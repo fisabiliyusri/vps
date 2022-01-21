@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/sampiiiiu
+# My Telegram : https://t.me/zerossl
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -14,13 +14,13 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/Gandring15/perizinan/main/ip | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/zerossl"
 exit 0
 fi
 clear
@@ -42,7 +42,7 @@ cp -r wireguard /etc/
 cp chap-secrets /etc/ppp/
 cp passwd1 /etc/ipsec.d/passwd
 cp ss.conf /etc/shadowsocks-libev/ss.conf
-cp -r geovpnstore /var/lib/
+cp -r gandring15 /var/lib/
 cp -r sstp /home/
 cp -r xray /etc/
 cp -r trojan-go /etc/
