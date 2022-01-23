@@ -119,4 +119,4 @@ rm -f setup.sh && apt update && apt upgrade -y && apt install lolcat -y && gem i
 
 ### Contact To Buy The Script
 
-• https://t.me/sampiiiiu
+• https://t.me/gandring
