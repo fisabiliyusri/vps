@@ -1,29 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/geovpn
-# ==========================================
-# Color
-RED='\033[0;31m'
-NC='\033[0m'
-GREEN='\033[0;32m'
-ORANGE='\033[0;33m'
-BLUE='\033[0;34m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
-LIGHT='\033[0;37m'
-# ==========================================
-# Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
-#Optimasi Speed By LamStore
+#Optimasi Speed By Adityah.NTB
 Add_To_New_Line(){
 	if [ "$(tail -n1 $1 | wc -l)" == "0"  ];then
 		echo "" >> "$1"
@@ -38,14 +14,14 @@ Check_And_Add_Line(){
 }
 
 Install_BBR(){
-echo "#############################################"
+echo "#############################################" | lolcat
 echo "Install TCP_BBR..."
 if [ -n "$(lsmod | grep bbr)" ];then
 echo "TCP_BBR sudah diinstall."
-echo "#############################################"
+echo "#############################################" | lolcat
 return 1
 fi
-echo "Mulai menginstall TCP_BBR..."
+echo "Mulai menginstall TCP_BBR..." | lolcat
 modprobe tcp_bbr
 Add_To_New_Line "/etc/modules-load.d/modules.conf" "tcp_bbr"
 Add_To_New_Line "/etc/sysctl.conf" "net.core.default_qdisc = fq"

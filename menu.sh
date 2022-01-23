@@ -1,310 +1,102 @@
 #!/bin/bash
-clear
-m="\033[0;1;36m"
-y="\033[0;1;37m"
-yy="\033[0;1;32m"
-yl="\033[0;1;33m"
-wh="\033[0m"
-
-echo -e "$yy■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■$wh"
-echo -e "$yy■《《《《《《《《《《《《《《《《《《     PREMIUM SCRIPT INSTALL VPS     》》》》》》》》》》》》》》》》》》》》■$wh"
-echo -e "$yy■《《《《《《《《《《《《《《《《《《《《     MENU LAYANAN SERVER      》》》》》》》》》》》》》》》》》》》》》》■$wh"             
-echo -e "$yy■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■$wh"
-echo -e ""
-echo -e "$m=============================================================================$wh"
-echo -e "$yy☆                                                             LAYANAN SSH & OpenVPN                                                                 ☆$wh"
-echo -e "$yy☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆$wh"
-echo -e "$yy 1$y.Create SSH & OpenVPN Account"
-echo -e "$yy 2$y.Generate SSH & OpenVPN Trial Account"
-echo -e "$yy 3$y.Extending SSH & OpenVPN Account Active Life"
-echo -e "$yy 4$y.Check User Login SSH & OpenVPN"
-echo -e "$yy 5$y.Daftar Member SSH & OpenVPN"
-echo -e "$yy 6$y.Delete SSH & OpenVpn Account"
-echo -e "$yy 7$y.Delete User Expired SSH & OpenVPN"
-echo -e "$yy 8$y.Set up Autokill SSH"
-echo -e "$yy 9$y.Displays Users Who Do Multi Login SSH"
-echo -e "$yy 10$y.Restart All Service"
-echo -e ""
-echo -e "$m===============================================================================$m"
-echo -e "$yy☆                                                                        LAYANAN  L2TP                                                                          ☆$wh"
-echo -e "$yy☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆$wh"
-echo -e "$yy 11$y.Create Account L2TP"
-echo -e "$yy 12$y.Delete Account L2TP"
-echo -e "$yy 13$y.Extending Account L2TP Active Life"
-echo -e ""
-echo -e "$m=============================================================================$m"
-echo -e "$yy☆                                                                         LAYANAN PPTP                                                                           ☆$wh"
-echo -e "$yy☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆$wh"
-echo -e "$yy 14$y.Create Account PPTP"
-echo -e "$yy 15$y.Delete Account PPTP"
-echo -e "$yy 16$y.Extending Account PPTP Active Life"
-echo -e ""
-echo -e "$m=============================================================================$m"
-echo -e "$yy☆                                                                          LAYANAN SSTP                                                                            ☆$wh"
-echo -e "$yy☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆$wh"
-echo -e "$yy 17$y.Create Account SSTP"
-echo -e "$yy 18$y.Delete Account SSTP"
-echo -e "$yy 19$y.Extending Account SSTP Active Life"
-echo -e "$yy 20$y.Check User Login SSTP"
-echo -e ""
-echo -e "$m==============================================================================$m"
-echo -e "$yy☆                                                                    LAYANAN WIREGUARD                                                                      ☆$wh"
-echo -e "$yy☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆$wh"
-echo -e "$yy 21$y.Create Account Wireguard"
-echo -e "$yy 22$y.Delete Account Wireguard"
-echo -e "$yy 23$y.Extending Account Wireguard Active Life"
-echo -e ""
-echo -e "$m===============================================================================$wh"
-echo -e "$yy☆                                                     LAYANAN SHADOWSOCKS OBFS/HTTP                                                         ☆$wh"
-echo -e "$yy☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆$wh"
-echo -e "$yy 24$y.Create Account Shadowsocks"
-echo -e "$yy 25$y.Delete Account Shadowsocks"
-echo -e "$yy 26$y.Extending Account Shadowsocks Active Life"
-echo -e "$yy 27$y.Check User Login Shadowsocks"
-echo -e ""
-echo -e "$m================================================================================$wh"
-echo -e "$yy☆                                                              LAYANAN SHADOWSOCKSRR                                                                  ☆$wh"
-echo -e "$yy☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆$wh"
-echo -e "$yy 28$y.Create Account SSR"
-echo -e "$yy 29$y.Delete Account SSR"
-echo -e "$yy 30$y.Extending Account SSR Active Life"
-echo -e "$yy 31$y.Show Other SSR Menu"
-echo -e ""
-echo -e "$m=================================================================================$wh"
-echo -e "$yy☆                                                                          LAYANAN VMESS                                                                                 ☆$wh"
-echo -e "$yy☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆$wh"
-echo -e "$yy 32$y.Create Account XRAYS Vmess Websocket"
-echo -e "$yy 33$y.Delete Account XRAYS Vmess Websocket"
-echo -e "$yy 34$y.Extending Account XRAYS Vmess Active Life"
-echo -e "$yy 35$y.Check User Login XRAYS Vmess"
-echo -e "$yy 36$y.Renew Certificate XRAYS Account"
-echo -e ""
-echo -e "$m=================================================================================$wh"
-echo -e "$y☆                                                                             LAYANAN VLESS                                                                                   ☆$wh"
-echo -e "$y☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆$wh"
-echo -e "$yy 37$y.Create Account XRAYS Vless Websocket"
-echo -e "$yy 38$y.Delete Account XRAYS Vless Websocket"
-echo -e "$yy 39$y.Extending Account XRAYS Vless Active Life"
-echo -e "$yy 40$y.Check User Login XRAYS Vless"
-echo -e ""
-echo -e "$m==================================================================================$wh"
-echo -e "$yy☆                                                                     LAYANAN TROJAN-GFW                                                                             ☆$wh"
-echo -e "$yy☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆$wh"
-echo -e "$yy 41$y.Create Account XRAYS Trojan"
-echo -e "$yy 42$y.Delete Account XRAYS Trojan"
-echo -e "$yy 43$y.Extending Account XRAYS Trojan Active Life"
-echo -e "$yy 44$y.Check User Login XRAYS Trojan"
-echo -e ""
-echo -e "$m===================================================================================$wh"
-echo -e "$yy☆                                                                       LAYANAN TROJAN-GO                                                                              ☆$wh"
-echo -e "$yy☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆$wh"
-echo -e "$yy 45$y.Create Account Trojan Go"
-echo -e "$yy 46$y.Delete Account Trojan Go"
-echo -e "$yy 47$y.Extending Account Trojan Go Active Life"
-echo -e "$yy 48$y.Check User Login Trojan Go"
-echo ""
-echo -e "$m====================================================================================$wh"
-echo -e "$yy☆                                                                  KONFIGURASI TAMABAHAN                                                                            ☆$wh"
-echo -e "$yy☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆☆$wh"
-echo -e "$yy 49$y.Add Or Change Subdomain Host For VPS"
-echo -e "$yy 50$y.Change Port Of Some Service"
-echo -e "$yy 51$y.Autobackup Data VPS"
-echo -e "$yy 52$y.Backup Data VPS"
-echo -e "$yy 53$y.Restore Data VPS"
-echo -e "$yy 54$y.Webmin Menu"
-echo -e "$yy 55$y.Limit Bandwith Speed Server"
-echo -e "$yy 56$y.Check Usage of VPS Ram"
-echo -e "$yy 57$y.Reboot VPS"
-echo -e "$yy 58$y.Speedtest VPS"
-echo -e "$yy 59$y.Displaying System Information"
-echo -e "$yy 60$y.Info Script Auto Install"
-echo -e "$yy======================================================================================$wh"
-echo -e ""
-read -p "Select From Options [ 1 - 60 ] : " menu
-echo -e ""
+yl='\e[32;1m'
+bl='\e[36;1m'
+gl='\e[32;1m'
+rd='\e[31;1m'
+mg='\e[0;95m'
+blu='\e[34m'
+op='\e[35m'
+or='\033[1;33m'
+bd='\e[1m'
+red='\e[1;31m'
+green='\e[0;32m'
+NC='\e[0m'
+bl='\e[36;1m'
+bd='\e[1m'
+color1='\e[031;1m'
+color2='\e[34;1m'
+color3='\e[0m'
+clear 
+cat /usr/bin/bannerku | lolcat
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+IPVPS=$(curl -s ipinfo.io/ip )
+domain=$(cat /etc/xray/domain)
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city )
+WKT=$(curl -s ipinfo.io/timezone )
+IPVPS=$(curl -s ipinfo.io/ip )
+jam=$(date +"%T")
+hari=$(date +"%A")
+tnggl=$(date +"%d-%B-%Y")
+	cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
+	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
+	freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
+	tram=$( free -m | awk 'NR==2 {print $2}' )
+	swap=$( free -m | awk 'NR==4 {print $2}' )
+	up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
+ echo -e  "  ║                       [ INFORMASI VPS ]                   ║" |lolcat
+ echo -e  "  ╠═══════════════════════════════════════════════════════════╣"| lolcat
+ echo -e " $bl ║ \e[36;1m• ISP Name          :\e[0m$bd $ISP"
+ echo -e " $bl ║ \e[36;1m• City              :\e[0m$bd $CITY"
+ echo -e " $bl ║ \e[36;1m• CPU Model         :\e[0m$bd$cname"
+ echo -e " $bl ║ \e[36;1m• Number Of Cores   :\e[0m$bd $cores"
+ echo -e " $gl ║ \e[36;1m• CPU Frequency     :\e[0m$bd$freq MHz"
+ echo -e " $gl ║ \e[36;1m• Total RAM         :\e[0m$bd $tram MB"
+ echo -e " $gl ║ \e[36;1m• Waktu             :\e[0m$bd $jam"
+ echo -e " $mg ║ \e[36;1m• Hari              :\e[0m$bd $hari"
+ echo -e " $mg ║ \e[36;1m• Tanggal           :\e[0m$bd $tnggl"
+ echo -e " $mg ║ \e[36;1m• IP VPS            :\e[0m$bd $IPVPS"
+ echo -e " $mg ║ \e[36;1m• Domain            :\e[0m$bd $domain"
+ echo -e  "  ╠══════════════════════════════════════════════════════════╣" | lolcat
+ echo -e  "  ║                     [ MENU TUNNELING ]                   ║" |lolcat
+ echo -e  "  ╠══════════════════════════════════════════════════════════╣" | lolcat
+ echo -e  " $gl ║\e[m$red 1$bl.\e[m$bd SSH & OpenVPN Section      $bl                           ║"
+ echo -e  " $gl ║\e[m$red 2$bl.\e[m$bd SSTP - L2TP - PPTP - Wireguard Section     $bl           ║"
+ echo -e  " $mg ║\e[m$red 3$bl.\e[m$bd Shadowsocks & ShadowsocksR Section        $gl            ║"
+ echo -e  " $mg ║\e[m$red 4$bl.\e[m$bd V2ray Vmess & Vless Section                 $gl          ║"
+ echo -e  " $bl ║\e[m$red 5$bl.\e[m$bd Trojan & TrojanGO Section         $mg                    ║"
+ echo -e  " $bl ║\e[m$red 6$bl.\e[m$bd Backup Section         $mg                               ║"
+ echo -e  " $mg ║\e[m$red 7$bl.\e[m$bd System Tools Section            $mg                      ║"
+ echo -e  " $mg ║\e[m$red 8$bl.\e[m$bd Update Script Section $gl Version $op($bl 2.0.4 $op)      $mg        ║"
+ echo -e  "  \e[1;32m╠══════════════════════════════════════════════════════════╣" | lolcat
+ echo -e  "  ║ x.   Exit                                                ║" | lolcat
+ echo -e  "  \e[1;32m╚══════════════════════════════════════════════════════════╝" | lolcat
+echo -e  ""
+read -p "  Select From Options [1-8 or x] :  " menu
+echo -e   ""
+echo -e   ""
+echo -e   ""
 case $menu in
 1)
-addssh
+ssh
 ;;
 2)
-trialssh
+paneli
 ;;
 3)
-renewssh
+ssssr
 ;;
 4)
-cekssh
+v2raay
 ;;
 5)
-member
+trojaan
 ;;
 6)
-delssh
+bebek
 ;;
 7)
-delexp
+system
 ;;
 8)
-autokill
+update
 ;;
-9)
-ceklim
-;;
-10)
-restart
-;;
-11)
-addl2tp
-;;
-12)
-dell2tp
-;;
-13)
-renewl2tp
-;;
-14)
-addpptp
-;;
-15)
-delpptp
-;;
-16)
-renewpptp
-;;
-17)
-addsstp
-;;
-18)
-delsstp
-;;
-19)
-renewsstp
-;;
-20)
-ceksstp
-;;
-21)
-addwg
-;;
-22)
-delwg
-;;
-23)
-renewwg
-;;
-24)
-addss
-;;
-25)
-delss
-;;
-26)
-renewss
-;;
-27)
-cekss
-;;
-28)
-addssr
-;;
-29)
-delssr
-;;
-30)
-renewssr
-;;
-31)
-ssr
-;;
-32)
-addv2ray
-;;
-33)
-delv2ray
-;;
-34)
-renewv2ray
-;;
-35)
-cekv2ray
-;;
-36)
-certv2ray
-;;
-37)
-addvless
-;;
-38)
-delvless
-;;
-39)
-renewvless
-;;
-40)
-cekvless
-;;
-41)
-addtrojan
-;;
-42)
-deltrojan
-;;
-43)
-renewtrojan
-;;
-44)
-cektrojan
-;;
-45)
-addtrgo
-;;
-46)
-deltrgo
-;;
-47)
-renewtrgo
-;;
-48)
-cektrgo
-;;
-49)
-addhost
-;;
-50)
-changeport
-;;
-51)
-autobackup
-;;
-52)
-backup
-;;
-53)
-restore
-;;
-54)
-wbmn
-;;
-55)
-limitspeed
-;;
-56)
-ram
-;;
-57)
-reboot
-;;
-58)
-speedtest
-;;
-59)
-info
-;;
-60)
-about
+x)
+exit
 ;;
 *)
-clear
+echo "Masukkan Nomor Yang Ada Sayang!"
 menu
 ;;
 esac
+
