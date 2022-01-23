@@ -42,15 +42,8 @@ geovpnnnnnnnnnn="raw.githubusercontent.com/geovpn/scriptvps/main/ohp"
 
 # Getting
 MYIP=$(wget -qO- icanhazip.com);
-IZIN=$( curl https://raw.githubusercontent.com/Gandring15/vps/main/ipvps | grep $MYIP )
-if [ $MYIP = $MYIP ]; then
-echo -e "${green}Permission Accepted...${NC}"
-else
-echo -e "${red}Permission Denied!${NC}";
-echo "Please Contact Admin"
-rm -f setup.sh
-exit 0
-fi
+echo -e "checking vps"
+clear
 if [ -f "/etc/v2ray/domain" ]; then
 echo "Script Already Installed"
 exit 0
