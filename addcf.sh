@@ -13,7 +13,7 @@ echo -e "${BLUE}==========================================================${NC}"
 echo ""
 echo "Please Input Your Pointing Domain In Cloudflare "
 read -rp "Domain/Host: " -e host
-echo "IP=$host" >> /var/lib/geovpnstore/ipvps.conf
+echo "IP=$host" >> /var/lib/gandring15/ipvps.conf
 #rm -f /home/homain
 echo "$host" > /etc/xray/domain
 echo -e "[${GREEN}Done${NC}]"
@@ -23,7 +23,7 @@ echo "Automatical Update Your Sertificate SSL"
 sleep 3
 echo Starting Update SSL Sertificate
 sleep 0.5
-source /var/lib/geovpnstore/ipvps.conf
+source /var/lib/gandring15/ipvps.conf
 domain=$IP
 systemctl stop xray@v2ray-tls
 systemctl stop xray@v2ray-nontls
@@ -36,4 +36,4 @@ systemctl stop xray@v2ray-nontls
 echo -e "[${GREEN}Done${NC}]"
 echo "Location Your Domain : /etc/xray/domain"
 echo ""
-echo -e "${BLUE}Script By GEO GABUT ANAK NTB${NC}"
+echo -e "${BLUE}Script By gandring${NC}"
