@@ -1,7 +1,7 @@
 ### Command Install
 
 ```
-rm -f setup.sh && apt update && apt upgrade -y && apt install lolcat -y && gem install lolcat && apt install figlet -y && update-grub && sleep 2 && apt-get update -y && apt-get upgrade && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://raw.githubusercontent.com/geovpn/scriptvps/main/setup.sh && chmod +x setup.sh && screen -S setup ./setup.sh
+rm -f setup.sh && apt update && apt upgrade -y && apt install lolcat -y && gem install lolcat && apt install figlet -y && update-grub && sleep 2 && apt-get update -y && apt-get upgrade && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://raw.githubusercontent.com/Gandring15/vps/main/setup.sh && chmod +x setup.sh && screen -S setup ./setup.sh
 ```
 
 ### Fitur Script
