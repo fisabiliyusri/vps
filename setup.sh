@@ -7,7 +7,7 @@ if [ "$(systemd-detect-virt)" == "openvz" ]; then
 		echo "OpenVZ is not supported"
 		exit 1
 fi
-# My Telegram : https://t.me/geovpn
+# My Telegram : https://t.me/gandring
 # ==========================================
 # Color
 RED='\033[0;31m'
