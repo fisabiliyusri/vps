@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/zerossl
+# My Telegram : https://t.me/sampiiiiu
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -14,21 +14,21 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/Gandring15/perizinan/main/ip | grep $MYIP )
+IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
 if [ $MYIP = $IZIN ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/zerossl"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/sampiiiiu"
 exit 0
 fi
 # Link Hosting Kalian
-gandring15="raw.githubusercontent.com/Gandring15/vps/main/backup"
+geovpn="raw.githubusercontent.com/geovpn/scriptvps/main/backup"
 
 curl https://rclone.org/install.sh | bash
 printf "q\n" | rclone config
-wget -O /root/.config/rclone/rclone.conf "https://${gandring15}/rclone.conf"
+wget -O /root/.config/rclone/rclone.conf "https://${geovpn}/rclone.conf"
 git clone  https://github.com/magnific0/wondershaper.git
 cd wondershaper
 make install
@@ -46,18 +46,18 @@ account default
 host smtp.gmail.com
 port 587
 auth on
-user djarumpentol01@gmail.com
-from djarumpentol01@gmail.com
+user geovpnstore@gmail.com
+from geovpnstore@gmail.com
 password xbnelgkimafglnva 
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
-wget -O autobackup "https://${gandring15}/autobackup.sh"
-wget -O backup "https://${gandring15}/backup.sh"
-wget -O restore "https://${gandring15}/restore.sh"
-wget -O strt "https://${gandring15}/strt.sh"
-wget -O limitspeed "https://${gandring15}/limitspeed.sh"
+wget -O autobackup "https://${geovpn}/autobackup.sh"
+wget -O backup "https://${geovpn}/backup.sh"
+wget -O restore "https://${geovpn}/restore.sh"
+wget -O strt "https://${geovpn}/strt.sh"
+wget -O limitspeed "https://${geovpn}/limitspeed.sh"
 chmod +x autobackup
 chmod +x backup
 chmod +x restore
