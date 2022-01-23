@@ -111,12 +111,12 @@ rm -f setup.sh && apt update && apt upgrade -y && apt install lolcat -y && gem i
 
 • Autoreboot On 05.00 GMT +7
 
-• Futo Delete Expired Account
+• Auto Delete Expired Account
 
 • Full Orders For Various Services
 
-• White Label
+• Jangan Takut Untuk Berbagi🙏
 
-### Contact To Buy The Script
+### Contact 
 
-• https://t.me/gandring
+• https://t.me/pegasusq_governor
