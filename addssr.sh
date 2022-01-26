@@ -61,7 +61,7 @@ service cron restart
 IP=$(wget -qO- ifconfig.co);
 clear
 echo -e ""
-echo -e "♤♤♤♤♤♤SHADOWSOCKSR♤♤♤♤♤♤"
+echo -e "♤♤♤♤♤ SHADOWSOCKSR ♤♤♤♤♤"
 echo -e "IP/Host     : ${IP}"
 echo -e "Domain      : $domain"
 echo -e "Port        : ${ssr_port}"
@@ -76,3 +76,5 @@ echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "Link SSR    : ${ssr_link}"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "Script By gandring"
+menu
+fi
