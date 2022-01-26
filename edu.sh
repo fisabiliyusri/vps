@@ -15,27 +15,19 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
+clear
 # Link Hosting Kalian
 geovpn="raw.githubusercontent.com/geovpn/scriptvps/main/websocket"
 
 # Getting Proxy Template
-wget -q -O /usr/local/bin/ws-tls https://${geovpn}/ws-tls.py
+wget -q -O /usr/local/bin/ws-tls https://raw.githubusercontent.com/Gandring15/vps/main/ws-tls.py
 chmod +x /usr/local/bin/ws-tls
 
 # Installing Service
 cat > /etc/systemd/system/ws-tls.service << END
 [Unit]
-Description=Python Proxy Mod By geovpn
-Documentation=https://t.me/geovpn
+Description=Python Proxy Mod By gandring
+Documentation=https://raw.githubusercontent.com/Gandring15/vps/main/
 After=network.target nss-lookup.target
 
 [Service]
@@ -56,14 +48,14 @@ systemctl enable ws-tls
 systemctl restart ws-tls
 
 # Getting Proxy Template
-wget -q -O /usr/local/bin/ws-nontls https://${geovpn}/ws-nontls.py
+wget -q -O /usr/local/bin/ws-nontls https://raw.githubusercontent.com/Gandring15/vps/main/ws-nontls.py
 chmod +x /usr/local/bin/ws-nontls
 
 # Installing Service
 cat > /etc/systemd/system/ws-nontls.service << END
 [Unit]
 Description=Python Proxy Mod By geovpn
-Documentation=https://t.me/geovpn
+Documentation=https://raw.githubusercontent.com/Gandring15/vps/main/
 After=network.target nss-lookup.target
 
 [Service]
@@ -84,14 +76,14 @@ systemctl enable ws-nontls
 systemctl restart ws-nontls
 
 # Getting Proxy Template
-wget -q -O /usr/local/bin/ws-ovpn https://${geovpn}/ws-ovpn.py
+wget -q -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/Gandring15/vps/main/ws-ovpn.py
 chmod +x /usr/local/bin/ws-ovpn
 
 # Installing Service
 cat > /etc/systemd/system/ws-ovpn.service << END
 [Unit]
-Description=Python Proxy Mod By geovpn
-Documentation=https://t.me/geovpn
+Description=Python Proxy Mod By gandring
+Documentation=https://raw.githubusercontent.com/Gandring15/vps/main/
 After=network.target nss-lookup.target
 
 [Service]
