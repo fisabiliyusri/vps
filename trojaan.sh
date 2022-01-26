@@ -8,15 +8,6 @@ color1='\e[031;1m'
 color2='\e[34;1m'
 color3='\e[0m'
 MYIP=$(wget -qO- ifconfig.co);
-echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/Sangarya/izin/main/ipvps | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${green}Permission Accepted...${NC}"
-else
-echo -e "${red}Permission Denied!${NC}";
-echo "Only For Premium Users"
-exit 0
-fi
 clear
 cat /usr/bin/bannerTROJAN | lolcat
 echo -e""
@@ -62,7 +53,7 @@ x)
 menu
 ;;
 *)
-echo "Masukkan Nomor Yang Ada Sayang!"
+echo "Masukkan Nomor Yang Ada!"
 sleep 1
 trojaan
 ;;
