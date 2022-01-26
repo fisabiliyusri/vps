@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/geovpn
+# My Telegram : https://t.me/pegasusq_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -13,17 +13,8 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
-#Optimasi Speed By LamStore
+clear
+#Tweak Tcp BBR Optimisasi oleh Gandring
 Add_To_New_Line(){
 	if [ "$(tail -n1 $1 | wc -l)" == "0"  ];then
 		echo "" >> "$1"
@@ -62,27 +53,29 @@ echo "#############################################"
 Optimize_Parameters(){
 echo "#############################################"
 echo "Optimasi Parameters..."
-Check_And_Add_Line "/etc/security/limits.conf" "* soft nofile 51200"
-Check_And_Add_Line "/etc/security/limits.conf" "* hard nofile 51200"
-Check_And_Add_Line "/etc/security/limits.conf" "root soft nofile 51200"
-Check_And_Add_Line "/etc/security/limits.conf" "root hard nofile 51200"
+Check_And_Add_Line "/etc/security/limits.conf" "* soft nofile 65535"
+Check_And_Add_Line "/etc/security/limits.conf" "* hard nofile 65535"
+Check_And_Add_Line "/etc/security/limits.conf" "root soft nofile 65535"
+Check_And_Add_Line "/etc/security/limits.conf" "root hard nofile 65535"
 Check_And_Add_Line "/etc/sysctl.conf" "fs.file-max = 51200"
 Check_And_Add_Line "/etc/sysctl.conf" "net.core.rmem_max = 67108864"
 Check_And_Add_Line "/etc/sysctl.conf" "net.core.wmem_max = 67108864"
-Check_And_Add_Line "/etc/sysctl.conf" "net.core.netdev_max_backlog = 250000"
-Check_And_Add_Line "/etc/sysctl.conf" "net.core.somaxconn = 4096"
+Check_And_Add_Line "/etc/sysctl.conf" "net.core.netdev_max_backlog = 25000000"
+Check_And_Add_Line "/etc/sysctl.conf" "net.core.somaxconn = 65536"
 Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_syncookies = 1"
 Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_tw_reuse = 1"
 Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_fin_timeout = 30"
 Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_keepalive_time = 1200"
 Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.ip_local_port_range = 10000 65000"
-Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_max_syn_backlog = 8192"
-Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_max_tw_buckets = 5000"
-Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_fastopen = 3"
-Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_mem = 25600 51200 102400"
-Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_rmem = 4096 87380 67108864"
-Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_wmem = 4096 65536 67108864"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_max_syn_backlog = 16777216"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_max_tw_buckets = 5000000"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_fastopen = 1"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_mem = 16777216 16777216 16777216"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_rmem = 16777216 3355443 67108864"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_wmem = 16777216 33554432 67108864"
 Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_mtu_probing = 1"
+Check_And_Add_Line "/etc/sysctl.conf" "net.core.default_qdisc = fq"
+Check_And_Add_Line "/etc/sysctl.conf" "net.ipv4.tcp_congestion_control = westwood"
 echo "Optimasi Parameters Selesai."
 echo "#############################################"
 }
