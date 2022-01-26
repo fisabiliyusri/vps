@@ -12,7 +12,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
+MYIP=$(wget -qO- ifconfig.me/ip);
 clear
 #Tweak Tcp BBR Optimisasi oleh Gandring
 Add_To_New_Line(){
