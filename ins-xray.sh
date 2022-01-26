@@ -14,7 +14,7 @@ PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 
-MYIP=$(wget -qO- ipinfo.io/ip);
+MYIP=$(wget -qO- ifconfig.me/ip);
 clear
 domain=$(cat /root/domain)
 apt install iptables iptables-persistent -y
@@ -91,7 +91,7 @@ cat > /etc/xray/v2ray-tls.json << END
           ]
         },
         "wsSettings": {
-          "path": "/gandring/",
+          "path": "/gandring",
           "headers": {
             "Host": ""
           }
@@ -179,7 +179,7 @@ cat > /etc/xray/v2ray-nontls.json << END
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/gandring/",
+          "path": "/gandring",
           "headers": {
             "Host": ""
           }
@@ -276,7 +276,7 @@ cat > /etc/xray/vless-tls.json << END
           ]
         },
         "wsSettings": {
-          "path": "/gandring/",
+          "path": "/gandring",
           "headers": {
             "Host": ""
           }
@@ -363,7 +363,7 @@ cat > /etc/xray/vless-nontls.json << END
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/gandring/",
+          "path": "/gandring",
           "headers": {
             "Host": ""
           }
@@ -442,7 +442,7 @@ cat > /etc/xray/trojan.json <<END
       "settings": {
         "clients": [
           {
-            "password": "geovpnProject"
+            "password": "${user}"
 #xray-trojan
           }
         ],
@@ -523,7 +523,7 @@ END
 cat > /etc/systemd/system/xray@.service << END
 [Unit]
 Description=Xray Service ( %i ) By gandring
-Documentation=https://t.me/pegasusq_governor
+Documentation=https://raw.githubusercontent.com/Gandring15/vps/main/
 After=network.target nss-lookup.target
 
 [Service]
@@ -535,7 +535,7 @@ AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
 ExecStart=/usr/local/bin/xray -config /etc/xray/%i.json
 ExecStop=/usr/local/bin/xray
-LimitNOFILE=51200
+LimitNOFILE=65535
 Restart=on-failure
 RestartSec=1s
 
@@ -550,12 +550,18 @@ iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 8443 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 8443 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 80 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2083 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2083 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 443 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 443 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2095 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2095 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2087 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2087 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2053 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p tcp --dport 2053 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 222 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p tcp --dport 222 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p tcp --dport 200 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 200 -j ACCEPT
 iptables-save > /etc/iptables.up.rules
 iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
@@ -666,7 +672,7 @@ END
 cat > /etc/systemd/system/trojan-go.service << END
 [Unit]
 Description=Trojan-Go Service By gandring
-Documentation=https://t.me/gandring
+Documentation=https://github.com/Gandring15/vps/main/
 Documentation=https://github.com/Gandring15/vps/main/
 After=network.target nss-lookup.target
 
@@ -678,7 +684,7 @@ CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
 ExecStart=/usr/local/bin/trojan-go -config /etc/trojan-go/config.json
-LimitNOFILE=51200
+LimitNOFILE=65535
 Restart=on-failure
 RestartSec=1s
 
