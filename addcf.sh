@@ -7,9 +7,9 @@ NC='\e[0m'
 #Input Domain
 clear
 echo ""
-echo -e "${BLUE}==========================================================${NC}"
+echo -e "${RED}==========================================================${NC}"
 figlet Add Domain | lolcat
-echo -e "${BLUE}==========================================================${NC}"
+echo -e "${RED}==========================================================${NC}"
 echo ""
 echo "Please Input Your Pointing Domain In Cloudflare "
 read -rp "Domain/Host: " -e host
