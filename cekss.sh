@@ -14,15 +14,15 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
-echo "----------------------------------";
-echo "----=[ SS - OBFS User Login ]=----";
-echo "----------------------------------";
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
+echo "♤♤♤=[ SS - OBFS User Login ]=♤♤♤";
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
 echo ""
 data=( `cat /etc/shadowsocks-libev/akun.conf | grep '^###' | cut -d ' ' -f 2`);
 x=1
-echo "----------------------------------";
+echo "♤♤♤♤♤♤♤♡♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
 echo " User | TLS"
-echo "----------------------------------";
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
 for akun in "${data[@]}"
 do
 port=$(cat /etc/shadowsocks-libev/akun.conf | grep '^port_tls' | cut -d ' ' -f 2 | tr '\n' ' ' | awk '{print $'"$x"'}')
@@ -32,16 +32,16 @@ echo > /dev/null
 else
 echo " $akun - $port"
 echo "$jum";
-echo "----------------------------------"
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 fi
 x=$(( "$x" + 1 ))
 done
 data=( `cat /etc/shadowsocks-libev/akun.conf | grep '^###' | cut -d ' ' -f 2`);
 x=1
 echo ""
-echo "----------------------------------";
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
 echo " User |  HTTP"
-echo "----------------------------------";
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
 for akun in "${data[@]}"
 do
 port=$(cat /etc/shadowsocks-libev/akun.conf | grep '^port_http' | cut -d ' ' -f 2 | tr '\n' ' ' | awk '{print $'"$x"'}')
@@ -51,7 +51,9 @@ echo > /dev/null
 else
 echo " $akun - $port"
 echo "$jum";
-echo "----------------------------------"
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 fi
 x=$(( "$x" + 1 ))
 done
+menu
+fi
