@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/geovpn
+# My Telegram : https://t.me/pegasusq_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -13,18 +13,8 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
 clear
-source /var/lib/geovpnstore/ipvps.conf
+source /var/lib/gandring/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
@@ -50,14 +40,14 @@ sed -i '/#xray-vless-tls$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/vless-tls.json
 sed -i '/#xray-vless-nontls$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/vless-nontls.json
-xrayvless1="vless://${uuid}@${domain}:$tls?path=/vless/&security=tls&encryption=none&type=ws#${user}"
-xrayvless2="vless://${uuid}@${domain}:$nontls?path=/vless/&encryption=none&type=ws#${user}"
+xrayvless1="vless://${uuid}@${domain}:$tls?path=/gandring&security=tls&encryption=none&type=ws#${user}"
+xrayvless2="vless://${uuid}@${domain}:$nontls?path=/gandring&encryption=none&type=ws#${user}"
 systemctl restart xray@vless-tls
 systemctl restart xray@vless-nontls
 service cron restart
 clear
 echo -e ""
-echo -e "======-XRAYS/VLESS-======"
+echo -e "♤♤♤♤♤ AKUN VLESS ♤♤♤♤♤"
 echo -e "Remarks     : ${user}"
 echo -e "IP/Host     : ${MYIP}"
 echo -e "Address     : ${domain}"
@@ -66,12 +56,12 @@ echo -e "Port No TLS : $nontls"
 echo -e "User ID     : ${uuid}"
 echo -e "Encryption  : none"
 echo -e "Network     : ws"
-echo -e "Path        : /vless/"
+echo -e "Path        : /gandring"
 echo -e "Created     : $hariini"
 echo -e "Expired     : $exp"
-echo -e "========================="
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "Link TLS    : ${xrayvless1}"
-echo -e "========================="
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "Link No TLS : ${xrayvless2}"
-echo -e "========================="
-echo -e "Script By geovpn"
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo -e "Script By gandring"
