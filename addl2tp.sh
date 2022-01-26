@@ -69,3 +69,5 @@ Expired    : $exp
 ♤♤♤♤♤♤♤♤♤♤♤♡♤♤♤♤♤♤
 Script By gandring
 EOF
+menu
+fi
