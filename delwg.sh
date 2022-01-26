@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/geovpn
+# My Telegram : https://t.me/pegasusq_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -12,17 +12,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
+MYIP=$(wget -qO- ifconfig.me/ip);
 clear
 source /etc/wireguard/params
 	NUMBER_OF_CLIENTS=$(grep -c -E "^### Client" "/etc/wireguard/$SERVER_WG_NIC.conf")
@@ -38,8 +28,8 @@ source /etc/wireguard/params
 	echo ""
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo " ==============================="
-	echo "     No  Expired   User"
+	echo " ♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+	echo "   nggak ada pengguna kadal"
 	grep -E "^### Client" "/etc/wireguard/$SERVER_WG_NIC.conf" | cut -d ' ' -f 3-4 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -64,10 +54,12 @@ systemctl restart "wg-quick@$SERVER_WG_NIC"
 service cron restart
 clear
 echo ""
-echo "============================="
-echo "  Wireguard Account Deleted  "
-echo "============================="
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo "   Wireguard Akun Dihapus"
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Username  : $user"
 echo "Expired   : $exp"
-echo "============================="
-echo "Script By geovpn"
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo "Script By gandring"
+menu
+fi
