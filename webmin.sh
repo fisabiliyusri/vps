@@ -40,7 +40,7 @@ echo "  Done Install Webmin  "
 echo "======================="
 echo "http://$IP:10000"
 echo "======================="
-echo "Script By geovpn"
+echo "Script By gandring"
 }
 function restart () {
 echo " Restarting Webmin"
