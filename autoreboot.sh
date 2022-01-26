@@ -5,9 +5,9 @@ NC='\e[0m'
 MYIP=$(wget -qO- ipv4.icanhazip.com);
 clear
 echo -e ""
-echo -e "------------------------------------" | lolcat
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤" | lolcat
 echo -e "             AUTO REBOOT"
-echo -e "------------------------------------" | lolcat
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♡♤♡♡♡♡♡" | lolcat
 echo -e ""
 echo -e "    1)  Auto Reboot 30 minutes"
 echo -e "    2)  Auto Reboot 1 Hours"
@@ -16,9 +16,9 @@ echo -e "    4)  Auto Reboot 24 Hours"
 echo -e "    5)  Auto Reboot 1 weeks"
 echo -e "    6)  Auto Reboot 1 mount"
 echo -e ""
-echo -e "------------------------------------" | lolcat
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤" | lolcat
 echo -e "    x)   MENU"
-echo -e "------------------------------------" | lolcat
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤" | lolcat
 echo -e ""
 read -p "     Please Input Number  [1-6 or x] :  "  autoreboot
 echo -e ""
