@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/geovpn
+# My Telegram : https://t.me/pegasusq_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -13,16 +13,6 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
 clear
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
 Info="${Green_font_prefix}[ON]${Font_color_suffix}"
@@ -35,15 +25,15 @@ sts="${Error}"
 fi
 clear
 echo -e ""
-echo -e "=================================="
-echo -e "       Status Autokill $sts       "
-echo -e "=================================="
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo -e "       Status Autokill           "
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "1. AutoKill After 5 Minutes"
 echo -e "2. AutoKill After 10 Minutes"
 echo -e "3. AutoKill After 15 Minutes"
 echo -e "4. Turn Off AutoKill/MultiLogin"
 echo -e "5. Exit"
-echo -e "=================================="                                                                                                          
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"                                                                                                          
 echo -e ""
 read -p "Select From Options [1-4 or x] :  " AutoKill
 read -p "Multilogin Maximum Number Of Allowed: " max
@@ -57,12 +47,12 @@ case $AutoKill in
                 echo "# Autokill" >>/etc/cron.d/tendang
                 echo "*/5 * * * *  root /usr/bin/tendang $max" >>/etc/cron.d/tendang
                 echo -e ""
-                echo -e "======================================"
+                echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
                 echo -e ""
                 echo -e "      Allowed MultiLogin : $max"
                 echo -e "      AutoKill Every     : 5 Minutes"      
                 echo -e ""
-                echo -e "======================================"                                                                                                                                 
+                echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"                                                                                                                                 
                 exit                                                                  
                 ;;
                 2)
@@ -73,12 +63,12 @@ case $AutoKill in
                 echo "# Autokill" >>/etc/cron.d/tendang
                 echo "*/10 * * * *  root /usr/bin/tendang $max" >>/etc/cron.d/tendang
                 echo -e ""
-                echo -e "======================================"
+                echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
                 echo -e ""
                 echo -e "      Allowed MultiLogin : $max"
                 echo -e "      AutoKill Every     : 10 Minutes"
                 echo -e ""
-                echo -e "======================================"
+                echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
                 exit
                 ;;
                 3)
@@ -89,23 +79,23 @@ case $AutoKill in
                 echo "# Autokill" >>/etc/cron.d/tendang
                 echo "*/15 * * * *  root /usr/bin/tendang $max" >>/etc/cron.d/tendang
                 echo -e ""
-                echo -e "======================================"
+                echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
                 echo -e ""
                 echo -e "      Allowed MultiLogin : $max"
                 echo -e "      AutoKill Every     : 15 Minutes"
                 echo -e ""
-                echo -e "======================================"
+                echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
                 exit
                 ;;
                 4)
                 clear
                 echo > /etc/cron.d/tendang
                 echo -e ""
-                echo -e "======================================"
+                echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
                 echo -e ""
                 echo -e "      AutoKill MultiLogin Turned Off  "
                 echo -e ""
-                echo -e "======================================"
+                echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
                 exit
                 ;;
                 x)
@@ -113,3 +103,5 @@ case $AutoKill in
                 exit
                 ;;
         esac
+menu
+fi
