@@ -12,7 +12,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- icanhazip.com);
+MYIP=$(wget -qO- ifconfig.me/ip);
 clear
 echo -n > /tmp/other.txt
 data=( `cat /etc/xray/trojan.json | grep '^###' | cut -d ' ' -f 2`);
@@ -52,7 +52,7 @@ oth=$(cat /tmp/other.txt | sort | uniq | nl)
 echo "other";
 echo "$oth";
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo "Script By geovpn"
+echo "Script By gandring"
 rm -rf /tmp/other.txt
 menu
 fi
