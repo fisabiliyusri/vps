@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/geovpn
+# My Telegram : https://t.me/gandring
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -13,18 +13,8 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
 clear
-source /var/lib/geovpnstore/ipvps.conf
+source /var/lib/gandring/ipvps.conf
 if [[ "$IP2" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
@@ -34,7 +24,7 @@ IP=$(wget -qO- ipinfo.io/ip);
 sstp="$(cat ~/log-install.txt | grep -i SSTP | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "Usernew : " -e user
-		CLIENT_EXISTS=$(grep -w $user /var/lib/geovpnstore/data-user-sstp | wc -l)
+		CLIENT_EXISTS=$(grep -w $user /var/lib/gandring/data-user-sstp | wc -l)
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 			echo ""
@@ -49,7 +39,7 @@ exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 cat >> /home/sstp/sstp_account <<EOF
 $user * $pass *
 EOF
-echo -e "### $user $exp">>"/var/lib/geovpnstore/data-user-sstp"
+echo -e "### $user $exp">>"/var/lib/gandring/data-user-sstp"
 clear
 cat <<EOF
 
@@ -65,5 +55,5 @@ Cert      : http://$IP:89/server.crt
 Created   : $hariini
 Expired   : $exp
 ============================
-Script By geovpn
+Script By gandring
 EOF
