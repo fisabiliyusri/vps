@@ -111,3 +111,5 @@ echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "Link HTTP   : $linkss2"
 echo -e "========================="
 echo -e "Script By gandring"
+menu
+fi
