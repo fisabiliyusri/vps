@@ -15,7 +15,7 @@ MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
 clear
 read -rp "Domain/Host : " -e domain
-echo "IP=$domain" >>/var/lib/geovpnstore/ipvps.conf
+echo "IP=$domain" >>/var/lib/gandring/ipvps.conf
 echo $domain > /etc/xray/domain
 echo start
 systemctl stop xray@v2ray-tls
