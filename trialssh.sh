@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/geovpn
+# My Telegram : https://t.me/gandring
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -12,17 +12,8 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
+MYIP=$(wget -qO- icanhazip.com);
+clear
 source /var/lib/geovpnstore/ipvps.conf
 if [[ "$IP2" = "" ]]; then
 domain=$(cat /etc/xray/domain)
@@ -56,14 +47,14 @@ echo -e "IP/Host       : $IP"
 echo -e "Domain        : $domain"
 echo -e "Username      : $Login"
 echo -e "Password      : $Pass"
-echo -e "OpenSSH       : 443, 22"
-echo -e "Dropbear      : 443, 109, 143"
-echo -e "SSL/TLS       :$ssl"
-echo -e "Port Squid    :$sqd"
+echo -e "OpenSSH       : 222, 22"
+echo -e "Dropbear      : 200, 300"
+echo -e "SSL/TLS       : $ssl"
+echo -e "Port Squid    : $sqd"
 echo -e "OHP SSH       : 8181"
 echo -e "OHP Dropbear  : 8282"
 echo -e "OHP OpenVPN   : 8383"
-echo -e "Ssh Ws SSL    : 443"
+echo -e "Ssh Ws SSL    : 2083"
 echo -e "Ssh Ws No SSL : 8880"
 echo -e "Ovpn Ws       : 2086"
 echo -e "Port TCP      : $ovpn"
@@ -78,10 +69,10 @@ echo -e "Expired       : $expi"
 echo -e "=============================="
 echo -e "Payload Websocket TLS"
 echo -e "=============================="
-echo -e "GET wss://bug.com [protocol][crlf]Host: ${domain}[crlf]Upgrade: websocket[crlf][crlf]"
+echo -e "CONNECT wss://bugmu.com /HTTP/1.1[protocol][crlf]Host: ${domain}[crlf]Upgrade: websocket[crlf][crlf]"
 echo -e "=============================="
 echo -e "Payload Websocket No TLS"
 echo -e "=============================="
-echo -e "GET / HTTP/1.1[crlf]Host: ${domain}[crlf]Upgrade: websocket[crlf][crlf]"
+echo -e "CONNECT wss://bugmu.com /HTTP/1.1[crlf]Host: ${domain}[crlf]Upgrade: websocket[crlf][crlf]"
 echo -e "=============================="
 echo -e "Script By geovpn"
