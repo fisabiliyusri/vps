@@ -44,7 +44,7 @@ service cron restart
 clear
 echo ""
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo "  TrojanGo Account Deleted  "
+echo "  Trojan-Go Akun Dihapus"
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Username : $user"
 echo "Expired  : $exp"
