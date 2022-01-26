@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/geovpn
+# My Telegram : https://t.me/gandring
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -13,34 +13,25 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
-# By geovpn
+clear
+# By gandring
 # ==================================================
 # Link Hosting Kalian
-geovpn="raw.githubusercontent.com/geovpn/scriptvps/main/ssh"
+geovpn="raw.githubusercontent.com/Gandring15/vps/main/ssh"
 
 # initialisasi var
 export DEBIAN_FRONTEND=noninteractive
 OS=`uname -m`;
 MYIP=$(wget -qO- ipinfo.io/ip);
 MYIP2="s/xxxxxxxxx/$MYIP/g";
-ANU=$(ip -o $ANU -4 route show to default | awk '{print $5}');
+NIC=$(ip -o $NIC -4 route show to default | awk '{print $5}');
 
 # Install OpenVPN dan Easy-RSA
 apt install openvpn easy-rsa unzip -y
 apt install openssl iptables iptables-persistent -y
 mkdir -p /etc/openvpn/server/easy-rsa/
 cd /etc/openvpn/
-wget https://${geovpn}/vpn.zip
+wget https://raw.githubusercontent.com/Gandring15/vps/main/vpn.zip
 unzip vpn.zip
 rm -f vpn.zip
 chown -R root:root /etc/openvpn/server/easy-rsa/
@@ -62,12 +53,12 @@ systemctl enable --now openvpn-server@server-udp
 echo 1 > /proc/sys/net/ipv4/ip_forward
 sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
 
-# Buat config client TCP 1194
+# Buat config client TCP 700
 cat > /etc/openvpn/tcp.ovpn <<-END
 client
 dev tun
 proto tcp
-remote xxxxxxxxx 1194
+remote xxxxxxxxx 700
 resolv-retry infinite
 route-method exe
 nobind
@@ -80,12 +71,12 @@ END
 
 sed -i $MYIP2 /etc/openvpn/tcp.ovpn;
 
-# Buat config client UDP 2200
+# Buat config client UDP 800
 cat > /etc/openvpn/udp.ovpn <<-END
 client
 dev tun
 proto udp
-remote xxxxxxxxx 2200
+remote xxxxxxxxx 800
 resolv-retry infinite
 route-method exe
 nobind
@@ -120,20 +111,20 @@ cd
 # pada tulisan xxx ganti dengan alamat ip address VPS anda 
 /etc/init.d/openvpn restart
 
-# masukkan certificatenya ke dalam config client TCP 1194
+# masukkan certificatenya ke dalam config client TCP 700
 echo '<ca>' >> /etc/openvpn/tcp.ovpn
 cat /etc/openvpn/server/ca.crt >> /etc/openvpn/tcp.ovpn
 echo '</ca>' >> /etc/openvpn/tcp.ovpn
 
-# Copy config OpenVPN client ke home directory root agar mudah didownload ( TCP 1194 )
+# Copy config OpenVPN client ke home directory root agar mudah didownload ( TCP 700 )
 cp /etc/openvpn/tcp.ovpn /home/vps/public_html/tcp.ovpn
 
-# masukkan certificatenya ke dalam config client UDP 2200
+# masukkan certificatenya ke dalam config client UDP 800
 echo '<ca>' >> /etc/openvpn/udp.ovpn
 cat /etc/openvpn/server/ca.crt >> /etc/openvpn/udp.ovpn
 echo '</ca>' >> /etc/openvpn/udp.ovpn
 
-# Copy config OpenVPN client ke home directory root agar mudah didownload ( UDP 2200 )
+# Copy config OpenVPN client ke home directory root agar mudah didownload ( UDP 800 )
 cp /etc/openvpn/udp.ovpn /home/vps/public_html/udp.ovpn
 
 # masukkan certificatenya ke dalam config client SSL
@@ -146,8 +137,8 @@ cp /etc/openvpn/ssl.ovpn /home/vps/public_html/ssl.ovpn
 
 #firewall untuk memperbolehkan akses UDP dan akses jalur TCP
 
-iptables -t nat -I POSTROUTING -s 10.6.0.0/24 -o $ANU -j MASQUERADE
-iptables -t nat -I POSTROUTING -s 10.7.0.0/24 -o $ANU -j MASQUERADE
+iptables -t nat -I POSTROUTING -s 10.6.0.0/24 -o $NIC -j MASQUERADE
+iptables -t nat -I POSTROUTING -s 10.7.0.0/24 -o $NIC -j MASQUERADE
 iptables-save > /etc/iptables.up.rules
 chmod +x /etc/iptables.up.rules
 
