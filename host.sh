@@ -13,9 +13,9 @@ off='\x1b[m'
 flag='\x1b[47;41m'
 clear
 sys=$(cat /etc/xray/domain)
-Geogabut=paoandest@gmail.com
-Geo=1d158d0efc4eef787222cefff0b6d20981462
-DM1=apa-itu.website
+gandring=djarumpentol01@gmail.com
+cfdomain=okUiRiUf8wrVhuZJKddKLZFkmri43wwxNKCvQ0kV
+DM1=kolocokro.xyz
 DM2=bothervpn.tk
 DM3=vpsku.space
 DM4=gassfull.tech
@@ -49,8 +49,8 @@ echo ""
 read -p "   [☆]  Masukkan Nomor :  " nom
 if [[ $nom == '1' ]]; then
 DOMAIN=$DM1
-CF_ID=$Geogabut
-CF_KEY=$Geo
+CF_ID=$gandring
+CF_KEY=$cfdomain
 elif [[ $nom == '2' ]]; then
 DOMAIN=$DM2
 CF_ID=$Geogabut
@@ -126,7 +126,7 @@ clear
 
 SUB_DOMAIN=${sub}.${DOMAIN}
 set -euo pipefail
-IP=$(wget -qO- ipinfo.io/ip);
+IP=$(wget -qO- ifconfig.me/ip);
 echo -e "${cyan}Pointing DNS Untuk Domain${off} ${green}${SUB_DOMAIN}...${off}"
 sleep 1
 clear
@@ -171,3 +171,5 @@ echo -e "${green}Domain Ini Tidak Support Wildcard Atau Multi Subdomain!"
 echo -e "Untuk VPN L2TP, SSTP, PPTP, Dan WIREGUARD,"
 echo -e "Anda Harus Menggunakan Domain System${off} ${cyan}$sys $off}"
 echo ""
+menu
+fi
