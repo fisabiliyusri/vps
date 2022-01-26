@@ -25,7 +25,7 @@ exit 0
 fi
 clear
 uuid=$(cat /etc/trojan-go/uuid.txt)
-source /var/lib/geovpnstore/ipvps.conf
+source /var/lib/gandring/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
@@ -51,17 +51,17 @@ systemctl restart trojan-go.service
 link="trojan-go://${user}@${domain}:${trgo}/?sni=${domain}&type=ws&host=${domain}&path=/trojango&encryption=none#$user"
 clear
 echo -e ""
-echo -e "=======-TROJAN-GO-======="
+echo -e "♤♤♤♤♤ TROJAN-GO ♤♤♤♤♤"
 echo -e "Remarks    : ${user}"
 echo -e "IP/Host    : ${MYIP}"
 echo -e "Address    : ${domain}"
 echo -e "Port       : ${trgo}"
 echo -e "Key        : ${user}"
 echo -e "Encryption : none"
-echo -e "Path       : /trojango"
+echo -e "Path       : /gandring"
 echo -e "Created    : $hariini"
 echo -e "Expired    : $exp"
-echo -e "========================="
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "Link TrGo  : ${link}"
-echo -e "========================="
-echo -e "Script By geovpn"
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo -e "Script By gandring"
