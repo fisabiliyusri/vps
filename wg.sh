@@ -2,8 +2,8 @@
 # Debian 9 & 10 64bit
 # Ubuntu 18.04 & 20.04 bit
 # Centos 7 & 8 64bit 
-# By geovpn
-# My Telegram : https://t.me/geovpn
+# repack by gandring
+# My Telegram : https://t.me/pegasusw_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -17,19 +17,10 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
+clear
 # ==================================================
 # Link Hosting Kalian
-geovpn="raw.githubusercontent.com/geovpn/scriptvps/main/wireguard"
+wget https://raw.githubusercontent.com/Gandring15/vps/main/wireguard.sh"
 
 # Check OS version
 if [[ -e /etc/debian_version ]]; then
@@ -48,7 +39,7 @@ if [[ -e /etc/wireguard/params ]]; then
 	exit 1
 fi
 
-echo -e "${Info} Wireguard Script By geovpn"
+echo -e "${Info} Wireguard Script By gandring"
 # Detect public IPv4 address and pre-fill for the user
 
 # Detect public interface and pre-fill for the user
@@ -80,8 +71,8 @@ SERVER_PUB_KEY=$(echo "$SERVER_PRIV_KEY" | wg pubkey)
 # Save WireGuard settings
 echo "SERVER_PUB_NIC=$SERVER_PUB_NIC
 SERVER_WG_NIC=wg0
-SERVER_WG_IPV4=10.66.66.1
-SERVER_PORT=7070
+SERVER_WG_IPV4=10.11.11.1
+SERVER_PORT=51820
 SERVER_PRIV_KEY=$SERVER_PRIV_KEY
 SERVER_PUB_KEY=$SERVER_PUB_KEY" >/etc/wireguard/params
 
@@ -95,11 +86,11 @@ PrivateKey = $SERVER_PRIV_KEY
 PostUp = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -t nat -A POSTROUTING -o $SERVER_PUB_NIC -j MASQUERADE;
 PostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o $SERVER_PUB_NIC -j MASQUERADE;" >>"/etc/wireguard/wg0.conf"
 
-iptables -t nat -I POSTROUTING -s 10.66.66.1/24 -o $SERVER_PUB_NIC -j MASQUERADE
+iptables -t nat -I POSTROUTING -s 10.11.11.1/24 -o $SERVER_PUB_NIC -j MASQUERADE
 iptables -I INPUT 1 -i wg0 -j ACCEPT
 iptables -I FORWARD 1 -i $SERVER_PUB_NIC -o wg0 -j ACCEPT
 iptables -I FORWARD 1 -i wg0 -o $SERVER_PUB_NIC -j ACCEPT
-iptables -I INPUT 1 -i $SERVER_PUB_NIC -p udp --dport 7070 -j ACCEPT
+iptables -I INPUT 1 -i $SERVER_PUB_NIC -p udp --dport 51820 -j ACCEPT
 iptables-save > /etc/iptables.up.rules
 iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
@@ -114,9 +105,9 @@ WG_RUNNING=$?
 
 # Tambahan
 cd /usr/bin
-wget -O addwg "https://${geovpn}/addwg.sh"
-wget -O delwg "https://${geovpn}/delwg.sh"
-wget -O renewwg "https://${geovpn}/renewwg.sh"
+wget -O addwg "https://raw.githubusercontent.com/Gandring15/vps/main/addwg.sh"
+wget -O delwg "https://raw.githubusercontent.com/Gandring15/vps/main/delwg.sh"
+wget -O renewwg "https://raw.githubusercontent.com/Gandring15/vps/main/renewwg.sh"
 chmod +x addwg
 chmod +x delwg
 chmod +x renewwg
