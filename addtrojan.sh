@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/geovpn
+# My Telegram : https://t.me/gandring
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -13,18 +13,8 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
 clear
-source /var/lib/geovpnstore/ipvps.conf
+source /var/lib/gandring/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
@@ -51,7 +41,7 @@ trojanlink="trojan://${user}@${domain}:${tr}"
 service cron restart
 clear
 echo -e ""
-echo -e "======-XRAYS/TROJAN-======"
+echo -e "♤♤♤♤♤ TROJAN-GFW ♤♤♤♤♤"
 echo -e "Remarks  : ${user}"
 echo -e "IP/Host  : ${MYIP}"
 echo -e "Address  : ${domain}"
@@ -59,7 +49,7 @@ echo -e "Port     : ${tr}"
 echo -e "Key      : ${user}"
 echo -e "Created  : $hariini"
 echo -e "Expired  : $exp"
-echo -e "=========================="
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "Link TR  : ${trojanlink}"
-echo -e "=========================="
-echo -e "Script By geovpn"
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo -e "Script By gandring"
