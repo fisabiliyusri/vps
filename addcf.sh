@@ -13,7 +13,7 @@ echo -e "${RED}==========================================================${NC}"
 echo ""
 echo "Please Input Your Pointing Domain In Cloudflare "
 read -rp "Domain/Host: " -e host
-echo "IP=$host" >> /var/lib/gandring15/ipvps.conf
+echo "IP=$host" >> /var/lib/gandring/ipvps.conf
 #rm -f /home/homain
 echo "$host" > /etc/xray/domain
 echo -e "[${GREEN}Done${NC}]"
@@ -23,7 +23,7 @@ echo "Automatical Update Your Sertificate SSL"
 sleep 3
 echo Starting Update SSL Sertificate
 sleep 0.5
-source /var/lib/gandring15/ipvps.conf
+source /var/lib/gandring/ipvps.conf
 domain=$IP
 systemctl stop xray@v2ray-tls
 systemctl stop xray@v2ray-nontls
