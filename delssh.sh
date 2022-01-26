@@ -1,6 +1,6 @@
 #!/bin/bash
-# My Telegram : https://t.me/gandring
-# ==========================================
+# My Telegram : https://t.me/pegasusq_governor
+# ♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤
 # Color
 RED='\033[0;31m'
 NC='\033[0m'
