@@ -26,7 +26,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/gandring/data-user-l2tp")
 	echo ""
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo " ==============================="
+	echo " ♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 	echo "     No  Expired   User"
 	grep -E "^### " "/var/lib/gandring/data-user-l2tp" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
