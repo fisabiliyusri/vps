@@ -12,13 +12,13 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
+MYIP=$(wget -qO- ifconfig.me/ip);
 clear
 # Load params
 source /etc/wireguard/params
 source /var/lib/gandring/ipvps.conf
 if [[ "$IP" = "" ]]; then
-SERVER_PUB_IP=$(wget -qO- ipinfo.io/ip);
+SERVER_PUB_IP=$(wget -qO- ifconfig.me/ip);
 else
 SERVER_PUB_IP=$IP
 fi
@@ -52,9 +52,9 @@ CLIENT_ADDRESS="10.11.11.$((LASTIP+1))"
 fi
 
 # Adguard DNS by default
-CLIENT_DNS_1="176.103.130.130"
+CLIENT_DNS_1="1.1.1.1"
 
-CLIENT_DNS_2="176.103.130.131"
+CLIENT_DNS_2="8.8.8.8"
 MYIP=$(wget -qO- ifconfig.co);
 read -p "Expired (Days) : " masaaktif
 hariini=`date -d "0 days" +"%Y-%m-%d"`
