@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me
+# My Telegram : https://t.me/gandring
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -12,15 +12,14 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
+MYIP=$(wget -qO- ipv4.icanhazip.com);
 clear
 if [[ "$IP" = "" ]]; then
 PUBLIC_IP=$(wget -qO- ipinfo.io/ip);
 else
 PUBLIC_IP=$IP
 fi
-source /var/lib/Gandring15/ipvps.conf
+source /var/lib/gandring/ipvps.conf
 if [[ "$IP2" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
@@ -28,7 +27,7 @@ domain=$IP2
 fi
 until [[ $VPN_USER =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "Username : " -e VPN_USER
-		CLIENT_EXISTS=$(grep -w $VPN_USER /var/lib/geovpnstore/data-user-l2tp | wc -l)
+		CLIENT_EXISTS=$(grep -w $VPN_USER /var/lib/gandring/data-user-l2tp | wc -l)
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 			echo ""
@@ -54,7 +53,7 @@ EOF
 
 # Update file attributes
 chmod 600 /etc/ppp/chap-secrets* /etc/ipsec.d/passwd*
-echo -e "### $VPN_USER $exp">>"/var/lib/Gandring15/data-user-l2tp"
+echo -e "### $VPN_USER $exp">>"/var/lib/gandring/data-user-l2tp"
 cat <<EOF
 
 ============================
