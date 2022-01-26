@@ -1,6 +1,6 @@
 #!/bin/bash
 # Proxy For Edukasi & Imclass
-# My Telegram : https://t.me/geovpn
+# My Telegram : https://t.me/pegasusq_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -13,10 +13,11 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipv4.icanhazip.com);
+MYIP=$(wget -qO- ifconfig.me/ip);
 clear
 # Link Hosting Kalian
-geovpn="raw.githubusercontent.com/geovpn/scriptvps/main/websocket"
+wget https://raw.githubusercontent.com/Gandring15/vps/main/websocket
+chmod +x /usr/local/bin/websocket
 
 # Getting Proxy Template
 wget -q -O /usr/local/bin/ws-tls https://raw.githubusercontent.com/Gandring15/vps/main/ws-tls.py
@@ -35,7 +36,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/bin/python -O /usr/local/bin/ws-tls 443
+ExecStart=/usr/bin/python -O /usr/local/bin/ws-tls 2083
 Restart=on-failure
 
 [Install]
@@ -53,7 +54,7 @@ chmod +x /usr/local/bin/ws-nontls
 # Installing Service
 cat > /etc/systemd/system/ws-nontls.service << END
 [Unit]
-Description=Python Proxy Mod By geovpn
+Description=Python Proxy Mod By gandring
 Documentation=https://raw.githubusercontent.com/Gandring15/vps/main/
 After=network.target nss-lookup.target
 
