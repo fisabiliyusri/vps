@@ -12,17 +12,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
+MYIP=$(wget -qO- ipv4.icanhazip.com);
 clear
 IP=$(wget -qO- ipinfo.io/ip);
 lastport1=$(grep "port_tls" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
@@ -37,7 +27,7 @@ http=3443
 else
 http="$((lastport2+1))"
 fi
-source /var/lib/geovpnstore/ipvps.conf
+source /var/lib/gandring/ipvps.conf
 if [[ "$IP2" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
@@ -120,4 +110,4 @@ echo -e "Link HTTPS  : $linkss1"
 echo -e "========================="
 echo -e "Link HTTP   : $linkss2"
 echo -e "========================="
-echo -e "Script By geovpn"
+echo -e "Script By gandring"
