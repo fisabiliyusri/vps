@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script by : geovpn
+# Script by : gandring
 #!/bin/bash
 clear
 MAX=1
