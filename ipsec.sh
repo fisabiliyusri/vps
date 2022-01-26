@@ -3,7 +3,7 @@
 # Ubuntu 18.04 & 20.04 bit
 # Centos 7 & 8 64bit 
 # By geovpn
-# My Telegram : https://t.me/geovpn
+# My Telegram : https://t.me/pegasusq_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -16,22 +16,13 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
+MYIP=$(wget -qO- ifconfig.me/ip);
+clear
 # ==================================================
 # Link Hosting Kalian
-geovpn="raw.githubusercontent.com/geovpn/scriptvps/main/ipsec"
+Gandring15="raw.githubusercontent.com/Gandring15/vps/main/ipsec"
 
-VPN_IPSEC_PSK='myvpn'
+VPN_IPSEC_PSK='gandring'
 NET_IFACE=$(ip -o $NET_IFACE -4 route show to default | awk '{print $5}');
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 source /etc/os-release
@@ -45,7 +36,7 @@ mkdir -p /opt/src
 cd /opt/src
 
 bigecho "Trying to auto discover IP of this server..."
-PUBLIC_IP=$(wget -qO- ipinfo.io/ip);
+PUBLIC_IP=$(wget -qO- ifconfig.me/ip);
 
 bigecho "Installing packages required for the VPN..."
 if [[ ${OS} == "centos" ]]; then
@@ -221,8 +212,8 @@ ipcp-accept-local
 ipcp-accept-remote
 noccp
 auth
-mtu 1280
-mru 1280
+mtu 1480
+mru 1480
 proxyarp
 lcp-echo-failure 4
 lcp-echo-interval 30
@@ -303,12 +294,12 @@ mkdir -p /run/pluto
 service fail2ban restart 2>/dev/null
 service ipsec restart 2>/dev/null
 service xl2tpd restart 2>/dev/null
-wget -O /usr/bin/addl2tp https://${geovpn}/addl2tp.sh && chmod +x /usr/bin/addl2tp
-wget -O /usr/bin/dell2tp https://${geovpn}/dell2tp.sh && chmod +x /usr/bin/dell2tp
-wget -O /usr/bin/addpptp https://${geovpn}/addpptp.sh && chmod +x /usr/bin/addpptp
-wget -O /usr/bin/delpptp https://${geovpn}/delpptp.sh && chmod +x /usr/bin/delpptp
-wget -O /usr/bin/renewpptp https://${geovpn}/renewpptp.sh && chmod +x /usr/bin/renewpptp
-wget -O /usr/bin/renewl2tp https://${geovpn}/renewl2tp.sh && chmod +x /usr/bin/renewl2tp
-touch /var/lib/geovpnstore/data-user-l2tp
-touch /var/lib/geovpnstore/data-user-pptp
+wget -O /usr/bin/addl2tp https://raw.githubusercontent.com/Gandring15/vps/main/addl2tp.sh && chmod +x /usr/bin/addl2tp
+wget -O /usr/bin/dell2tp https://raw.githubusercontent.com/Gandring15/vps/main/dell2tp.sh && chmod +x /usr/bin/dell2tp
+wget -O /usr/bin/addpptp https://raw.githubusercontent.com/Gandring15/vps/main/addpptp.sh && chmod +x /usr/bin/addpptp
+wget -O /usr/bin/delpptp https://raw.githubusercontent.com/Gandring15/vps/main/delpptp.sh && chmod +x /usr/bin/delpptp
+wget -O /usr/bin/renewpptp https://raw.githubusercontent.com/Gandring15/vps/main/renewpptp.sh && chmod +x /usr/bin/renewpptp
+wget -O /usr/bin/renewl2tp https://raw.githubusercontent.com/Gandring15/vps/main/renewl2tp.sh && chmod +x /usr/bin/renewl2tp
+touch /var/lib/gandring/data-user-l2tp
+touch /var/lib/gandring/data-user-pptp
 rm -f /root/ipsec.sh
