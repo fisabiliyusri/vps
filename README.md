@@ -43,13 +43,13 @@ rm -f setup.sh && apt update && apt upgrade -y && apt install lolcat -y && gem i
 
 # Service & Port
 
-• OpenSSH                 : 443, 22
+• OpenSSH                 : 222, 22
 
-• OpenVPN                 : TCP 1194, UDP 2200, SSL 990
+• OpenVPN                 : TCP 700, UDP 800, SSL 990
 
-• Stunnel5                : 443, 445, 777
+• Stunnel5                : 445, 442
 
-• Dropbear                : 443, 109, 143
+• Dropbear                : 200, 300
 
 • Squid Proxy             : 3128, 8080
 
@@ -57,7 +57,7 @@ rm -f setup.sh && apt update && apt upgrade -y && apt install lolcat -y && gem i
 
 • Nginx                   : 89
 
-• Wireguard               : 7070
+• Wireguard               : 51820
 
 • L2TP/IPSEC VPN          : 1701
 
@@ -73,15 +73,15 @@ rm -f setup.sh && apt update && apt upgrade -y && apt install lolcat -y && gem i
 
 • XRAYS Vmess TLS         : 8443
 
-• XRAYS Vmess None TLS    : 80
+• XRAYS Vmess None TLS    : 2052
 
-• XRAYS Vless TLS         : 2083
+• XRAYS Vless TLS         : 443
 
-• XRAYS Vless None TLS    : 2095
+• XRAYS Vless None TLS    : 80
 
 • XRAYS Trojan            : 2087
 
-• Websocket TLS           : 443
+• Websocket TLS           : 2083
 
 • Websocket None TLS      : 8880
 
