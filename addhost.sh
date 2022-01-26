@@ -12,7 +12,6 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 MYIP=$(wget -qO- ifconfig.me/ip);
-echo "Checking VPS"
 clear
 read -rp "Domain/Host : " -e domain
 echo "IP=$domain" >>/var/lib/gandring/ipvps.conf
