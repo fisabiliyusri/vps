@@ -56,16 +56,16 @@ chmod 600 /etc/ppp/chap-secrets* /etc/ipsec.d/passwd*
 echo -e "### $VPN_USER $exp">>"/var/lib/gandring/data-user-l2tp"
 cat <<EOF
 
-============================
-L2TP/IPSEC PSK VPN
-============================
+****************************
+*    L2TP/IPSEC PSK VPN    *
+****************************
 IP/Host    : $PUBLIC_IP
 Domain     : $domain
-IPsec PSK  : myvpn
+IPsec PSK  : gandring
 Username   : $VPN_USER
 Password   : $VPN_PASSWORD
 Created    : $hariini
 Expired    : $exp
-============================
+****************************
 Script By gandring
 EOF
