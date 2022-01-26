@@ -6,6 +6,8 @@ LISTENING_ADDR = '0.0.0.0'
 LISTENING_PORT = sys.argv[1]
 else:	
 LISTENING_PORT = 2052
+LISTENING_PORT = 2082
+LISTENING_PORT = 8880
 
 # Pass
 PASS = ''
@@ -14,6 +16,8 @@ PASS = ''
 BUFLEN = 4096 * 4
 TIMEOUT = 60
 DEFAULT_HOST = '127.0.0.1:300'
+DEFAULT_HOST = '127.0.0.1:200'
+DEFAULT_HOST = '127.0.0.1:222'
 RESPONSE = 'HTTP/1.1 101 <b><h1><h><font color="fuchsia"> Geo Switching Protocols</font></b>\r\n\r\nContent-Length: 104857600000\r\n\r\n'
 
 class Server(threading.Thread):
