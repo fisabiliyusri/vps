@@ -12,9 +12,9 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
+MYIP=$(wget -qO- ifconfig.me/ip);
 clear
-IP=$(wget -qO- ipinfo.io/ip);
+IP=$(wget -qO- ifconfig.me/ip);
 read -e -p "Username : " ssr_user
 CLIENT_EXISTS=$(grep -w $ssr_user /usr/local/shadowsocksr/akun.conf | wc -l)
 if [[ ${CLIENT_EXISTS} == '1' ]]; then
@@ -58,7 +58,7 @@ ssr_link="ssr://${tmp2}"
 /etc/init.d/ssrmu restart
 systemctl restart ssrmu
 service cron restart
-IP=$(wget -qO- ifconfig.co);
+IP=$(wget -qO- ifconfig.me/ip);
 clear
 echo -e ""
 echo -e "♤♤♤♤♤ SHADOWSOCKSR ♤♤♤♤♤"
