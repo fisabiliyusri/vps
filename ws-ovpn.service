@@ -1,6 +1,6 @@
 [Unit]
 Description=Python Proxy Mod By gandring
-Documentation=https://t.me/pegasusq_governor
+Documentation=https://raw.githubusercontent.com/Gandring15/vps/main/
 After=network.target nss-lookup.target
 
 [Service]
