@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/sampiiiiu
+# My Telegram : https://t.me/gandring
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -13,23 +13,13 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/sampiiiiu"
-exit 0
-fi
 clear
 if [[ "$IP" = "" ]]; then
 PUBLIC_IP=$(wget -qO- ipinfo.io/ip);
 else
 PUBLIC_IP=$IP
 fi
-source /var/lib/geovpnstore/ipvps.conf
+source /var/lib/gandring/ipvps.conf
 if [[ "$IP2" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
@@ -37,7 +27,7 @@ domain=$IP2
 fi
 until [[ $VPN_USER =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "Username : " -e VPN_USER
-		CLIENT_EXISTS=$(grep -w $VPN_USER /var/lib/geovpnstore/data-user-pptp | wc -l)
+		CLIENT_EXISTS=$(grep -w $VPN_USER /var/lib/gandring/data-user-pptp | wc -l)
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 			echo ""
@@ -58,7 +48,7 @@ EOF
 
 # Update file attributes
 chmod 600 /etc/ppp/chap-secrets*
-echo -e "### $VPN_USER $exp">>"/var/lib/geovpnstore/data-user-pptp"
+echo -e "### $VPN_USER $exp">>"/var/lib/gandring/data-user-pptp"
 cat <<EOF
 
 ============================
@@ -71,5 +61,5 @@ Password  : $VPN_PASSWORD
 Created   : $hariini
 Expired   : $exp
 ============================
-Script By geovpn
+Script By gandring
 EOF
