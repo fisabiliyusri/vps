@@ -12,9 +12,9 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipv4.icanhazip.com);
+MYIP=$(wget -qO- ifconfig.me/ip);
 clear
-IP=$(wget -qO- ipinfo.io/ip);
+IP=$(wget -qO- ifconfig.me/ip);
 lastport1=$(grep "port_tls" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 lastport2=$(grep "port_http" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 if [[ $lastport1 == '' ]]; then
