@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/geovpn
+# My Telegram : https://t.me/pegasusq_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -12,17 +12,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
+MYIP=$(wget -qO- ipv4.icanhazip.com);
 clear
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
 Info="${Green_font_prefix}[ON]${Font_color_suffix}"
@@ -67,12 +57,12 @@ echo " Autobackup Has Been Stopped"
 exit 0
 }
 clear
-echo -e "=============================="
-echo -e "     Autobackup Data $sts     "
-echo -e "=============================="
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo -e "♤     Autobackup Data       ♤"
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "1. Start Autobackup"
 echo -e "2. Stop Autobackup"
-echo -e "=============================="
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 read -rp "Please Enter The Correct Number : " -e num
 if [[ "$num" = "1" ]]; then
 start
