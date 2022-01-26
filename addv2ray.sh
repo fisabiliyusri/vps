@@ -24,7 +24,7 @@ echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
 exit 0
 fi
 clear
-source /var/lib/geovpnstore/ipvps.conf
+source /var/lib/gandring/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
@@ -59,7 +59,7 @@ cat>/etc/xray/v2ray-$user-tls.json<<EOF
       "id": "${uuid}",
       "aid": "0",
       "net": "ws",
-      "path": "/v2ray/",
+      "path": "/gandring",
       "type": "none",
       "host": "",
       "tls": "tls"
@@ -74,7 +74,7 @@ cat>/etc/xray/v2ray-$user-nontls.json<<EOF
       "id": "${uuid}",
       "aid": "0",
       "net": "ws",
-      "path": "/v2ray/",
+      "path": "/gandring",
       "type": "none",
       "host": "",
       "tls": "none"
@@ -89,7 +89,7 @@ systemctl restart xray@v2ray-nontls
 service cron restart
 clear
 echo -e ""
-echo -e "======-XRAYS/VMESS-======"
+echo -e "♤♤♤♤♤ AKUN VMESS ♤♤♤♤♤"
 echo -e "Remarks     : ${user}"
 echo -e "IP/Host     : ${MYIP}"
 echo -e "Address     : ${domain}"
@@ -99,12 +99,12 @@ echo -e "User ID     : ${uuid}"
 echo -e "Alter ID    : 0"
 echo -e "Security    : auto"
 echo -e "Network     : ws"
-echo -e "Path        : /v2ray/"
+echo -e "Path        : /gandring"
 echo -e "Created     : $hariini"
 echo -e "Expired     : $exp"
-echo -e "========================="
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "Link TLS    : ${xrayv2ray1}"
-echo -e "========================="
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "Link No TLS : ${xrayv2ray2}"
-echo -e "========================="
-echo -e "Script By geovpn"
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo -e "Script By gandring"
