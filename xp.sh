@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/geovpn
+# My Telegram : https://t.me/gandring
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -12,8 +12,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- icanhazip.com);
-echo "Checking VPS"
+MYIP=$(wget -qO- ipv4.icanhazip.com);
 clear
 data=( `cat /var/lib/geovpnstore/data-user-l2tp | grep '^###' | cut -d ' ' -f 2`);
 now=`date +"%Y-%m-%d"`
