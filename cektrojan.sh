@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/geovpn
+# My Telegram : https://t.me/gandring
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -12,23 +12,13 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
+MYIP=$(wget -qO- icanhazip.com);
 clear
 echo -n > /tmp/other.txt
 data=( `cat /etc/xray/trojan.json | grep '^###' | cut -d ' ' -f 2`);
-echo "-----------------------------------------";
-echo "---------=[ Trojan User Login ]=---------";
-echo "-----------------------------------------";
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
+echo "♤♤♤♤♤[ Trojan User Login ]♤♤♤♤♤";
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
 for akun in "${data[@]}"
 do
 if [[ -z "$akun" ]]; then
@@ -54,13 +44,15 @@ else
 jum2=$(cat /tmp/iptrojan.txt | nl)
 echo "user : $akun";
 echo "$jum2";
-echo "-----------------------------------------"
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 fi
 rm -rf /tmp/iptrojan.txt
 done
 oth=$(cat /tmp/other.txt | sort | uniq | nl)
 echo "other";
 echo "$oth";
-echo "-----------------------------------------"
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Script By geovpn"
 rm -rf /tmp/other.txt
+menu
+fi
