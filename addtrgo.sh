@@ -55,5 +55,6 @@ echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "Link TrGo  : ${link}"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "Script By gandring"
+echo""
 menu
 fi
