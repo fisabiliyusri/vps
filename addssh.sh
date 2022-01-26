@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/gandring
+# My Telegram : https://t.me/pegasusq_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -12,7 +12,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
+MYIP=$(wget -qO- ifconfig.me/ip);
 clear
 source /var/lib/gandring/ipvps.conf
 if [[ "$IP2" = "" ]]; then
@@ -70,7 +70,7 @@ echo -e "Expired       : $expi"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "Payload Websocket TLS"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo -e "CONNECT  ws://bugmu.com /HTTP/1.1 [protocol][crlf]Host: ${domain}[crlf]Upgrade: websocket[crlf][crlf]"
+echo -e "CONNECT  ws://bugmu.com /HTTP/1.1[crlf]Host: ${domain}[crlf]Upgrade: websocket[crlf][crlf]"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "Payload Websocket No TLS"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
