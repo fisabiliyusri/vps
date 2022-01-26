@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/geovpn
+# My Telegram : https://t.me/pegasusq_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -12,17 +12,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
+MYIP=$(wget -qO- ifconfig.me/ip);
 clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/v2ray-tls.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
@@ -35,8 +25,8 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/v2ray-tls.json")
 	echo ""
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo " ==============================="
-	echo "     No  Expired   User"
+	echo " ♤♤♤♤♤♤♤♤♤♤♡♡♡♡♡♡♡♤"
+	echo "   nggak ada pengguna kadal"
 	grep -E "^### " "/etc/xray/v2ray-tls.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
 		if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -54,10 +44,12 @@ systemctl restart xray@v2ray-tls
 systemctl restart xray@v2ray-nontls
 clear
 echo ""
-echo "==============================="
-echo "  XRAYS/Vmess Account Deleted  "
-echo "==============================="
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo "      Vmess Akun Dihapus"
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Username  : $user"
 echo "Expired   : $exp"
-echo "==============================="
-echo "Script By geovpn"
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo "Script By gandring"
+menu
+fi
