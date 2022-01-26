@@ -12,7 +12,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
+MYIP=$(wget -qO- ifconfig.me/ip);
 clear
 source /var/lib/gandring/ipvps.conf
 if [[ "$IP2" = "" ]]; then
@@ -20,7 +20,7 @@ domain=$(cat /etc/xray/domain)
 else
 domain=$IP2
 fi
-IP=$(wget -qO- ipinfo.io/ip);
+IP=$(wget -qO- ifconfig.me/ip);
 sstp="$(cat ~/log-install.txt | grep -i SSTP | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "Usernew : " -e user
