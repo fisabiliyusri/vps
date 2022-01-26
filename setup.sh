@@ -41,14 +41,14 @@ geovpnnnnnnnnn="raw.githubusercontent.com/geovpn/scriptvps/main/websocket"
 geovpnnnnnnnnnn="raw.githubusercontent.com/geovpn/scriptvps/main/ohp"
 
 # Getting
-MYIP=$(wget -qO- icanhazip.com);
+MYIP=$(wget -qO- ifconfig.me/ip);
 clear
 if [ -f "/etc/v2ray/domain" ]; then
 echo "Script Already Installed"
 exit 0
 fi
 mkdir /var/lib/premium-script;
-echo "IP=" >> /var/lib/premium-script/ipvps.conf
+echo "IP=" >> /var/lib/gandring/ipvps.conf
 wget https://raw.githubusercontent.com/Gandring15/vps/main/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
 wget https://raw.githubusercontent.com/Gandring15/vps/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
