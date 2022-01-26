@@ -12,11 +12,11 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
+MYIP=$(wget -qO- ifconfig.me/ip);
 clear
 echo start
 sleep 0.5
-source /var/lib/geovpnstore/ipvps.conf
+source /var/lib/gandring/ipvps.conf
 domain=$IP
 systemctl enable xray@v2ray-tls
 systemctl enable xray@v2ray-nontls
