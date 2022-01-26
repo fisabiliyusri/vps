@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/geovpn
+# My Telegram : https://t.me/gandring
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -12,17 +12,8 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
+MYIP=$(wget -qO- ipv4.icanhazip.com);
+clear
 # Link Hosting Kalian
 geovpn="raw.githubusercontent.com/geovpn/scriptvps/main/ssr"
 
@@ -149,7 +140,7 @@ if [[ ${OS} == "centos" ]]; then
 }
 Start_SSR(){
 	check_pid
-	wget -O /etc/init.d/ssrmu "https://${geovpn}/ssrmu"
+	wget -O /etc/init.d/ssrmu "https://raw.githubusercontent.com/Gandring15/vps/main/ssrmu"
 	/etc/init.d/ssrmu start
 }
 Install_SSR(){
@@ -165,9 +156,9 @@ Save_iptables
 Start_SSR
 }
 Install_SSR
-wget -O /usr/bin/ssr https://${geovpn}/ssrmu.sh && chmod +x /usr/bin/ssr
-wget -O /usr/bin/addssr https://${geovpn}/addssr.sh && chmod +x /usr/bin/addssr
-wget -O /usr/bin/delssr https://${geovpn}/delssr.sh && chmod +x /usr/bin/delssr
-wget -O /usr/bin/renewssr https://${geovpn}/renewssr.sh && chmod +x /usr/bin/renewssr
+wget -O /usr/bin/ssr https://raw.githubusercontent.com/Gandring15/vps/main/ssrmu.sh && chmod +x /usr/bin/ssr
+wget -O /usr/bin/addssr https://raw.githubusercontent.com/Gandring15/vps/main/addssr.sh && chmod +x /usr/bin/addssr
+wget -O /usr/bin/delssr https://raw.githubusercontent.com/Gandring15/vps/main/delssr.sh && chmod +x /usr/bin/delssr
+wget -O /usr/bin/renewssr https://raw.githubusercontent.com/Gandring15/vps/main/renewssr.sh && chmod +x /usr/bin/renewssr
 touch /usr/local/shadowsocksr/akun.conf
 rm -f /root/ssr.sh
