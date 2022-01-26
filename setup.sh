@@ -42,7 +42,6 @@ geovpnnnnnnnnnn="raw.githubusercontent.com/geovpn/scriptvps/main/ohp"
 
 # Getting
 MYIP=$(wget -qO- icanhazip.com);
-echo -e "checking vps"
 clear
 if [ -f "/etc/v2ray/domain" ]; then
 echo "Script Already Installed"
@@ -154,7 +153,7 @@ echo "   - Telegram                : T.me/"  | tee -a log-install.txt
 echo "   - Instagram               : ~"  | tee -a log-install.txt
 echo "   - Whatsapp                : ~"  | tee -a log-install.txt
 echo "   - Facebook                : ~" | tee -a log-install.txt
-echo "----------------------Script Created By gandring Project----------------------" | tee -a log-install.txt
+echo "-----------------Script Created By gandring Project-----------------" | tee -a log-install.txt
 echo ""
 echo " Reboot 7 Sec"
 sleep 7
