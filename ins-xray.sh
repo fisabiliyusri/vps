@@ -1,7 +1,7 @@
 #!/bin/bash
 # V2Ray Mini Core Version 4.42.2
 # Script By geovpn
-# @ Copyrigt 2021 By geovpn
+# @ Copyrigt 2021 By gandring
 # =====================================================
 
 # Color
@@ -91,7 +91,7 @@ cat > /etc/xray/v2ray-tls.json << END
           ]
         },
         "wsSettings": {
-          "path": "/v2ray/",
+          "path": "/gandring/",
           "headers": {
             "Host": ""
           }
@@ -165,7 +165,7 @@ cat > /etc/xray/v2ray-nontls.json << END
   },
   "inbounds": [
     {
-      "port": 80,
+      "port": 2095,
       "protocol": "vmess",
       "settings": {
         "clients": [
@@ -179,7 +179,7 @@ cat > /etc/xray/v2ray-nontls.json << END
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/v2ray/",
+          "path": "/gandring/",
           "headers": {
             "Host": ""
           }
@@ -253,7 +253,7 @@ cat > /etc/xray/vless-tls.json << END
   },
   "inbounds": [
     {
-      "port": 2083,
+      "port": 443,
       "protocol": "vless",
       "settings": {
         "clients": [
@@ -276,7 +276,7 @@ cat > /etc/xray/vless-tls.json << END
           ]
         },
         "wsSettings": {
-          "path": "/vless/",
+          "path": "/gandring/",
           "headers": {
             "Host": ""
           }
@@ -349,7 +349,7 @@ cat > /etc/xray/vless-nontls.json << END
   },
   "inbounds": [
     {
-      "port": 2095,
+      "port": 80,
       "protocol": "vless",
       "settings": {
         "clients": [
@@ -363,7 +363,7 @@ cat > /etc/xray/vless-nontls.json << END
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/vless/",
+          "path": "/gandring/",
           "headers": {
             "Host": ""
           }
@@ -522,8 +522,8 @@ END
 # / / Installation V2Ray Service
 cat > /etc/systemd/system/xray@.service << END
 [Unit]
-Description=Xray Service ( %i ) By geovpn
-Documentation=https://t.me/geovpn
+Description=Xray Service ( %i ) By gandring
+Documentation=https://t.me/pegasusq_governor
 After=network.target nss-lookup.target
 
 [Service]
@@ -644,7 +644,7 @@ cat > /etc/trojan-go/config.json << END
   },
   "websocket": {
     "enabled": true,
-    "path": "/trojango",
+    "path": "/gandring",
     "host": "$domain"
   },
     "api": {
@@ -665,9 +665,9 @@ END
 # Installing Trojan Go Service
 cat > /etc/systemd/system/trojan-go.service << END
 [Unit]
-Description=Trojan-Go Service By geovpn
-Documentation=https://t.me/geovpn
-Documentation=https://github.com/geovpn/geovpn
+Description=Trojan-Go Service By gandring
+Documentation=https://t.me/gandring
+Documentation=https://github.com/Gandring15/vps/main/
 After=network.target nss-lookup.target
 
 [Service]
