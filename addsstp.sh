@@ -43,9 +43,9 @@ echo -e "### $user $exp">>"/var/lib/gandring/data-user-sstp"
 clear
 cat <<EOF
 
-============================
-SSTP VPN
-============================
+♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤
+♤         SSTP VPN        ♤
+♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤
 IP/Host   : $IP
 Domain    : $domain
 Username  : $user
@@ -54,6 +54,6 @@ Port      : $sstp
 Cert      : http://$IP:89/server.crt
 Created   : $hariini
 Expired   : $exp
-============================
+♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤
 Script By gandring
 EOF
