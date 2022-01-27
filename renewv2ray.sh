@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/geovpn
+# My Telegram : https://t.me/pegasusq_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -12,18 +12,8 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
+MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
-clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/v2ray-tls.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
@@ -59,10 +49,12 @@ sed -i "s/### $user $exp/### $user $exp4/g" /etc/xray/v2ray-nontls.json
 service cron restart
 clear
 echo ""
-echo "==============================="
-echo "  XRAYS/Vmess Account Renewed  "
-echo "==============================="
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo "  Perpanjang Akun Vmess  "
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Username  : $user"
 echo "Expired   : $exp4"
-echo "==============================="
-echo "Script By geovpn"
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo "Repacked By gandring"
+menu
+fi
