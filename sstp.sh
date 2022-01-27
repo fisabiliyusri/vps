@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/geovpn
+# My Telegram : https://t.me/pegasusq_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -12,21 +12,13 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
+MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
+
 # Link Hosting Kalian
 geovpn="raw.githubusercontent.com/geovpn/scriptvps/main/sstp"
 
-MYIP=$(wget -qO- ipinfo.io/ip);
+MYIP=$(wget -qO- ifconfig.me/ip);
 MYIP2="s/xxxxxxxxx/$MYIP/g";
 NIC=$(ip -o $ANU -4 route show to default | awk '{print $5}');
 source /etc/os-release
@@ -47,15 +39,15 @@ fi
 fi
 mkdir /home/sstp
 touch /home/sstp/sstp_account
-touch /var/lib/geovpnstore/data-user-sstp
+touch /var/lib/gandring/data-user-sstp
 #detail nama perusahaan
 country=ID
 state=Indonesia
 locality=Indonesia
-organization=geovpn
-organizationalunit=geovpn
-commonname=geovpn
-email=geovpnstore@gmail.com
+organization=gandring
+organizationalunit=gandring
+commonname=gandring
+email=djarumpentol01@gmail.com
 
 #install sstp
 apt-get install -y build-essential cmake gcc linux-headers-`uname -r` git libpcre3-dev libssl-dev liblua5.1-0-dev ppp
@@ -67,7 +59,7 @@ make
 cpack -G DEB
 dpkg -i accel-ppp.deb
 mv /etc/accel-ppp.conf.dist /etc/accel-ppp.conf
-wget -O /etc/accel-ppp.conf "https://${geovpn}/accel.conf"
+wget -O /etc/accel-ppp.conf "https://raw.githubusercontent.com/Gandring15/vps/main/accel.conf"
 sed -i $MYIP2 /etc/accel-ppp.conf
 chmod +x /etc/accel-ppp.conf
 systemctl start accel-ppp
@@ -89,8 +81,8 @@ iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save > /dev/null
 netfilter-persistent reload > /dev/null
 #input perintah sstp
-wget -O /usr/bin/addsstp https://${geovpn}/addsstp.sh && chmod +x /usr/bin/addsstp
-wget -O /usr/bin/delsstp https://${geovpn}/delsstp.sh && chmod +x /usr/bin/delsstp
-wget -O /usr/bin/ceksstp https://${geovpn}/ceksstp.sh && chmod +x /usr/bin/ceksstp
-wget -O /usr/bin/renewsstp https://${geovpn}/renewsstp.sh && chmod +x /usr/bin/renewsstp
+wget -O /usr/bin/addsstp https://raw.githubusercontent.com/Gandring15/vps/main/addsstp.sh && chmod +x /usr/bin/addsstp
+wget -O /usr/bin/delsstp https://raw.githubusercontent.com/Gandring15/vps/main/delsstp.sh && chmod +x /usr/bin/delsstp
+wget -O /usr/bin/ceksstp https://raw.githubusercontent.com/Gandring15/vps/main/ceksstp.sh && chmod +x /usr/bin/ceksstp
+wget -O /usr/bin/renewsstp https://raw.githubusercontent.com/Gandring15/vps/main/renewsstp.sh && chmod +x /usr/bin/renewsstp
 rm -f /root/sstp.sh
