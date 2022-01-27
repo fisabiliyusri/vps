@@ -9,14 +9,13 @@ color2='\e[34;1m'
 color3='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-clear
 echo -e ""
 cat /usr/bin/bannerPPTP | lolcat
 echo -e""
-echo -e "${color1}1${color3}.$bd Create Account PPTP (${color2}add-pptp${color3})"
-echo -e "${color1}2${color3}.$bd Delete PPTP Account (${color2}del-pptp${color3})"
-echo -e "${color1}3${color3}.$bd Check User Login PPTP (${color2}cek-pptp${color3})"
-echo -e "${color1}4${color3}.$bd Renew PPTP Account (${color2}renew-pptp${color3})"
+echo -e "${color1}1${color3}.$bd Buat Akun PPTP (${color2}add-pptp${color3})"
+echo -e "${color1}2${color3}.$bd Hapus Akun PPTP (${color2}del-pptp${color3})"
+echo -e "${color1}3${color3}.$bd Cek User Login PPTP (${color2}cek-pptp${color3})"
+echo -e "${color1}4${color3}.$bd Perpanjang Masa aktif Akun PPTP (${color2}renew-pptp${color3})"
 echo -e""
 echo -e "${color1}x${color3}.$bd Menu"
 echo -e""
