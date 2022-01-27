@@ -15,8 +15,6 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-clear
-
 # Download File Ohp
 wget https://github.com/lfasmpao/open-http-puncher/releases/download/0.1/ohpserver-linux32.zip
 unzip ohpserver-linux32.zip
@@ -50,7 +48,7 @@ END
 cat > /etc/systemd/system/dropbear-ohp.service << END
 [Unit]]
 Description=Dropbear OHP Redirection Service
-Documentation=https://t.me/geovpn
+Documentation=https://raw.githubusercontent.com/Gandring15/vps/main/
 After=network.target nss-lookup.target
 
 [Service]
