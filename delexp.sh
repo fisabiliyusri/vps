@@ -13,7 +13,7 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ifconfig.me/ip);
-clear
+echo -e "checking vps"
                hariini=`date +%d-%m-%Y`
                echo "Thank you for removing the EXPIRED USERS"
                echo "--------------------------------------"
