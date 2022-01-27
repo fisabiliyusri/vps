@@ -17,7 +17,7 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ifconfig.me/ip);
-clear
+echo -e "checking vps"
 # ==================================================
 # Link Hosting Kalian
 Gandring15="raw.githubusercontent.com/Gandring15/vps/main/ipsec"
