@@ -13,7 +13,7 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ifconfig.me/ip);
-clear
+echo -e "checking vps"
 source /var/lib/gandring/ipvps.conf
 if [[ "$IP2" = "" ]]; then
 domain=$(cat /etc/xray/domain)
@@ -48,8 +48,9 @@ echo -e "IP/Host       : $IP"
 echo -e "Domain        : ${domain}"
 echo -e "Username      : $Login"
 echo -e "Password      : $Pass"
+echo -e "Openssh Port  : 22
 echo -e "Ssl Port      : 445, 442"
-echo -e "Dropbear      : 200, 300"
+echo -e "Dropbear Port : 200, 300"
 echo -e "SSL/TLS       : $ssl"
 echo -e "Port Squid    : $sqd"
 echo -e "OHP SSH       : 8181"
