@@ -13,7 +13,7 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ifconfig.me/ip);
-clear
+echo -e "checking vps:
 # Load params
 source /etc/wireguard/params
 source /var/lib/gandring/ipvps.conf
@@ -104,7 +104,7 @@ echo -e "Expired  : $exp"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "Link WG  : http://$MYIP:89/$CLIENT_NAME.conf"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo -e "Script By gandring"
+echo -e "Repacked By gandring"
 rm -f /root/wg0-client-$CLIENT_NAME.conf
 menu
 fi
