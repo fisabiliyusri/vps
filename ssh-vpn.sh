@@ -1,6 +1,6 @@
 #!/bin/bash
 # By geovpn
-# My Telegram : https://t.me/geovpn
+# My Telegram : https://t.me/pegasusq_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -13,17 +13,9 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
+MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
+clear
 # ==================================================
 # Link Hosting Kalian
 geovpn="raw.githubusercontent.com/geovpn/scriptvps/main/ssh"
@@ -58,13 +50,13 @@ ver=$VERSION_ID
 country=ID
 state=Indonesia
 locality=Indonesia
-organization=geovpn
-organizationalunit=geovpn
-commonname=geovpn
-email=geovpnstore@gmail.com
+organization=gandring
+organizationalunit=gandring
+commonname=gandring
+email=gandring@gmail.com
 
 # simple password minimal
-wget -O /etc/pam.d/common-password "https://${geovpn}/password"
+wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/Gandring15/vps/main/password"
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -164,7 +156,7 @@ apt -y install nginx php php-fpm php-cli php-mysql libxml-parser-perl
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 curl https://${geovpn}/nginx.conf > /etc/nginx/nginx.conf
-curl https://${geovpn}/vps.conf > /etc/nginx/conf.d/vps.conf
+curl https://raw.githubusercontent/Gandring15/vps/main/vps.conf > /etc/nginx/conf.d/vps.conf
 sed -i 's/listen = \/var\/run\/php-fpm.sock/listen = 127.0.0.1:9000/g' /etc/php/fpm/pool.d/www.conf
 useradd -m vps;
 mkdir -p /home/vps/public_html
@@ -172,13 +164,13 @@ echo "<?php phpinfo() ?>" > /home/vps/public_html/info.php
 chown -R www-data:www-data /home/vps/public_html
 chmod -R g+rw /home/vps/public_html
 cd /home/vps/public_html
-wget -O /home/vps/public_html/index.html "https://${geovpn}/index.html1"
+wget -O /home/vps/public_html/index.html "https://raw.githubusercontent.com/Gandring15/vps/main/index.html1"
 /etc/init.d/nginx restart
 cd
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://${geovpn}/badvpn-udpgw64"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/Gandring15/vps/main/badvpn-udpgw64"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -199,8 +191,8 @@ sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
 # install dropbear
 apt -y install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=143/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109"/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=300/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 200"/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/dropbear restart
@@ -208,7 +200,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://${geovpn}/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/Gandring15/vps/main/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # Install SSLH
@@ -234,7 +226,7 @@ RUN=yes
 # systemd users: don't forget to modify /lib/systemd/system/sslh.service
 DAEMON=/usr/sbin/sslh
 
-DAEMON_OPTS="--user sslh --listen 0.0.0.0:443 --ssl 127.0.0.1:777 --ssh 127.0.0.1:109 --openvpn 127.0.0.1:1194 --http 127.0.0.1:8880 --pidfile /var/run/sslh/sslh.pid -n"
+DAEMON_OPTS="--user sslh --listen 0.0.0.0:2083 --ssl 127.0.0.1:442 --ssh 127.0.0.1:200 --openvpn 127.0.0.1:700 --http 127.0.0.1:8880 --pidfile /var/run/sslh/sslh.pid -n"
 
 END
 
@@ -262,12 +254,12 @@ systemctl enable vnstat
 rm -f /root/vnstat-2.6.tar.gz
 rm -rf /root/vnstat-2.6
 
-mkdir -p /usr/local/geovpn
+mkdir -p /usr/local/gandring
 mkdir -p /etc/geovpn
 
 # install stunnel 5 
 cd /root/
-wget -q -O stunnel5.zip "https://${geovpnnnn}/stunnel5.zip"
+wget -q -O stunnel5.zip "https://raw.githubusercontent.com/Gandring15/vps/main/stunnel5.zip"
 unzip -o stunnel5.zip
 cd /root/stunnel
 chmod +x configure
@@ -290,15 +282,15 @@ socket = r:TCP_NODELAY=1
 
 [dropbear]
 accept = 445
-connect = 127.0.0.1:109
+connect = 127.0.0.1:200
 
 [openssh]
-accept = 777
-connect = 127.0.0.1:443
+accept = 442
+connect = 127.0.0.1:22
 
 [openvpn]
 accept = 990
-connect = 127.0.0.1:1194
+connect = 127.0.0.1:700
 
 END
 
@@ -313,11 +305,11 @@ cat > /etc/systemd/system/stunnel5.service << END
 [Unit]
 Description=Stunnel5 Service
 Documentation=https://stunnel.org
-Documentation=https://github.com/geovpn
+Documentation=https://github.com/Gandring15/vps/main/
 After=syslog.target network-online.target
 
 [Service]
-ExecStart=/usr/local/geovpn/stunnel5 /etc/stunnel5/stunnel5.conf
+ExecStart=/usr/local/gandring/stunnel5 /etc/stunnel5/stunnel5.conf
 Type=forking
 
 [Install]
@@ -325,12 +317,12 @@ WantedBy=multi-user.target
 END
 
 # Service Stunnel5 /etc/init.d/stunnel5
-wget -q -O /etc/init.d/stunnel5 "https://${geovpnnnn}/stunnel5.init"
+wget -q -O /etc/init.d/stunnel5 "https://raw.githubusercontent.com/Gandring15/vps/main/stunnel5.init"
 
 # Ubah Izin Akses
 chmod 600 /etc/stunnel5/stunnel5.pem
 chmod +x /etc/init.d/stunnel5
-cp /usr/local/bin/stunnel /usr/local/geovpn/stunnel5
+cp /usr/local/bin/stunnel /usr/local/gandring/stunnel5
 
 # Remove File
 rm -r -f /usr/local/share/doc/stunnel/
@@ -350,7 +342,7 @@ systemctl restart stunnel5
 /etc/init.d/stunnel5 restart
 
 #OpenVPN
-wget https://${geovpn}/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
+wget https://raw.githubusercontent.com/Gandring15/vps/main/vpn.sh &&  chmod +x vpn.sh && ./vpn.sh
 
 # install fail2ban
 apt -y install fail2ban
@@ -387,10 +379,10 @@ echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
 # Install BBR
-wget https://${geovpn}/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+wget https://raw.githubusercontent.com/Gandring15/vps/main/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 
 # Ganti Banner
-wget -O /etc/issue.net "https://${geovpn}/issue.net"
+wget -O /etc/issue.net "https://raw.githubusercontent.com/Gandring15/vps/main/issue.net"
 
 # blockir torrent
 iptables -A FORWARD -m string --string "get_peers" --algo bm -j DROP
@@ -411,90 +403,90 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O addhost "https://${geovpn}/autoreboot.sh"
-wget -O autoreboot "https://${geovpn}/addhost.sh"
-wget -O about "https://${geovpn}/about.sh"
-wget -O menu "https://${geovpn}/menu.sh"
-wget -O addssh "https://${geovpn}/addssh.sh"
-wget -O trialssh "https://${geovpn}/trialssh.sh"
-wget -O delssh "https://${geovpn}/delssh.sh"
-wget -O member "https://${geovpn}/member.sh"
-wget -O delexp "https://${geovpn}/delexp.sh"
-wget -O cekssh "https://${geovpn}/cekssh.sh"
-wget -O restart "https://${geovpn}/restart.sh"
-wget -O speedtest "https://${geovpn}/speedtest_cli.py"
-wget -O info "https://${geovpn}/info.sh"
-wget -O ram "https://${geovpn}/ram.sh"
-wget -O renewssh "https://${geovpn}/renewssh.sh"
-wget -O autokill "https://${geovpn}/autokill.sh"
-wget -O ceklim "https://${geovpn}/ceklim.sh"
-wget -O tendang "https://${geovpn}/tendang.sh"
-wget -O clearlog "https://${geovpn}/clearlog.sh"
-wget -O changeport "https://${geovpn}/changeport.sh"
-wget -O portovpn "https://${geovpn}/portovpn.sh"
-wget -O portwg "https://${geovpn}/portwg.sh"
-wget -O porttrojan "https://${geovpn}/porttrojan.sh"
-wget -O portsstp "https://${geovpn}/portsstp.sh"
-wget -O portsquid "https://${geovpn}/portsquid.sh"
-wget -O portv2ray "https://${geovpn}/portv2ray.sh"
-wget -O portvless "https://${geovpn}/portvless.sh"
-wget -O wbmn "https://${geovpn}/webmin.sh"
-wget -O xp "https://${geovpn}/xp.sh"
-wget -O swapkvm "https://${geovpn}/swapkvm.sh"
-wget -O addv2ray "https://${geovpnn}/addv2ray.sh"
-wget -O addvless "https://${geovpnn}/addvless.sh"
-wget -O addtrojan "https://${geovpnn}/addtrojan.sh"
-wget -O delv2ray "https://${geovpnn}/delv2ray.sh"
-wget -O delvless "https://${geovpnn}/delvless.sh"
-wget -O deltrojan "https://${geovpnn}/deltrojan.sh"
-wget -O cekv2ray "https://${geovpnn}/cekv2ray.sh"
-wget -O cekvless "https://${geovpnn}/cekvless.sh"
-wget -O cektrojan "https://${geovpnn}/cektrojan.sh"
-wget -O renewv2ray "https://${geovpnn}/renewv2ray.sh"
-wget -O renewvless "https://${geovpnn}/renewvless.sh"
-wget -O renewtrojan "https://${geovpnn}/renewtrojan.sh"
-wget -O certv2ray "https://${geovpnn}/certv2ray.sh"
-wget -O addtrgo "https://${geovpnnn}/addtrgo.sh"
-wget -O deltrgo "https://${geovpnnn}/deltrgo.sh"
-wget -O renewtrgo "https://${geovpnnn}/renewtrgo.sh"
-wget -O cektrgo "https://${geovpnnn}/cektrgo.sh"
-wget -O bebek "https://${geovpnnnnn}/bebek.sh"
-wget -O l2tp "https://${geovpnnnnn}/l2tp.sh"
-wget -O medo "https://${geovpnnnnn}/medo.sh"
-wget -O menu "https://${geovpnnnnn}/menu.sh"
-wget -O paneli "https://${geovpnnnnn}/paneli.sh"
-wget -O ppt "https://${geovpnnnnn}/ppt.sh"
-wget -O ssh "https://${geovpnnnnn}/ssh.sh"
-wget -O ssssr "https://${geovpnnnnn}/ssssr.sh"
-wget -O sstpp "https://${geovpnnnnn}/sstpp.sh"
-wget -O status "https://${geovpnnnnn}/status.sh"
-wget -O system "https://${geovpnnnnn}/system.sh"
-wget -O trojaan "https://${geovpnnnnn}/trojaan.sh"
-wget -O v2raay "https://${geovpnnnnn}/v2raay.sh"
-wget -O wgr "https://${geovpnnnnn}/wgr.sh"
-wget -O bbr "https://${geovpnnnnn}/bbr.sh"
-wget -O bannerku "https://${geovpnnnnn}/bannerku"
-wget -O bannerDOMAIN "https://${geovpnnnnnn}/bannerDOMAIN"
-wget -O bannerL2TP "https://${geovpnnnnnn}/bannerL2TP"
-wget -O bannerPPTP "https://${geovpnnnnnn}/bannerPPTP"
-wget -O bannerSHADOWSOCK "https://${geovpnnnnnn}/bannerSHADOWSOCK"
-wget -O bannerSSH "https://${geovpnnnnnn}/bannerSSH"
-wget -O bannerSSTP "https://${geovpnnnnnn}/bannerSSTP"
-wget -O bannerSYSTEM "https://${geovpnnnnnn}/bannerSYSTEM"
-wget -O bannerTROJAN "https://${geovpnnnnnn}/bannerTROJAN"
-wget -O bannerV2RAY "https://${geovpnnnnnn}/bannerV2RAY"
-wget -O bannerVPN "https://${geovpnnnnnn}/bannerVPN"
-wget -O bannerWIREGUARD "https://${geovpnnnnnn}/bannerWIREGUARD"
-wget -O bannerBACKUP "https://${geovpnnnnnn}/bannerBACKUP"
-wget -O addcf "https://${geovpnnnnnnn}/addcf.sh"
-wget -O cfd "https://${geovpnnnnnnn}/cfd.sh"
-wget -O cff "https://${geovpnnnnnnn}/cff.sh"
-wget -O cfh "https://${geovpnnnnnnn}/cfh.sh"
-wget -O host "https://${geovpnnnnnnn}/host.sh"
-wget -O pointing "https://${geovpnnnnnnn}/pointing.sh"
-wget -O bw "https://${geovpnnnnnnn}/bw.sh"
-wget -O update "https://${geovpnnnnnnn}/update.sh"
-wget -O host "https://${geovpnnnnnnn}/host.sh"
+wget -O addhost "https://raw.githubusercontent.com/Gandring15/vps/main/autoreboot.sh"
+wget -O autoreboot "https://raw.githubusercontent.com/Gandring15/vps/main/addhost.sh"
+wget -O about "https://raw.githubusercontent.com/Gandring15/vps/main/about.sh"
+wget -O menu "https://raw.githubusercontent.com/Gandring15/vps/main/menu.sh"
+wget -O addssh "https://raw.githubusercontent.com/Gandring15/vps/main/addssh.sh"
+wget -O trialssh "https://raw.githubusercontent.com/Gandring15/vps/main/trialssh.sh"
+wget -O delssh "https://raw.githubusercontent.com/Gandring15/vps/main/delssh.sh"
+wget -O member "https://raw.githubusercontent.com/Gandring15/vps/main/member.sh"
+wget -O delexp "https://raw.githubusercontent.com/Gandring15/vps/main/delexp.sh"
+wget -O cekssh "https://raw.githubusercontent.com/Gandring15/vps/main/cekssh.sh"
+wget -O restart "https://raw.githubusercontent.com/Gandring15/vps/main/restart.sh"
+wget -O speedtest "https://raw.githubusercontent.com/Gandring15/vps/main/speedtest_cli.py"
+wget -O info "https://raw.githubusercontent.com/Gandring15/vps/main/info.sh"
+wget -O ram "https://raw.githubusercontent.com/Gandring15/vps/main/ram.sh"
+wget -O renewssh "https://raw.githubusercontent.com/Gandring15/vps/main/renewssh.sh"
+wget -O autokill "https://raw.githubusercontent.com/Gandring15/vps/main/autokill.sh"
+wget -O ceklim "https://raw.githubusercontent.com/Gandring15/vps/main/ceklim.sh"
+wget -O tendang "https://raw.githubusercontent.com/Gandring15/vps/main/tendang.sh"
+wget -O clearlog "https://raw.githubusercontent.com/Gandring15/vps/main/clearlog.sh"
+wget -O changeport "https://raw.githubusercontent.com/Gandring15/vps/main/changeport.sh"
+wget -O portovpn "https://raw.githubusercontent.com/Gandring15/vps/main/portovpn.sh"
+wget -O portwg "https://raw.githubusercontent.com/Gandring15/vps/main/portwg.sh"
+wget -O porttrojan "https://raw.githubusercontent.com/Gandring15/vps/main/porttrojan.sh"
+wget -O portsstp "https://raw.githubusercontent.com/Gandring15/vps/main/portsstp.sh"
+wget -O portsquid "https://raw.githubusercontent.com/Gandring15/vps/main/portsquid.sh"
+wget -O portv2ray "https://raw.githubusercontent.com/Gandring15/vps/main/portv2ray.sh"
+wget -O portvless "https://raw.githubusercontent.com/Gandring15/vps/main/portvless.sh"
+wget -O wbmn "https://raw.githubusercontent.com/Gandring15/vps/main/webmin.sh"
+wget -O xp "https://raw.githubusercontent.com/Gandring15/vps/main/xp.sh"
+wget -O swapkvm "https://raw.githubusercontent.com/Gandring15/vps/main/swapkvm.sh"
+wget -O addv2ray "https://raw.githubusercontent.com/Gandring15/vps/main/addv2ray.sh"
+wget -O addvless "https://raw.githubusercontent.com/Gandring15/vps/main/addvless.sh"
+wget -O addtrojan "https://raw.githubusercontent.com/Gandring15/vps/main/addtrojan.sh"
+wget -O delv2ray "https://raw.githubusercontent.com/Gandring15/vps/main/delv2ray.sh"
+wget -O delvless "https://raw.githubusercontent.com/Gandring15/vps/main/delvless.sh"
+wget -O deltrojan "https://raw.githubusercontent.com/Gandring15/vps/main/deltrojan.sh"
+wget -O cekv2ray "https://raw.githubusercontent.com/Gandring15/vps/main/cekv2ray.sh"
+wget -O cekvless "https://raw.githubusercontent.com/Gandring15/vps/main/cekvless.sh"
+wget -O cektrojan "https://raw.githubusercontent.com/Gandring15/vps/main/cektrojan.sh"
+wget -O renewv2ray "https://raw.githubusercontent.com/Gandring15/vps/main/renewv2ray.sh"
+wget -O renewvless "https://raw.githubusercontent.com/Gandring15/vps/main/renewvless.sh"
+wget -O renewtrojan "https://raw.githubusercontent.com/Gandring15/vps/main/renewtrojan.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/Gandring15/vps/main/certv2ray.sh"
+wget -O addtrgo "https://raw.githubusercontent.com/Gandring15/vps/main/addtrgo.sh"
+wget -O deltrgo "https://raw.githubusercontent.com/Gandring15/vps/main/deltrgo.sh"
+wget -O renewtrgo "https://raw.githubusercontent.com/Gandring15/vps/main/renewtrgo.sh"
+wget -O cektrgo "https://raw.githubusercontent.com/Gandring15/vps/main/cektrgo.sh"
+wget -O bebek "https://raw.githubusercontent.com/Gandring15/vps/main/bebek.sh"
+wget -O l2tp "https://raw.githubusercontent.com/Gandring15/vps/main/l2tp.sh"
+wget -O medo "https://raw.githubusercontent.com/Gandring15/vps/main/medo.sh"
+wget -O menu "https://raw.githubusercontent.com/Gandring15/vps/main/menu.sh"
+wget -O paneli "https://raw.githubusercontent.com/Gandring15/vps/main/paneli.sh"
+wget -O ppt "https://raw.githubusercontent.com/Gandring15/vps/main/pptp.sh"
+wget -O ssh "https://raw.githubusercontent.com/Gandring15/vps/main/ssh.sh"
+wget -O ssssr "https://raw.githubusercontent.com/Gandring15/vps/main/ssssr.sh"
+wget -O sstpp "https://raw.githubusercontent.com/Gandring15/vps/main/sstpp.sh"
+wget -O status "https://raw.githubusercontent.com/Gandring15/vps/main/status.sh"
+wget -O system "https://raw.githubusercontent.com/Gandring15/vps/main/system.sh"
+wget -O trojaan "https://raw.githubusercontent.com/Gandring15/vps/main/trojaan.sh"
+wget -O v2raay "https://raw.githubusercontent.com/Gandring15/vps/main/v2raay.sh"
+wget -O wgr "https://raw.githubusercontent.com/Gandring15/vps/main/wgr.sh"
+wget -O bbr "https://raw.githubusercontent.com/Gandring15/vps/main/bbr.sh"
+wget -O bannerku "https://raw.githubusercontent.com/Gandring15/vps/main/bannerku"
+wget -O bannerDOMAIN "https://raw.githubusercontent.com/Gandring15/vps/main/bannerDOMAIN"
+wget -O bannerL2TP "https://raw.githubusercontent.com/Gandring15/vps/main/bannerL2TP"
+wget -O bannerPPTP "https://raw.githubusercontent.com/Gandring15/vps/main/bannerPPTP"
+wget -O bannerSHADOWSOCK "https://raw.githubusercontent.com/Gandring15/vps/main/bannerSHADOWSOCK"
+wget -O bannerSSH "https://raw.githubusercontent.com/Gandring15/vps/main/bannerSSH"
+wget -O bannerSSTP "https://raw.githubusercontent.com/Gandring15/vps/main/bannerSSTP"
+wget -O bannerSYSTEM "https://raw.githubusercontent.com/Gandring15/vps/main/bannerSYSTEM"
+wget -O bannerTROJAN "https://raw.githubusercontent.com/Gandring15/vps/main/bannerTROJAN"
+wget -O bannerV2RAY "https://raw.githubusercontent.com/Gandring15/vps/main/bannerV2RAY"
+wget -O bannerVPN "https://raw.githubusercontent.com/Gandring15/vps/main/bannerVPN"
+wget -O bannerWIREGUARD "https://raw.githubusercontent.com/Gandring15/vps/main/bannerWIREGUARD"
+wget -O bannerBACKUP "https://raw.githubusercontent.com/Gandring15/vps/main/bannerBACKUP"
+wget -O addcf "https://raw.githubusercontent.com/Gandring15/vps/main/addcf.sh"
+wget -O cfd "https://raw.githubusercontent.com/Gandring15/vps/main/cfd.sh"
+wget -O cff "https://raw.githubusercontent.com/Gandring15/vps/main/cff.sh"
+wget -O cfh "https://raw.githubusercontent.com/Gandring15/vps/main/cfh.sh"
+wget -O host "https://raw.githubusercontent.com/Gandring15/vps/main/host.sh"
+wget -O pointing "https://raw.githubusercontent.com/Gandring15/vps/main/pointing.sh"
+wget -O bw "https://raw.githubusercontent.com/Gandring15/vps/main/bw.sh"
+wget -O update "https://raw.githubusercontent.com/Gandring15/vps/main/update.sh"
+wget -O host "https://raw.githubusercontent.com/Gandring15/vps/main/host.sh"
 chmod +x autoreboot
 chmod +x addhost
 chmod +x menu
