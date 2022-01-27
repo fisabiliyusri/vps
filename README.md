@@ -11,15 +11,15 @@ rm -f setup.sh && apt update && apt upgrade -y && apt install lolcat -y && gem i
 
 • OHP SSH & OHP Dropbear & OHP OpenVPN
 
-• XRAY VMESS 
+• Vmess
 
-• XRAY VLESS
+• Vless
 
-• XRAY TROJAN
+• Trojan-Gfw
 
-• SHADOWSOCKS
+• Shadowsocks
 
-• SSR
+• ShadowsocksR
 
 • PPTP VPN
 
@@ -27,9 +27,9 @@ rm -f setup.sh && apt update && apt upgrade -y && apt install lolcat -y && gem i
 
 • SSTP VPN
 
-• WIREGUARD
+• Wireguard
 
-• TROJAN GO
+• Trojan-GO
 
 • Backup Data ALL Service
 
@@ -37,9 +37,9 @@ rm -f setup.sh && apt update && apt upgrade -y && apt install lolcat -y && gem i
 
 ### Os Supported
 
-• Debian 10 Only
+• Debian 9 & 10 64bit
 
-• Ubuntu 18.04 & 20.04 Only
+• Ubuntu 18.04 & 20.04 64bit
 
 # Service & Port
 
@@ -71,15 +71,15 @@ rm -f setup.sh && apt update && apt upgrade -y && apt install lolcat -y && gem i
 
 • SS-OBFS HTTP            : 3443-3543
 
-• XRAYS Vmess TLS         : 8443
+• Vmess TLS               : 2096
 
-• XRAYS Vmess None TLS    : 2052
+• Vmess None TLS          : 2095
 
-• XRAYS Vless TLS         : 443
+• Vless TLS               : 443
 
-• XRAYS Vless None TLS    : 80
+• Vless None TLS          : 80
 
-• XRAYS Trojan            : 2087
+• Trojan-Gfw              : 2087
 
 • Websocket TLS           : 2083
 
@@ -93,7 +93,7 @@ rm -f setup.sh && apt update && apt upgrade -y && apt install lolcat -y && gem i
 
 • OHP OpenVPN             : 8383
 
-• Trojan Go               : 2053
+• Trojan-Go               : 2053
 
  ### Server Information & Other Features
 
