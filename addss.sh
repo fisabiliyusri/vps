@@ -13,7 +13,7 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ifconfig.me/ip);
-clear
+echo -e "checking vps"
 IP=$(wget -qO- ifconfig.me/ip);
 lastport1=$(grep "port_tls" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 lastport2=$(grep "port_http" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
@@ -109,7 +109,7 @@ echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "Link HTTPS  : $linkss1"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "Link HTTP   : $linkss2"
-echo -e "========================="
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "Script By gandring"
 menu
 fi
