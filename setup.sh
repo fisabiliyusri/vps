@@ -100,37 +100,37 @@ echo "2.9" > /home/ver
 echo " "
 echo "Installation has been completed!!"
 echo " "
-echo "=================================-gandring Project-===========================" | tee -a log-install.txt
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤Script Install Vpn By gandring♤♤♤♤♤♤♤♤♤♤♤♤♤♤" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
-echo "----------------------------------------------------------------------------" | tee -a log-install.txt
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Service & Port"  | tee -a log-install.txt
-echo "   - OpenSSH                 : 222, 22"  | tee -a log-install.txt
+echo "   - OpenSSH                 : 222, 22"    | tee -a log-install.txt
 echo "   - OpenVPN                 : TCP 700, UDP 800, SSL 990"  | tee -a log-install.txt
-echo "   - Stunnel5                : 445, 777"  | tee -a log-install.txt
-echo "   - Dropbear                : 200, 300"  | tee -a log-install.txt
-echo "   - Squid Proxy             : 3128, 8080"  | tee -a log-install.txt
+echo "   - Stunnel5                : 445, 442"   | tee -a log-install.txt
+echo "   - Dropbear                : 200, 300"   | tee -a log-install.txt
+echo "   - Squid Proxy             : 3128, 8080" | tee -a log-install.txt
 echo "   - Badvpn                  : 7100, 7200, 7300"  | tee -a log-install.txt
-echo "   - Nginx                   : 89"  | tee -a log-install.txt
-echo "   - Wireguard               : 7070"  | tee -a log-install.txt
 echo "   - L2TP/IPSEC VPN          : 1701"  | tee -a log-install.txt
+echo "   - SSTP BPN                : 444"   | tee -a log-install.txt
 echo "   - PPTP VPN                : 1732"  | tee -a log-install.txt
-echo "   - SSTP VPN                : 444"  | tee -a log-install.txt
-echo "   - Shadowsocks-R           : 1443-1543"  | tee -a log-install.txt
+echo "   - TROJAN-GO               : 2053"  | tee -a log-install.txt
+echo "   - WIREGUARD               : 51820" | tee -a log-install.txt
+echo "   - SHADOWSOCKS-R           : 1443-1543"  | tee -a log-install.txt
 echo "   - SS-OBFS TLS             : 2443-2543"  | tee -a log-install.txt
 echo "   - SS-OBFS HTTP            : 3443-3543"  | tee -a log-install.txt
-echo "   - XRAYS Vmess TLS         : 8443"  | tee -a log-install.txt
-echo "   - XRAYS Vmess None TLS    : 2095"  | tee -a log-install.txt
-echo "   - XRAYS Vless TLS         : 443"  | tee -a log-install.txt
-echo "   - XRAYS Vless None TLS    : 80"  | tee -a log-install.txt
-echo "   - XRAYS Trojan            : 2087"  | tee -a log-install.txt
+echo "   - Vmess TLS               : 8443"  | tee -a log-install.txt
+echo "   - Vmess None TLS          : 2095"  | tee -a log-install.txt
+echo "   - Vless TLS               : 443"   | tee -a log-install.txt
+echo "   - Vless None TLS          : 80"    | tee -a log-install.txt
+echo "   - Trojan-GFW              : 2087"  | tee -a log-install.txt
 echo "   - Websocket TLS           : 2083"  | tee -a log-install.txt
 echo "   - Websocket None TLS      : 8880"  | tee -a log-install.txt
 echo "   - Websocket Ovpn          : 2086"  | tee -a log-install.txt
 echo "   - OHP SSH                 : 8181"  | tee -a log-install.txt
 echo "   - OHP Dropbear            : 8282"  | tee -a log-install.txt
 echo "   - OHP OpenVPN             : 8383"  | tee -a log-install.txt
-echo "   - Tr Go                   : 2053"  | tee -a log-install.txt
+echo "   - Nginx                   : 89"    | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
@@ -153,7 +153,7 @@ echo "   - Telegram                : T.me/"  | tee -a log-install.txt
 echo "   - Instagram               : ~"  | tee -a log-install.txt
 echo "   - Whatsapp                : ~"  | tee -a log-install.txt
 echo "   - Facebook                : ~" | tee -a log-install.txt
-echo "-----------------Script Created By gandring Project-----------------" | tee -a log-install.txt
+echo "♤♤♤♤♤♤♤♤♤♤♤♤SELESAI INSTALASI VPN BY gandring♤♤♤♤♤♤♤♤♤♤♤♤" | tee -a log-install.txt
 echo ""
 echo " Reboot 7 Sec"
 sleep 7
