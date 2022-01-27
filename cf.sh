@@ -3,7 +3,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
-clear
+echo -e "checking vps"
 apt install jq curl -y
 DOMAIN=vpsku.space
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
