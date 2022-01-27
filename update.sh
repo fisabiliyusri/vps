@@ -3,8 +3,8 @@ RED='\e[1;31m'
 GREEN='\e[0;32m'
 BLUE='\e[0;34m'
 NC='\e[0m'
-MYIP=$(wget -qO- icanhazip.com);
-clear
+MYIP=$(wget -qO- ifconfig.me/ip);
+echo -e "checking vps"
 
 if [ ! -e /home/vps/public_html/TCP.ovpn ]; then
 cp /etc/openvpn/client-tcp-700.ovpn /home/vps/public_html/tcp.ovpn
