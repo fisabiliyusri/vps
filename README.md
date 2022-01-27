@@ -53,7 +53,7 @@ rm -f setup.sh && apt update && apt upgrade -y && apt install lolcat -y && gem i
 
 • Squid Proxy             : 3128, 8080
 
-• Badvpn                  : 7100, 7200, 7300
+• Badvpn/Udpgw            : 7100, 7200, 7300~7900
 
 • Nginx                   : 89
 
@@ -81,6 +81,8 @@ rm -f setup.sh && apt update && apt upgrade -y && apt install lolcat -y && gem i
 
 • Trojan-Gfw              : 2087
 
+• Trojan-Go               : 2053
+
 • Websocket TLS           : 2083
 
 • Websocket None TLS      : 8880
@@ -92,8 +94,6 @@ rm -f setup.sh && apt update && apt upgrade -y && apt install lolcat -y && gem i
 • OHP Dropbear            : 8282
 
 • OHP OpenVPN             : 8383
-
-• Trojan-Go               : 2053
 
  ### Server Information & Other Features
 
@@ -109,11 +109,11 @@ rm -f setup.sh && apt update && apt upgrade -y && apt install lolcat -y && gem i
 
 • IPv6                    : [OFF]
 
-• Autoreboot On 05.00 GMT +7
+• Autoreboot set time
 
 • Auto Delete Expired Account
 
-• Full Orders For Various Services
+• Tweak Tuning Server And Limit Speed
 
 • Jangan Takut Untuk Berbagi🙏
 
