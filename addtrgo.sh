@@ -13,7 +13,7 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ifconfig.me/ip);
-clear
+echo -e "checking vps"
 uuid=$(cat /etc/trojan-go/uuid.txt)
 source /var/lib/gandring/ipvps.conf
 if [[ "$IP" = "" ]]; then
@@ -52,9 +52,9 @@ echo -e "Path       : /gandring"
 echo -e "Created    : $hariini"
 echo -e "Expired    : $exp"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo -e "Link TrGo  : ${link}"
+echo -e "Link Trojan-Go  : ${link}"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo -e "Script By gandring"
+echo -e "Repacked By gandring"
 echo""
 menu
 fi
