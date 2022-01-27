@@ -19,8 +19,8 @@ bd='\e[1m'
 AKTIF="$bd Aktif [ ${green}Running${NC} ]"
 ERROR="Error [ ${red}Not Running${NC} ]"
 
-dahlah=()
-mantap=()
+wisnu=()
+gandring=()
 declare ingfo=()
 
 
@@ -64,219 +64,219 @@ ohr=$(systemctl status ssh-ohp | grep -i "active (running)")
 
 if [[ $wsdrop == "" ]]; then
       swsdrop=$ERROR
-      ingfo+=("WebSocket Dropbear")
-      dahlah+=("err1")
+      info+=("WebSocket Dropbear")
+      keook+=("err1")
 else
       swsdrop=$AKTIF
-      mantap+=("hore1")
+      gandring+=("enjoooos1")
 fi
 
 if [[ $wstls == "" ]]; then
       swstls=$ERROR
-      ingfo+=("WebSocket TLS")
-      dahlah+=("err2")
+      wstls+=("WebSocket TLS")
+      keook+=("err2")
 else
       swstls=$AKTIF
-      mantap+=("hore2")
+      gandring+=("enjoooos2")
 fi
 
 if [[ $wsovpn == "" ]]; then
       swsovpn=$ERROR
-      ingfo+=("WebSocket ovpn")
-      dahlah+=("err3")
+      info+=("WebSocket ovpn")
+      keook+=("err3")
 else
       swsovpn=$AKTIF
-      mantap+=("hore3")
+      gandring+=("enjoooos3")
 
 fi
 
 if [[ $v2ray == "" ]]; then
       sv2ray=$ERROR
-      ingfo+=("V2ray/VMess TLS")
-      dahlah+=("err4")
+      info+=("V2ray/VMess TLS")
+      keook+=("err4")
 else
       sv2ray=$AKTIF
-      mantap+=("hore4")
+      gandring+=("enjoooos4")
 fi
 
 if [[ $v2none == "" ]]; then
       sv2none=$ERROR
-      ingfo+=("V2ray/VMess NON-TLS")
-      dahlah+=("err5")
+      info+=("V2ray/VMess NON-TLS")
+      keook+=("err5")
 else
       sv2none=$AKTIF
-      mantap+=("hore5")
+      gandring+=("enjoooos5")
 fi
 
 if [[ $vless == "" ]]; then
       svless=$ERROR
-      ingfo+=("V2ray/VLess TLS")
-      dahlah+=("err6")
+      info+=("V2ray/VLess TLS")
+      keook+=("err6")
 else
       svless=$AKTIF
-      mantap+=("hore6")
+      gandring+=("enjoooos6")
 fi
 
 if [[ $vnone == "" ]]; then
       svnone=$ERROR
       ingfo+=("V2ray/VLess NON-TLS")
-      dahlah+=("err7")
+      keook+=("err7")
 else
       svnone=$AKTIF
-      mantap+=("hore7")
+      gandring+=("enjoooos7")
 fi
 
 if [[ $trojan == "" ]]; then
       strojan=$ERROR
       ingfo+=("Trojan")
-      dahlah+=("err8")
+      keook+=("err8")
 else
       strojan=$AKTIF
-      mantap+=("hore8")
+      gandring+=("enjoooos8")
 fi
 
 if [[ $trojang == "" ]]; then
       strojang=$ERROR
       ingfo+=("TrojanGO")
-      dahlah+=("err9")
+      keook+=("err9")
 else
       strojang=$AKTIF
-      mantap+=("hore9")
+      gandring+=("enjoooos9")
 fi
 
 if [[ $ipsec == "" ]]; then
       sipsec=$ERROR
       ingfo+=("IPSec Services")
-      dahlah+=("err10")
+      keook+=("err10")
 else
       sipsec=$AKTIF
-      mantap+=("hore10")
+      gandring+=("enjoooos10")
 fi
 
 if [[ $shadow == "" ]]; then
       sshadow=$ERROR
       ingfo+=("Shadowsocks OBFS")
-      dahlah+=("err11")
+      keook+=("err11")
 else
       sshadow=$AKTIF
-      mantap+=("hore11")
+      gandring+=("enjoooos11")
 fi
 
 if [[ $ssr == "" ]]; then
       sssr=$ERROR
       ingfo+=("ShadowsocksR/SSR")
-      dahlah+=("err12")
+      keook+=("err12")
 else
       sssr=$AKTIF
-      mantap+=("hore12")
+      gandring+=("enjoooos12")
 fi
 
 if [[ $sstp == "" ]]; then
       ssstp=$ERROR
       ingfo+=("SSTP")
-      dahlah+=("err13")
+      keook+=("err13")
 else
       ssstp=$AKTIF
-      mantap+=("hore13")
+      gandring+=("enjoooos13")
 fi
 
 if [[ $l2tp == "" ]]; then
       sl2tp=$ERROR
       ingfo+=("L2TP")
-      dahlah+=("err14")
+      keook+=("err14")
 else
       sl2tp=$AKTIF
-      mantap+=("hore14")
+      gandrin+=("enjoooos14")
 fi
 
 if [[ $pptp == "" ]]; then
       spptp=$ERROR
       ingfo+=("PPTP")
-      dahlah+=("err15")
+      keook+=("err15")
 else
       spptp=$AKTIF
-      mantap+=("hore15")
+      gandring+=("enjoooos15")
 fi
 
 if [[ $wg == "" ]]; then
       swg=$ERROR
       ingfo+=("Wireguard")
-      dahlah+=("err16")
+      keook+=("err16")
 else
       swg=$AKTIF
-      mantap+=("hore16")
+      gandring+=("enjoooos16")
 fi
 
 if [[ $ssh == "" ]]; then
       sssh=$ERROR
       ingfo+=("OpenSSH")
-      dahlah+=("err17")
+      keook+=("err17")
 else
       sssh=$AKTIF
-      mantap+=("hore17")
+      gandring+=("enjoooos17")
 fi
 
 if [[ $ssl == "" ]]; then
       sssl=$ERROR
       ingfo+=("Stunnel4")
-      dahlah+=("err18")
+      keook+=("err18")
 else
       sssl=$AKTIF
-      mantap+=("hore18")
+      gandring+=("enjoooos18")
 fi
 
 if [[ $drop == "" ]]; then
       sdrop=$ERROR
       ingfo+=("Dropbear")
-      dahlah+=("err19")
+      keook+=("err19")
 else
       sdrop=$AKTIF
-      mantap+=("hore19")
+      gandring+=("enjoooos19")
 fi
 
 if [[ $ovpn == "" ]]; then
       sovpn=$ERROR
       ingfo+=("OpenVPN")
-      dahlah+=("err20")
+      keook+=("err20")
 else
       sovpn=$AKTIF
-      mantap+=("hore20")
+      gandring+=("enjoooos20")
 fi
 
 if [[ $nginx == "" ]]; then
       snginx=$ERROR
       ingfo+=("Nginx")
-      dahlah+=("err21")
+      keook+=("err21")
 else
       snginx=$AKTIF
-      mantap+=("hore21")
+      gandring+=("enjoooos21")
 fi
 
 if [[ $squid == "" ]]; then
       ssquid=$ERROR
       ingfo+=("Squid")
-      dahlah+=("err22")
+      keook+=("err22")
 else
       ssquid=$AKTIF
-      mantap+=("hore22")
+      gandring+=("enjoooos22")
 fi
 
 if [[ $cron == "" ]]; then
       scron=$ERROR
       ingfo+=("Cron Services")
-      dahlah+=("err23")
+      keook+=("err23")
 else
       scron=$AKTIF
-      mantap+=("hore23")
+      gandring+=("enjoooos23")
 fi
 
 if [[ $fail2ban == "" ]]; then
       sfail2ban=$ERROR
       ingfo+=("Fail2Ban Services")
-      dahlah+=("err24")
+      keook+=("err24")
 else
       sfail2ban=$AKTIF
-      mantap+=("hore24")
+      gandring+=("enjoooos24")
 fi
 
 if [[ $vnstat == "" ]]; then
@@ -291,10 +291,10 @@ fi
 if [[ $ksslh == "" ]]; then
       sksslh=$ERROR
       ingfo+=("SSLH Services")
-      dahlah+=("err26")
+      keook+=("err26")
 else
       sksslh=$AKTIF
-      mantap+=("hore26")
+      gandring+=("enjoooos26")
 fi
 
 if [[ $shadown == "" ]]; then
@@ -305,45 +305,45 @@ fi
 if [[ $ohp == "" ]]; then
       sohp=$ERROR
       ingfo+=("OHP Dropbear")
-      dahlah+=("err28")
+      keook+=("err28")
 else
       sohp=$AKTIF
-      mantap+=("hore28")
+      gandring+=("enjoooos28")
 fi
 
 if [[ $ohq == "" ]]; then
       sohq=$ERROR
       ingfo+=("OHP Ovpn")
-      dahlah+=("err29")
+      keook+=("err29")
 else
       sohq=$AKTIF
-      mantap+=("hore29")
+      gandring+=("hmenjoooos29")
 fi
 
 if [[ $ohr == "" ]]; then
       sohr=$ERROR
       ingfo+=("OHP SSH")
-      dahlah+=("err3O")
+      keook+=("err3O")
 else
       sohr=$AKTIF
-      mantap+=("hore30")
+      gandring+=("enjoooos30")
 fi
 
-jumlah1="${#mantap[@]}"
-jumlah2="${#dahlah[@]}"
+jumlah1="${#gandring[@]}"
+jumlah2="${#keook[@]}"
 
 if [[ $jumlah1 == "" ]] || [[ $jumlah1 -eq 0 ]]; then
      jumlah_aktif=0
 else
-     let njor=${jumlah1}
-     jumlah_aktif=$njor
+     let njos=${jumlah1}
+     jumlah_aktif=$njos
 fi
 
 if [[ $jumlah2 == "" ]] || [[ $jumlah2 -eq 0 ]]; then
     jumlah_error=0
 else
-    let njir=${jumlah2}
-    jumlah_error=$njir
+    let walah=${jumlah2}
+    jumlah_error=$walah
 fi
 
 #=================================================================================================
@@ -445,6 +445,6 @@ fi
 echo ""
 echo -e "${cyan}======================================================${off}"
 echo -e ""
-echo -e "$yl Script Mod By Geo Gabut${off}"
+echo -e "${purple}Script Repacked by gandring${off}"
 echo -e ""
 echo -e ""
