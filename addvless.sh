@@ -12,8 +12,8 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
-clear
+MYIP=$(wget -qO- ifconfig.me/ip);
+echo -e "checking vps"
 source /var/lib/gandring/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
@@ -64,6 +64,6 @@ echo -e "Link TLS    : ${xrayvless1}"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "Link No TLS : ${xrayvless2}"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo -e "Script By gandring"
+echo -e "Repacked By gandring"
 menu
 fi
