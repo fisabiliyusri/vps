@@ -47,8 +47,10 @@ x)
 system
 ;;
 *)
-echo "Masukkan Nomor Yang Ada Sayang!"
+echo "Masukkan Nomor Yang Ada"
 sleep 1
 medo
 ;;
 esac
+menu
+fi
