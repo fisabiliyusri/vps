@@ -17,7 +17,7 @@ cp -r /etc/openvpn/client-udp-800.ovpn OpenVPN/udp.ovpn
 cp -r /etc/openvpn/client-tcp-700.ovpn OpenVPN/tcp.ovpn
 cd /root
 zip -r openvpn.zip OpenVPN > /dev/null 2>&1
-cp -r /root/openvpn.zip /home/vps/public_html/geo.zip
+cp -r /root/openvpn.zip /home/vps/public_html/openvpn.zip
 rm -rf /root/OpenVPN
 rm -f /root/openvpn.zip
 fi
