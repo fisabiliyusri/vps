@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/gandring
+# My Telegram : https://t.me/pegasusq_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -12,9 +12,9 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
-clear
-# By gandring
+MYIP=$(wget -qO- ifconfig.me/ip);
+echo -e "checking vps"
+# Repacked By gandring
 # ==================================================
 # Link Hosting Kalian
 geovpn="raw.githubusercontent.com/Gandring15/vps/main/ssh"
@@ -22,7 +22,7 @@ geovpn="raw.githubusercontent.com/Gandring15/vps/main/ssh"
 # initialisasi var
 export DEBIAN_FRONTEND=noninteractive
 OS=`uname -m`;
-MYIP=$(wget -qO- ipinfo.io/ip);
+MYIP=$(wget -qO- ifconfig.me/ip);
 MYIP2="s/xxxxxxxxx/$MYIP/g";
 NIC=$(ip -o $NIC -4 route show to default | awk '{print $5}');
 
@@ -89,7 +89,7 @@ END
 
 sed -i $MYIP2 /etc/openvpn/udp.ovpn;
 
-# Buat config client SSL
+# Buat config client SSL 990
 cat > /etc/openvpn/ssl.ovpn <<-END
 client
 dev tun
@@ -127,7 +127,7 @@ echo '</ca>' >> /etc/openvpn/udp.ovpn
 # Copy config OpenVPN client ke home directory root agar mudah didownload ( UDP 800 )
 cp /etc/openvpn/udp.ovpn /home/vps/public_html/udp.ovpn
 
-# masukkan certificatenya ke dalam config client SSL
+# masukkan certificatenya ke dalam config client SSL 990
 echo '<ca>' >> /etc/openvpn/ssl.ovpn
 cat /etc/openvpn/server/ca.crt >> /etc/openvpn/ssl.ovpn
 echo '</ca>' >> /etc/openvpn/ssl.ovpn
