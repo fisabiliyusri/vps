@@ -15,7 +15,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 
 MYIP=$(wget -qO- ifconfig.me/ip);
-clear
+echo -e "checking vps"
 domain=$(cat /root/domain)
 apt install iptables iptables-persistent -y
 apt install curl socat xz-utils wget apt-transport-https gnupg gnupg2 gnupg1 dnsutils lsb-release -y 
