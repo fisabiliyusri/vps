@@ -37,7 +37,7 @@ x)
 menu
 ;;
 *)
-echo "Masukkan Nomor Yang Ada Sayang!"
+echo "Masukkan Nomor Yang Ada"
 sleep 1
 paneli
 ;;
