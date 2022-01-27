@@ -13,7 +13,7 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ifconfig.me/ip);
-clear
+echo -e "checking vps"
 #Tweak Tcp BBR Optimisasi oleh Gandring
 Add_To_New_Line(){
 	if [ "$(tail -n1 $1 | wc -l)" == "0"  ];then
