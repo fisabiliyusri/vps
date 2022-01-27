@@ -31,7 +31,7 @@ if [ -f "/etc/v2ray/domain" ]; then
 echo "Script Already Installed"
 exit 0
 fi
-mkdir /var/lib/premium-script;
+mkdir /var/lib/gandring;
 echo "IP=" >> /var/lib/gandring/ipvps.conf
 wget https://raw.githubusercontent.com/Gandring15/vps/main/cf.sh && chmod +x cf.sh && ./cf.sh
 #install ssh ovpn
