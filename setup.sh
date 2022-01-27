@@ -19,27 +19,11 @@ PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
-# Link Hosting Kalian Untuk Ssh Vpn
-geovpn="raw.githubusercontent.com/geovpn/scriptvps/main/ssh"
-# Link Hosting Kalian Untuk Sstp
-geovpnn="raw.githubusercontent.com/geovpn/scriptvps/main/sstp"
-# Link Hosting Kalian Untuk Ssr
-geovpnnn="raw.githubusercontent.com/geovpn/scriptvps/main/ssr"
-# Link Hosting Kalian Untuk Shadowsocks
-geovpnnnn="raw.githubusercontent.com/geovpn/scriptvps/main/shadowsocks"
-# Link Hosting Kalian Untuk Wireguard
-geovpnnnnn="raw.githubusercontent.com/geovpn/scriptvps/main/wireguard"
-# Link Hosting Kalian Untuk Xray
-geovpnnnnnn="raw.githubusercontent.com/geovpn/scriptvps/main/xray"
-# Link Hosting Kalian Untuk Ipsec
-geovpnnnnnnn="raw.githubusercontent.com/geovpn/scriptvps/main/ipsec"
-# Link Hosting Kalian Untuk Backup
-geovpnnnnnnnn="raw.githubusercontent.com/geovpn/scriptvps/main/backup"
-# Link Hosting Kalian Untuk Websocket
-geovpnnnnnnnnn="raw.githubusercontent.com/geovpn/scriptvps/main/websocket"
-# Link Hosting Kalian Untuk Ohp
-geovpnnnnnnnnnn="raw.githubusercontent.com/geovpn/scriptvps/main/ohp"
 
+apt-get install figlet -y > /dev/null
+apt-get install ruby -y > /dev/null
+gem install lolcat
+clear
 # Getting
 MYIP=$(wget -qO- ifconfig.me/ip);
 clear
