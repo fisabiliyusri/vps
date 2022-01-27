@@ -1,6 +1,6 @@
 #!/bin/bash
-#shadowsocks-libev obfs install by geovpn
-# My Telegram : https://t.me/geovpn
+#shadowsocks-libev obfs install by gandring
+# My Telegram : https://t.me/pegasusq_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -13,17 +13,9 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
+MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
+
 # Link Hosting Kalian
 geovpn="raw.githubusercontent.com/geovpn/scriptvps/main/shadowsocks"
 
@@ -115,13 +107,13 @@ iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2443:3543 -j ACCEPT
 iptables-save > /etc/iptables.up.rules
 ip6tables-save > /etc/ip6tables.up.rules
 cd /usr/bin
-wget -O addss "https://${geovpn}/addss.sh"
-wget -O delss "https://${geovpn}/delss.sh"
-wget -O cekss "https://${geovpn}/cekss.sh"
-wget -O renewss "https://${geovpn}/renewss.sh"
-wget -O /usr/bin/system https://github.com/geovpn/scriptvps/raw/main/menu/system.sh && chmod +x /usr/bin/system && cd /usr/bin && apt install -y dos2unix && dos2unix system
-wget -O /usr/bin/medo https://raw.githubusercontent.com/geovpn/scriptvps/main/menu/medo.sh && chmod +x /usr/bin/medo && cd /usr/bin && apt install -y dos2unix && dos2unix medo
-wget -O /usr/bin/addcf https://raw.githubusercontent.com/geovpn/scriptvps/main/dom/addcf.sh && chmod +x /usr/bin/addcf && cd /usr/bin && apt install -y dos2unix && dos2unix addcf
+wget -O addss "https://raw.githubusercontent.com/Gandring15/vps/main/addss.sh"
+wget -O delss "https://raw.githubusercontent.com/Gandring15/vps/main/delss.sh"
+wget -O cekss "https://raw.githubusercontent.com/Gandring15/vps/main/cekss.sh"
+wget -O renewss "https:/raw.githubusercontent.com/Gandring15/vps/main/renewss.sh"
+wget -O /usr/bin/system https://raw.githubusercontent.com/Gandring15/vps/main/system.sh && chmod +x /usr/bin/system && cd /usr/bin && apt install -y dos2unix && dos2unix system
+wget -O /usr/bin/medo https://raw.githubusercontent.com/Gandring15/vps/main/medo.sh && chmod +x /usr/bin/medo && cd /usr/bin && apt install -y dos2unix && dos2unix medo
+wget -O /usr/bin/addcf https://raw.githubusercontent.com/Gandring15/vps/main/addcf.sh && chmod +x /usr/bin/addcf && cd /usr/bin && apt install -y dos2unix && dos2unix addcf
 chmod +x addss
 chmod +x delss
 chmod +x cekss
