@@ -7,23 +7,15 @@ bl='\e[36;1m'
 color1='\e[031;1m'
 color2='\e[34;1m'
 color3='\e[0m'
-MYIP=$(wget -qO- ifconfig.co);
+MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/Sangarya/izin/main/ipvps | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${green}Permission Accepted...${NC}"
-else
-echo -e "${red}Permission Denied!${NC}";
-echo "Only For Premium Users"
-exit 0
-fi
-clear
+
 cat /usr/bin/bannerSHADOWSOCK | lolcat
 echo -e""
-echo -e "${color1}1${color3}.$bd  Create SSR Account (${color2}addssr${color3})"
-echo -e "${color1}2${color3}.$bd  Create Shadowsocks Account (${color2}addss${color3})"
-echo -e "${color1}3${color3}.$bd  Deleting SSR Account (${color2}delssr${color3})"
-echo -e "${color1}4${color3}.$bd  Delete Shadowsocks Account (${color2}delss${color3})"
+echo -e "${color1}1${color3}.$bd  Buat SSR Account (${color2}addssr${color3})"
+echo -e "${color1}2${color3}.$bd  Buat Shadowsocks Account (${color2}addss${color3})"
+echo -e "${color1}3${color3}.$bd  Hapus SSR Account (${color2}delssr${color3})"
+echo -e "${color1}4${color3}.$bd  Hapus Shadowsocks Account (${color2}delss${color3})"
 echo -e "${color1}5${color3}.$bd  Renew SSR Account Active (${color2}renewssr${color3})"
 echo -e "${color1}6${color3}.$bd  Renew Shadowsocks Account (${color2}renewss${color3})"
 echo -e "${color1}7${color3}.$bd  Check User Login Shadowsocks (${color2}cekss${color3})"
@@ -62,8 +54,10 @@ x)
 menu
 ;;
 *)
-echo "Masukkan Nomor Yang Ada Sayang!"
+echo "Masukkan Nomor Yang Ada"
 sleep 1
 ssssr
 ;;
 esac
+menu
+fi
