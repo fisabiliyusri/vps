@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/geovpn
+# My Telegram : https://t.me/pegasusq_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -12,18 +12,9 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
+MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
-clear
+
 #PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 sh_ver="1.0.26"
@@ -272,7 +263,7 @@ View_User_info(){
 	ip=$(cat ${config_user_api_file}|grep "SERVER_PUB_ADDR = "|awk -F "[']" '{print $2}')
 	[[ -z "${ip}" ]] && Get_IP
 	ss_ssr_determine
-	clear && echo "===================================================" && echo
+	clear && echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤" && echo
 	echo -e " User [${user_name}] configuration info：" && echo
 	echo -e " IP : ${Green_font_prefix}${ip}${Font_color_suffix}"
 	echo -e " Port : ${Green_font_prefix}${port}${Font_color_suffix}"
@@ -282,7 +273,7 @@ View_User_info(){
 	echo -e " obfs : ${Red_font_prefix}${obfs}${Font_color_suffix}"
 	echo -e " Device limit : ${Green_font_prefix}${protocol_param}${Font_color_suffix}"
 	echo -e "${ssr_link}"
- 	echo && echo "==================================================="
+ 	echo && echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 }
 # 设置 配置信息
 Set_config_enable(){
