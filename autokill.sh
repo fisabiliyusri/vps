@@ -13,7 +13,7 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ifconfig.me/ip);
-clear
+echo -e "checking vps"
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
 Info="${Green_font_prefix}[ON]${Font_color_suffix}"
 Error="${Red_font_prefix}[OFF]${Font_color_suffix}"
@@ -26,7 +26,7 @@ fi
 clear
 echo -e ""
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo -e "       Status Autokill           "
+echo -e "        Status Autokill"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "1. AutoKill After 5 Minutes"
 echo -e "2. AutoKill After 10 Minutes"
@@ -93,7 +93,7 @@ case $AutoKill in
                 echo -e ""
                 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
                 echo -e ""
-                echo -e "      AutoKill MultiLogin Turned Off  "
+                echo -e "      AutoKill MultiLogin Turned Off"
                 echo -e ""
                 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
                 exit
