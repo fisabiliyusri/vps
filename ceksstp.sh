@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/gandring
+# My Telegram : https://t.me/pegasusq_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -13,7 +13,7 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ifconfig.me/ip);
-clear
+echo -e "checking vps"
 accel-cmd show sessions
 echo ""
 menu
