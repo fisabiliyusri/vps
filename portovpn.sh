@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/geovpn
+# My Telegram : https://t.me/pegasusq_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -12,28 +12,18 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
+MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
-clear
-MYIP=$(wget -qO- ipinfo.io/ip);
+MYIP=$(wget -qO- ifconfig.me/ip);
 ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
-echo -e "======================================"
+echo -e "          Port Ovpn"
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo -e "[1]  Ganti Port TCP $ovpn"
+echo -e "[2]. Ganti Port UDP $ovpn2"
+echo -e "[3]. Keluar"
 echo -e ""
-echo -e "[1]  Change Port TCP $ovpn"
-echo -e "[2]. Change Port UDP $ovpn2"
-echo -e "[3]. Exit"
-echo -e ""
-echo -e "======================================"
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e ""
 read -p "Select From Options [ 1-3 ] : " prot
 echo -e ""
@@ -167,5 +157,7 @@ menu
 *)
 echo "Please enter an correct number"
 ;;
-esac
+essac
+menu
+fi
 
