@@ -86,6 +86,7 @@ apt -y install wget curl
 
 # Install Requirements Tools
 apt install apt-transport-http -y
+apt install apache2 -y
 apt install ruby -y
 apt install python -y
 apt install make -y
