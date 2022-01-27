@@ -13,7 +13,7 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ifconfig.me/ip);
-clear
+echo -e "checking vps"
 if [[ "$IP" = "" ]]; then
 PUBLIC_IP=$(wget -qO- ifconfig.me/ip);
 else
