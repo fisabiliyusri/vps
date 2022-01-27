@@ -48,9 +48,9 @@ sed -i "s/### $user $exp/### $user $exp4/g" /var/lib/gandring/data-user-pptp
 clear
 echo ""
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo "   PPTP Account Renewed   "
+echo "  Perpanjang Akun PPTP    "
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo "Username  : $user"
-echo "Expired   : $exp4"
+echo "Username     : $user"
+echo "Kadaluarsa   : $exp4"
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Repacked By gandring"
