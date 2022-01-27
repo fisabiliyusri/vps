@@ -46,6 +46,7 @@ sed -i 's/#AUTOSTART="all"/AUTOSTART="all"/g' /etc/default/openvpn
 # restart openvpn dan cek status openvpn
 systemctl enable --now openvpn-server@server-tcp
 systemctl enable --now openvpn-server@server-udp
+systemctl enable --now openvpn-server@server-ssl
 /etc/init.d/openvpn restart
 /etc/init.d/openvpn status
 
@@ -139,6 +140,7 @@ cp /etc/openvpn/ssl.ovpn /home/vps/public_html/ssl.ovpn
 
 iptables -t nat -I POSTROUTING -s 10.6.0.0/24 -o $NIC -j MASQUERADE
 iptables -t nat -I POSTROUTING -s 10.7.0.0/24 -o $NIC -j MASQUERADE
+iptables -t nat -I POSTROUTING -s 10.8.0.0/24 -o $NIC -j MASQUERADE
 iptables-save > /etc/iptables.up.rules
 chmod +x /etc/iptables.up.rules
 
