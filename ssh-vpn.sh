@@ -490,6 +490,7 @@ wget -O pointing "https://raw.githubusercontent.com/Gandring15/vps/main/pointing
 wget -O bw "https://raw.githubusercontent.com/Gandring15/vps/main/bw.sh"
 wget -O update "https://raw.githubusercontent.com/Gandring15/vps/main/update.sh"
 wget -O host "https://raw.githubusercontent.com/Gandring15/vps/main/host.sh"
+wget -O host "https://raw.githubusercontent.com/Gandring15/vps/main/ohpserver"
 chmod +x autoreboot
 chmod +x addhost
 chmod +x menu
@@ -550,6 +551,7 @@ chmod +x status
 chmod +x system
 chmod +x trojaan
 chmod +x v2raay
+chmod +x ohpserver
 chmod +x wgr
 chmod +x bbr
 chmod +x update
@@ -580,7 +582,6 @@ cd
 apt autoclean -y
 apt -y remove --purge unscd
 apt-get -y --purge remove samba*;
-apt-get -y --purge remove apache2*;
 apt-get -y --purge remove bind9*;
 apt-get -y remove sendmail*
 apt autoremove -y
