@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/gandring
+# My Telegram : https://t.me/pegasusq_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -12,10 +12,10 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipv4.icanhazip.com);
+MYIP=$(wget -qO- ifconfig.me/ip);
 clear
 # Link Hosting Kalian
-geovpn="raw.githubusercontent.com/geovpn/scriptvps/main/ssr"
+geovpn="raw.githubusercontent.com/Gandring15/vps/main/ssr"
 
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
