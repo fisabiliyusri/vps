@@ -51,6 +51,15 @@ wget https://raw.githubusercontent.com/Gandring15/vps/main/set-br.sh && chmod +x
 wget https://raw.githubusercontent.com/Gandring15/vps/main/edu.sh && chmod +x edu.sh && ./edu.sh
 # Ohp Server
 wget https://raw.githubusercontent.com/Gandring15/vps/main/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+MYIP=$(wget -qO- https://icanhazip.com);
+host=$(hostname);
+cat > /etc/hosts <<-END
+127.0.0.1 localhost.localdomain localhost
+127.0.1.1 localhost
+$MYIP $host
+END
+apt-get install dbus -y > /dev/null
+sudo hostnamectl set-hostname Setup-gandring
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
