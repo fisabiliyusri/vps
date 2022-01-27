@@ -85,6 +85,7 @@ apt-get remove --purge exim4 -y
 apt -y install wget curl
 
 # Install Requirements Tools
+apt install apt-transport-http -y
 apt install ruby -y
 apt install python -y
 apt install make -y
@@ -589,9 +590,5 @@ screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500
 history -c
 echo "unset HISTFILE" >> /etc/profile
 
-cd
-rm -f /root/key.pem
-rm -f /root/cert.pem
-rm -f /root/ssh-vpn.sh
-
-# finishing
+#finishing
+clear
