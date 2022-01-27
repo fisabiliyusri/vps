@@ -44,14 +44,14 @@ d2=$(date -d "$now" +%s)
 exp2=$(( (d1 - d2) / 86400 ))
 exp3=$(($exp2 + $masaaktif))
 exp4=`date -d "$exp3 days" +"%Y-%m-%d"`
-sed -i "s/### $user $exp/### $user $exp4/g" /var/lib/geovpnstore/data-user-l2tp
+sed -i "s/### $user $exp/### $user $exp4/g" /var/lib/gandring/data-user-l2tp
 clear
 echo ""
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo "   L2TP Account Renewed"
+echo "   Perpanjang Akun L2TP "
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Username  : $user"
-echo "Expired   : $exp4"
+echo "Kadaluarsa   : $exp4"
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Repacked By gandring"
 menu
