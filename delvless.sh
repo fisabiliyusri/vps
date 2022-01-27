@@ -51,6 +51,6 @@ echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Username  : $user"
 echo "Expired   : $exp"
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo "Script By gandring"
+echo "Repacked By gandring"
 menu
 fi
