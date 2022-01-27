@@ -41,5 +41,6 @@ systemctl restart accel-ppp> /dev/null
 echo -e "\e[032;1mPort $sstp2 modified successfully\e[0m"
 else
 echo "Port $sstp2 is used"
+menu
 fi
 
