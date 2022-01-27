@@ -13,7 +13,7 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ifconfig.me/ip);
-clear
+echo -e "checking vps"
 data=(`find /var/log/ -name *.log`);
 for log in "${data[@]}"
 do
@@ -36,4 +36,4 @@ echo > /var/log/syslog
 echo > /var/log/btmp
 echo > /var/log/messages
 echo > /var/log/debug
-echo -e "By gandring"
+echo -e "Repacked By gandring"
