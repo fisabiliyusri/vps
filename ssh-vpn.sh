@@ -1,5 +1,5 @@
 #!/bin/bash
-# By geovpn
+# script editor by gandring
 # My Telegram : https://t.me/pegasusq_governor
 # ==========================================
 # Color
@@ -15,7 +15,6 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-clear
 # ==================================================
 # Link Hosting Kalian
 geovpn="raw.githubusercontent.com/geovpn/scriptvps/main/ssh"
@@ -42,7 +41,7 @@ geovpnnnnnnn="raw.githubusercontent.com/geovpn/scriptvps/main/dom"
 export DEBIAN_FRONTEND=noninteractive
 MYIP=$(wget -qO- ifconfig.me/ip);
 MYIP2="s/xxxxxxxxx/$MYIP/g";
-NET=$(ip -o $ANU -4 route show to default | awk '{print $5}');
+NIC=$(ip -o $ANU -4 route show to default | awk '{print $5}');
 source /etc/os-release
 ver=$VERSION_ID
 
@@ -255,7 +254,7 @@ rm -f /root/vnstat-2.6.tar.gz
 rm -rf /root/vnstat-2.6
 
 mkdir -p /usr/local/gandring
-mkdir -p /etc/geovpn
+mkdir -p /etc/gandring
 
 # install stunnel 5 
 cd /root/
