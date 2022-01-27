@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/gandring
+# My Telegram : https://t.me/pegasusq_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -13,7 +13,7 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ifconfig.me/ip);
-clear
+echo -e "checking vps"
 source /var/lib/gandring/ipvps.conf
 if [[ "$IP2" = "" ]]; then
 domain=$(cat /etc/xray/domain)
@@ -55,7 +55,7 @@ Cert      : http://$IP:89/server.crt
 Created   : $hariini
 Expired   : $exp
 ♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤
-Script By gandring
+Repacked By gandring
 EOF
 menu
 fi
