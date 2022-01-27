@@ -54,3 +54,5 @@ echo "Username  : $user"
 echo "Kadaluarsa   : $exp4"
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Repacked By gandring"
+menu
+fi
