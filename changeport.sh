@@ -13,18 +13,18 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ifconfig.me/ip);
-clear
+echo -e "checking vps"
 echo -e ""
 echo -e "     MENU GANTI PORT LAYANAN     "
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo -e "[1]. Change Port OpenVPN"
-echo -e "[2]. Change Port Wireguard"
-echo -e "[3]. Change Port Vmess"
-echo -e "[4]. Change Port Vless"
-echo -e "[5]. Change Port Trojan"
-echo -e "[6]. Change Port Squid"
-echo -e "[7]. Change Port SSTP"
-echo -e "[8]. Exit"
+echo -e "[1]. Ganti Port OpenVPN"
+echo -e "[2]. CmGanti Port Wireguard"
+echo -e "[3]. Ganti Port Vmess"
+echo -e "[4]. Ganti Port Vless"
+echo -e "[5]. Ganti Port Trojan"
+echo -e "[6]. Ganti Port Squid"
+echo -e "[7]. Ganti Port SSTP"
+echo -e "[8]. Keluar"
 echo -e ""
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e ""
