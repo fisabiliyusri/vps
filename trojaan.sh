@@ -7,8 +7,8 @@ bd='\e[1m'
 color1='\e[031;1m'
 color2='\e[34;1m'
 color3='\e[0m'
-MYIP=$(wget -qO- ifconfig.co);
-clear
+MYIP=$(wget -qO- ifconfig.me/ip);
+echo -e "checking vps"
 cat /usr/bin/bannerTROJAN | lolcat
 echo -e""
 echo -e "${color1}1${color3}.$bd Create Trojan Account (${color2}addtrojan${color3})"
