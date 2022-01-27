@@ -284,8 +284,12 @@ accept = 445
 connect = 127.0.0.1:200
 
 [openssh]
-accept = 442
+accept = 2083
 connect = 127.0.0.1:22
+
+[stunnel5]
+accept = 2052
+connect = 127.0.0.1:442
 
 [openvpn]
 accept = 990
@@ -612,4 +616,3 @@ rm -f /root/cert.pem
 rm -f /root/ssh-vpn.sh
 
 # finishing
-clear
