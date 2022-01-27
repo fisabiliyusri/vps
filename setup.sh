@@ -19,7 +19,7 @@ PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
-
+apt install git curl -y >/dev/null 2>&1
 apt-get install figlet -y > /dev/null
 apt-get install ruby -y > /dev/null
 gem install lolcat
@@ -103,7 +103,7 @@ echo "   - OpenVPN                 : TCP 700, UDP 800, SSL 990"  | tee -a log-in
 echo "   - Stunnel5                : 445, 442"   | tee -a log-install.txt
 echo "   - Dropbear                : 200, 300"   | tee -a log-install.txt
 echo "   - Squid Proxy             : 3128, 8080" | tee -a log-install.txt
-echo "   - Badvpn                  : 7100, 7200, 7300"  | tee -a log-install.txt
+echo "   - Badvpn                  : 7100, 7200, 7300-7900"  | tee -a log-install.txt
 echo "   - L2TP/IPSEC VPN          : 1701"  | tee -a log-install.txt
 echo "   - SSTP BPN                : 444"   | tee -a log-install.txt
 echo "   - PPTP VPN                : 1732"  | tee -a log-install.txt
@@ -132,7 +132,7 @@ echo "   - Dflate                  : [ON]"  | tee -a log-install.txt
 echo "   - IPtables                : [ON]"  | tee -a log-install.txt
 echo "   - Auto-Reboot             : [ON]"  | tee -a log-install.txt
 echo "   - IPv6                    : [OFF]"  | tee -a log-install.txt
-echo "   - Autoreboot On 05.00 GMT +7" | tee -a log-install.txt
+echo "   - Autoreboot On 04.00 GMT +7" | tee -a log-install.txt
 echo "   - Autobackup Data" | tee -a log-install.txt
 echo "   - Restore Data" | tee -a log-install.txt
 echo "   - Auto Delete Expired Account" | tee -a log-install.txt
@@ -141,8 +141,8 @@ echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   - Dev/Main                : "  | tee -a log-install.txt
-echo "   - Recode                  : " | tee -a log-install.txt
-echo "   - Telegram                : T.me/"  | tee -a log-install.txt
+echo "   - Recode                  : gandring" | tee -a log-install.txt
+echo "   - Telegram                : T.me/pegasusq_governor"  | tee -a log-install.txt
 echo "   - Instagram               : ~"  | tee -a log-install.txt
 echo "   - Whatsapp                : ~"  | tee -a log-install.txt
 echo "   - Facebook                : ~" | tee -a log-install.txt
@@ -150,5 +150,4 @@ echo "♤♤♤♤SELESAI INSTALASI VPN BY gandring♤♤♤♤" | tee -a log-in
 echo ""
 echo " Reboot 7 Sec"
 sleep 7
-rm -f setup.sh
 reboot
