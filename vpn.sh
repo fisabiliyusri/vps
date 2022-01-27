@@ -67,7 +67,7 @@ persist-key
 persist-tun
 auth-user-pass
 comp-lzo
-verb 3
+verb 1
 END
 
 sed -i $MYIP2 /etc/openvpn/tcp.ovpn;
@@ -85,7 +85,7 @@ persist-key
 persist-tun
 auth-user-pass
 comp-lzo
-verb 3
+verb 1
 END
 
 sed -i $MYIP2 /etc/openvpn/udp.ovpn;
@@ -103,7 +103,7 @@ persist-key
 persist-tun
 auth-user-pass
 comp-lzo
-verb 3
+verb 1
 END
 
 sed -i $MYIP2 /etc/openvpn/ssl.ovpn;
@@ -153,6 +153,4 @@ systemctl enable openvpn
 systemctl start openvpn
 /etc/init.d/openvpn restart
 
-# Delete script
-history -c
-rm -f /root/vpn.sh
+clear
