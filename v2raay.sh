@@ -7,8 +7,8 @@ bd='\e[1m'
 color1='\e[031;1m'
 color2='\e[34;1m'
 color3='\e[0m'
-MYIP=$(wget -qO- ipv4.icanhazip.com);
-clear
+MYIP=$(wget -qO- ifconfig.me/ip);
+echo -e "checking vps"
 cat /usr/bin/bannerV2RAY | lolcat
 echo -e""
 echo -e "${color1}1${color3}.$bd Create Vmess Websocket Account (${color2}addv2ray${color3})"
@@ -58,3 +58,5 @@ sleep 1
 v2raay
 ;;
 esac
+menu
+fi
