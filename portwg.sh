@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/geovpn
+# My Telegram : https://t.me/pegasusq_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -12,25 +12,16 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
+MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
 NIC=$(ip -o $ANU -4 route show to default | awk '{print $5}');
 clear
 wg="$(cat ~/log-install.txt | grep -i Wireguard | cut -d: -f2|sed 's/ //g')"
-echo -e "======================================"
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e ""
 echo -e "Change Port $wg"
 echo -e ""
-echo -e "======================================"
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤"
 read -p "New Port Wireguard : " wg2
 if [ -z $wg2 ]; then
 echo "Please Input Port"
@@ -51,4 +42,5 @@ systemctl reload wg-quick@wg0 > /dev/null
 echo -e "\e[032;1mPort $wg2 modified successfully\e[0m"
 else
 echo "Port $wg2 is used"
+menu
 fi
