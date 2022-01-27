@@ -17,6 +17,8 @@ rm -f setup.sh && apt update && apt upgrade -y && apt install lolcat -y && gem i
 
 • Trojan-Gfw
 
+• Trojan-GO
+
 • Shadowsocks
 
 • ShadowsocksR
@@ -28,8 +30,6 @@ rm -f setup.sh && apt update && apt upgrade -y && apt install lolcat -y && gem i
 • SSTP VPN
 
 • Wireguard
-
-• Trojan-GO
 
 • Backup Data ALL Service
 
