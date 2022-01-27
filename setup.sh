@@ -7,7 +7,7 @@ if [ "$(systemd-detect-virt)" == "openvz" ]; then
 		echo "OpenVZ is not supported"
 		exit 1
 fi
-# My Telegram : https://t.me/gandring
+# My Telegram : https://t.me/pegasusq_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -84,9 +84,9 @@ echo "2.9" > /home/ver
 echo " "
 echo "Installation has been completed!!"
 echo " "
-echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤Script Install Vpn By gandring♤♤♤♤♤♤♤♤♤♤♤♤♤♤" | tee -a log-install.txt
+echo "♤♤♤♤♤♤♤Script Install Vpn By gandring♤♤♤♤♤♤♤" | tee -a log-install.txt
 echo "" | tee -a log-install.txt
-echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤" | tee -a log-install.txt
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH                 : 222, 22"    | tee -a log-install.txt
@@ -137,7 +137,7 @@ echo "   - Telegram                : T.me/"  | tee -a log-install.txt
 echo "   - Instagram               : ~"  | tee -a log-install.txt
 echo "   - Whatsapp                : ~"  | tee -a log-install.txt
 echo "   - Facebook                : ~" | tee -a log-install.txt
-echo "♤♤♤♤♤♤♤♤♤♤♤♤SELESAI INSTALASI VPN BY gandring♤♤♤♤♤♤♤♤♤♤♤♤" | tee -a log-install.txt
+echo "♤♤♤♤♤♤♤SELESAI INSTALASI VPN BY gandring♤♤♤♤♤♤♤" | tee -a log-install.txt
 echo ""
 echo " Reboot 7 Sec"
 sleep 7
