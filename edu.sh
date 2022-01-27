@@ -14,7 +14,7 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ifconfig.me/ip);
-clear
+echo -e "checking vps"
 # Link Hosting Kalian
 wget https://raw.githubusercontent.com/Gandring15/vps/main/websocket
 chmod +x /usr/local/bin/websocket
