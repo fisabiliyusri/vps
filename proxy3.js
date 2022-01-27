@@ -55,7 +55,7 @@ setInterval(gcollector, 1000);
 const server = net.createServer();
 server.on('connection', function(socket) {
     var packetCount = 0;
-    var anu = "geovpn Switching Protocols";
+    var anu = "PEGASUSQ Switching Protocols";
     //var handshakeMade = false;
     socket.write("HTTP/1.1 101 " + anu.fontcolor("green") + "\r\nContent-Length: 1048576000000\r\n\r\n");
     console.log("[INFO] - Connection received from " + socket.remoteAddress + ":" + socket.remotePort);
