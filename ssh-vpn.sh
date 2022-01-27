@@ -15,27 +15,6 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-# ==================================================
-# Link Hosting Kalian
-geovpn="raw.githubusercontent.com/geovpn/scriptvps/main/ssh"
-
-# Link Hosting Kalian Untuk Xray
-geovpnn="raw.githubusercontent.com/geovpn/scriptvps/main/xray"
-
-# Link Hosting Kalian Untuk Trojan Go
-geovpnnn="raw.githubusercontent.com/geovpn/scriptvps/main/trojango"
-
-# Link Hosting Kalian Untuk Stunnel5
-geovpnnnn="raw.githubusercontent.com/geovpn/scriptvps/main/stunnel5"
-
-# Link Hosting Kalian Untuk menu
-geovpnnnnn="raw.githubusercontent.com/geovpn/scriptvps/main/menu"
-
-# Link Hosting Kalian Untuk banner
-geovpnnnnnn="raw.githubusercontent.com/geovpn/scriptvps/main/banner"
-
-# Link Hosting Kalian Untuk dom
-geovpnnnnnnn="raw.githubusercontent.com/geovpn/scriptvps/main/dom"
 
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
@@ -100,7 +79,6 @@ sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
 apt update -y
 apt upgrade -y
 apt dist-upgrade -y
-apt-get remove --purge ufw firewalld -y
 apt-get remove --purge exim4 -y
 
 # install wget and curl
@@ -328,12 +306,12 @@ chmod +x /etc/init.d/stunnel5
 cp /usr/local/bin/stunnel /usr/local/gandring/stunnel5
 
 # Remove File
-rm -r -f /usr/local/share/doc/stunnel/
-rm -r -f /usr/local/etc/stunnel/
-rm -f /usr/local/bin/stunnel
-rm -f /usr/local/bin/stunnel3
-rm -f /usr/local/bin/stunnel4
-rm -f /usr/local/bin/stunnel5
+#rm -r -f /usr/local/share/doc/stunnel/
+#rm -r -f /usr/local/etc/stunnel/
+#rm -f /usr/local/bin/stunnel
+#rm -f /usr/local/bin/stunnel3
+#rm -f /usr/local/bin/stunnel4
+#rm -f /usr/local/bin/stunnel5
 
 # Restart Stunnel 5
 systemctl stop stunnel5
@@ -490,7 +468,7 @@ wget -O pointing "https://raw.githubusercontent.com/Gandring15/vps/main/pointing
 wget -O bw "https://raw.githubusercontent.com/Gandring15/vps/main/bw.sh"
 wget -O update "https://raw.githubusercontent.com/Gandring15/vps/main/update.sh"
 wget -O host "https://raw.githubusercontent.com/Gandring15/vps/main/host.sh"
-wget -O host "https://raw.githubusercontent.com/Gandring15/vps/main/ohpserver"
+wget -O ohpserver "https://raw.githubusercontent.com/Gandring15/vps/main/ohpserver"
 chmod +x autoreboot
 chmod +x addhost
 chmod +x menu
