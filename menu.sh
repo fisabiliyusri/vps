@@ -107,7 +107,7 @@ echo -e "$yy 57$y.Reboot VPS"
 echo -e "$yy 58$y.Speedtest VPS"
 echo -e "$yy 59$y.Tampilkan Informasi System Vps"
 echo -e "$yy 60$y.Info Script Auto Install"
-echo -e "Server Anda Telah Di Tweak Tuning BBR"
+echo -e "Server Anda Telah Di Tweak Tuning BBR Moga Selamat Sampai Tujuan"
 echo -e "$yy♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e ""
 read -p "Select From Options [ 1 - 60 ] : " menu
