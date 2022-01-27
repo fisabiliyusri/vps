@@ -13,7 +13,7 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ifconfig.me/ip);
-clear
+echo -e "checking vps"
 source /var/lib/gandring/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
@@ -97,6 +97,6 @@ echo -e "Link TLS    : ${xrayv2ray1}"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "Link No TLS : ${xrayv2ray2}"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo -e "Script By gandring"
+echo -e "Repacked By gandring"
 menu
 fi
