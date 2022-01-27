@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/gandring
+# My Telegram : https://t.me/pegasusq_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -13,7 +13,7 @@ LIGHT='\033[0;37m'
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ifconfig.me/ip);
-clear
+echo -e " checking vps"
 source /var/lib/gandring/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
@@ -52,6 +52,6 @@ echo -e "Expired  : $exp"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "Link TR  : ${trojanlink}"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo -e "Script By gandring"
+echo -e "Repacked By gandring"
 menu
 fi
