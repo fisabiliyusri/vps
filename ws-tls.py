@@ -5,13 +5,18 @@ import socket, threading, thread, select, signal, sys, time, getopt
 LISTENING_ADDR = '0.0.0.0'
 LISTENING_PORT = sys.argv[1]
 
+else:	
+LISTENING_PORT = 2083
+
 # Pass
 PASS = ''
 
 # CONST
 BUFLEN = 4096 * 4
 TIMEOUT = 60
-DEFAULT_HOST = '127.0.0.1:2083'
+DEFAULT_HOST = '127.0.0.1:222'
+DEFAULT_HOST = '127.0.0.1:200'
+DEFAULT_HOST = '127.0.0.1:442'
 RESPONSE = 'HTTP/1.1 101 <b><h1><h><font color="fuchsia"> ngetrik jangan pelit </font></b>\r\n\r\nContent-Length: 104857600000\r\n\r\n'
 
 class Server(threading.Thread):
