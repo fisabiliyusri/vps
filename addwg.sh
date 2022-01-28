@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/geovpn
+# My Telegram : https://t.me/pegasusq_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -12,27 +12,17 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
+MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
-clear
 # Load params
 source /etc/wireguard/params
-source /var/lib/geovpnstore/ipvps.conf
+source /var/lib/gandring/ipvps.conf
 if [[ "$IP" = "" ]]; then
-SERVER_PUB_IP=$(wget -qO- ipinfo.io/ip);
+SERVER_PUB_IP=$(wget -qO- ifconfig.me/ip);
 else
 SERVER_PUB_IP=$IP
 fi
-source /var/lib/geovpnstore/ipvps.conf
+source /var/lib/gandring/ipvps.conf
 if [[ "$IP2" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
@@ -56,16 +46,16 @@ ENDPOINT="$SERVER_PUB_IP:$SERVER_PORT"
 WG_CONFIG="/etc/wireguard/wg0.conf"
 LASTIP=$( grep "/32" $WG_CONFIG | tail -n1 | awk '{print $3}' | cut -d "/" -f 1 | cut -d "." -f 4 )
 if [[ "$LASTIP" = "" ]]; then
-CLIENT_ADDRESS="10.66.66.2"
+CLIENT_ADDRESS="10.11.11.2"
 else
-CLIENT_ADDRESS="10.66.66.$((LASTIP+1))"
+CLIENT_ADDRESS="10.12.11.$((LASTIP+1))"
 fi
 
 # Adguard DNS by default
-CLIENT_DNS_1="176.103.130.130"
+CLIENT_DNS_1="1.1.1.1"
 
-CLIENT_DNS_2="176.103.130.131"
-MYIP=$(wget -qO- ifconfig.co);
+CLIENT_DNS_2="8.8.8.8"
+MYIP=$(wget -qO- ifconfig.me/ip);
 read -p "Expired (Days) : " masaaktif
 hariini=`date -d "0 days" +"%Y-%m-%d"`
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
@@ -114,5 +104,5 @@ echo -e "Expired  : $exp"
 echo -e "======================="
 echo -e "Link WG  : http://$MYIP:89/$CLIENT_NAME.conf"
 echo -e "======================="
-echo -e "Script By geovpn"
+echo -e "Script By gandring"
 rm -f /root/wg0-client-$CLIENT_NAME.conf
