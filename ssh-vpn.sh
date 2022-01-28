@@ -413,7 +413,7 @@ wget -O portsstp "https://raw.githubusercontent.com/Gandring15/vps/main/portsstp
 wget -O portsquid "https://raw.githubusercontent.com/Gandring15/vps/main/portsquid.sh"
 wget -O portv2ray "https://raw.githubusercontent.com/Gandring15/vps/main/portv2ray.sh"
 wget -O portvless "https://raw.githubusercontent.com/Gandring15/vps/main/portvless.sh"
-wget -O wbmn "https://raw.githubusercontent.com/Gandring15/vps/main/webmin.sh"
+wget -O webmin "https://raw.githubusercontent.com/Gandring15/vps/main/webmin.sh"
 wget -O xp "https://raw.githubusercontent.com/Gandring15/vps/main/xp.sh"
 wget -O swapkvm "https://raw.githubusercontent.com/Gandring15/vps/main/swapkvm.sh"
 wget -O addv2ray "https://raw.githubusercontent.com/Gandring15/vps/main/addv2ray.sh"
