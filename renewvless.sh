@@ -12,18 +12,8 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
+MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
-if [ $MYIP = $IZIN ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
-else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
-exit 0
-fi
-clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/vless-tls.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
@@ -65,4 +55,4 @@ echo "==============================="
 echo "Username  : $user"
 echo "Expired   : $exp4"
 echo "==============================="
-echo "Script By geovpn"
+echo "Script By gandring"
