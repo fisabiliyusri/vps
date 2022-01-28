@@ -41,5 +41,3 @@ systemctl restart xray@trojan > /dev/null
 echo -e "\e[032;1mPort $tr2 modified successfully\e[0m"
 else
 echo "Port $tr2 is used"
-menu
-fi
