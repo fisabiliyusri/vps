@@ -25,7 +25,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/v2ray-tls.json")
 	echo ""
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo " ♤♤♤♤♤♤♤♤♤♤♡♡♡♡♡♡♡♤"
+	echo " ♤♤♤♤♤♤♤♤♤♤♤♤♤"
 	echo "   nggak ada pengguna kadal"
 	grep -E "^### " "/etc/xray/v2ray-tls.json" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -44,12 +44,10 @@ systemctl restart xray@v2ray-tls
 systemctl restart xray@v2ray-nontls
 clear
 echo ""
-echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo "      Vmess Akun Dihapus"
-echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo "Vmess Akun Dihapus"
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Username  : $user"
 echo "Expired   : $exp"
-echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Repacked By gandring"
-menu
-fi
