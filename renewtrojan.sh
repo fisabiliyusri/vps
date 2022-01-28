@@ -47,12 +47,10 @@ exp4=`date -d "$exp3 days" +"%Y-%m-%d"`
 sed -i "s/### $user $exp/### $user $exp4/g" /etc/xray/trojan.json
 clear
 echo ""
-echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo "   Perpanjang Akun Trojan-Gfw"
-echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo "Perpanjang Akun Trojan-Gfw"
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤
 echo " Username    : $user"
 echo " Kadaluarsa  : $exp4"
-echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Repacked By gandring"
-menu
-fi
