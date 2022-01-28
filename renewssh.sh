@@ -44,5 +44,3 @@ echo -e ""
 echo -e "        Nama Pengguna Tidak Ada       "
 echo -e ""
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-menu
-fi
