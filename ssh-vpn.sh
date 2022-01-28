@@ -431,19 +431,19 @@ wget -O addtrgo "https://raw.githubusercontent.com/Gandring15/vps/main/addtrgo.s
 wget -O deltrgo "https://raw.githubusercontent.com/Gandring15/vps/main/deltrgo.sh"
 wget -O renewtrgo "https://raw.githubusercontent.com/Gandring15/vps/main/renewtrgo.sh"
 wget -O cektrgo "https://raw.githubusercontent.com/Gandring15/vps/main/cektrgo.sh"
-wget -O bebek "https://raw.githubusercontent.com/Gandring15/vps/main/bebek.sh"
+#wget -O bebek "https://raw.githubusercontent.com/Gandring15/vps/main/bebek.sh"
 wget -O l2tp "https://raw.githubusercontent.com/Gandring15/vps/main/l2tp.sh"
 wget -O medo "https://raw.githubusercontent.com/Gandring15/vps/main/medo.sh"
 wget -O menu "https://raw.githubusercontent.com/Gandring15/vps/main/menu.sh"
 wget -O paneli "https://raw.githubusercontent.com/Gandring15/vps/main/paneli.sh"
-wget -O ppt "https://raw.githubusercontent.com/Gandring15/vps/main/ppt.sh"
+#wget -O ppt "https://raw.githubusercontent.com/Gandring15/vps/main/ppt.sh"
 wget -O ssh "0https://raw.githubusercontent.com/Gandring15/vps/main/ssh.sh"
-wget -O ssssr "https://raw.githubusercontent.com/Gandring15/vps/main/ssssr.sh"
-wget -O sstpp "https://raw.githubusercontent.com/Gandring15/vps/main/sstpp.sh"
+#wget -O ssssr "https://raw.githubusercontent.com/Gandring15/vps/main/ssssr.sh"
+#wget -O sstpp "https://raw.githubusercontent.com/Gandring15/vps/main/sstpp.sh"
 wget -O status "https://raw.githubusercontent.com/Gandring15/vps/main/status.sh"
 wget -O system "https://raw.githubusercontent.com/Gandring15/vps/main/system.sh"
-wget -O trojaan "https://raw.githubusercontent.com/Gandring15/vps/main/trojaan.sh"
-#wget -O v2raay "https://raw.githubusercontent.com/Gandring15/vps/main/v2raay.sh"
+#wget -O trojaan "https://raw.githubusercontent.com/Gandring15/vps/main/trojaan.sh"
+##wget -O v2raay "https://raw.githubusercontent.com/Gandring15/vps/main/v2raay.sh"
 #wget -O wgr "https://raw.githubusercontent.com/Gandring15/vps/main/wgr.sh"
 wget -O bbr "https://raw.githubusercontent.com/Gandring15/vps/main/bbr.sh"
 #wget -O bannerku "https://raw.githubusercontent.com/Gandring15/vps/main/bannerku"
@@ -460,7 +460,7 @@ wget -O bbr "https://raw.githubusercontent.com/Gandring15/vps/main/bbr.sh"
 #wget -O bannerWIREGUARD "https://raw.githubusercontent.com/Gandring15/vps/main/bannerWIREGUARD"
 #wget -O bannerBACKUP "https://raw.githubusercontent.com/Gandring15/vps/main/bannerBACKUP"
 wget -O addcf "https://raw.githubusercontent.com/Gandring15/vps/main/addcf.sh"
-wget -O cfd "https://raw.githubusercontent.com/Gandring15/vps/main/cfd.sh"
+wget -O addwg "https://raw.githubusercontent.com/Gandring15/vps/main/addwg.sh"
 wget -O cff "https://raw.githubusercontent.com/Gandring15/vps/main/cff.sh"
 wget -O cfh "https://raw.githubusercontent.com/Gandring15/vps/main/cfh.sh"
 wget -O host "https://raw.githubusercontent.com/Gandring15/vps/main/host.sh"
@@ -499,6 +499,7 @@ chmod +x portvless
 chmod +x webmin
 chmod +x xp
 chmod +x swapkvm
+chmod +x addwg
 chmod +x addv2ray
 chmod +x addvless
 chmod +x addtrojan
