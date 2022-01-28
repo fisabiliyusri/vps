@@ -171,5 +171,3 @@ echo -e "${green}Domain Ini Tidak Support Wildcard Atau Multi Subdomain!"
 echo -e "Untuk VPN L2TP, SSTP, PPTP, Dan WIREGUARD,"
 echo -e "Anda Harus Menggunakan Domain System${off} ${cyan}$sys $off}"
 echo ""
-menu
-fi
