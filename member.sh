@@ -4,9 +4,9 @@ green='\e[0;32m'
 NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
-echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo "=========================================="
 echo "USERNAME          EXP DATE          STATUS"
-echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo "=========================================="
 while read expired
 do
 AKUN="$(echo $expired | cut -d: -f1)"
@@ -22,8 +22,6 @@ fi
 fi
 done < /etc/passwd
 JUMLAH="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
-echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Account number: $JUMLAH user"
-echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-menu
-fi
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
