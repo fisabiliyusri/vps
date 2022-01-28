@@ -48,11 +48,9 @@ sed -i "s/### $user $exp/### $user $exp4/g" /etc/trojan-go/akun.conf
 clear
 echo ""
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo "  Perpanjang Akun Trojan-Go"
+echo "Perpanjang Akun Trojan-Go"
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Username    : $user"
 echo "Kadaluarsa  : $exp4"
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Repacked By gandring"
-menu
-fi
