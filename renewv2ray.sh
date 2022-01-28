@@ -50,11 +50,9 @@ service cron restart
 clear
 echo ""
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo "  Perpanjang Akun Vmess  "
+echo "Perpanjang Akun Vmess"
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Username  : $user"
 echo "Expired   : $exp4"
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Repacked By gandring"
-menu
-fi
