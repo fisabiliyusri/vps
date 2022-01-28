@@ -59,5 +59,3 @@ sleep 1
 ssssr
 ;;
 esac
-menu
-fi
