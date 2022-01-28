@@ -16,13 +16,13 @@ MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
 sqd="$(cat /etc/squid/squid.conf | grep -i http_port | awk '{print $2}' | head -n1)"
 sqd2="$(cat /etc/squid/squid.conf | grep -i http_port | awk '{print $2}' | tail -n1)"
-echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo -e ""
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo -e "Por Squid"
 echo -e "[1]. Ganti Port $sqd"
 echo -e "[2]. Ganti Port $sqd2"
 echo -e "[3]. Exit"
-echo -e ""
-echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo -e "="
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e ""
 read -p "Select From Options [ 1-3 ] : " prot
 echo -e ""
@@ -67,5 +67,3 @@ menu
 echo "Please enter an correct number"
 ;;
 esac
-menu
-fi
