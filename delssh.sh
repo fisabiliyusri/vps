@@ -1,6 +1,6 @@
 #!/bin/bash
 # My Telegram : https://t.me/pegasusq_governor
-# ♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤
+# ♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤
 # Color
 RED='\033[0;31m'
 NC='\033[0m'
@@ -22,5 +22,3 @@ if getent passwd $Pengguna > /dev/null 2>&1; then
         echo -e "Username $Pengguna Telah Di Hapus"
 else
         echo -e "Failure: Username $Pengguna Tidak Ada"
-menu
-fi
