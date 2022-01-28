@@ -52,5 +52,3 @@ sleep 1
 medo
 ;;
 esac
-menu
-fi
