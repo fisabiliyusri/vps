@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/pegasusq_governor
+# My Telegram : https://t.me/geovpn
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -12,17 +12,27 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
-echo -e "checking vps:
+MYIP=$(wget -qO- ipinfo.io/ip);
+echo "Checking VPS"
+IZIN=$( curl https://raw.githubusercontent.com/geovpn/perizinan/main/ip | grep $MYIP )
+if [ $MYIP = $IZIN ]; then
+echo -e "${NC}${GREEN}Permission Accepted...${NC}"
+else
+echo -e "${NC}${RED}Permission Denied!${NC}";
+echo -e "${NC}${LIGHT}Please Contact Admin!!"
+echo -e "${NC}${LIGHT}Telegram : https://t.me/geovpn"
+exit 0
+fi
+clear
 # Load params
 source /etc/wireguard/params
-source /var/lib/gandring/ipvps.conf
+source /var/lib/geovpnstore/ipvps.conf
 if [[ "$IP" = "" ]]; then
-SERVER_PUB_IP=$(wget -qO- ifconfig.me/ip);
+SERVER_PUB_IP=$(wget -qO- ipinfo.io/ip);
 else
 SERVER_PUB_IP=$IP
 fi
-source /var/lib/gandring/ipvps.conf
+source /var/lib/geovpnstore/ipvps.conf
 if [[ "$IP2" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
@@ -46,15 +56,15 @@ ENDPOINT="$SERVER_PUB_IP:$SERVER_PORT"
 WG_CONFIG="/etc/wireguard/wg0.conf"
 LASTIP=$( grep "/32" $WG_CONFIG | tail -n1 | awk '{print $3}' | cut -d "/" -f 1 | cut -d "." -f 4 )
 if [[ "$LASTIP" = "" ]]; then
-CLIENT_ADDRESS="10.11.11.2"
+CLIENT_ADDRESS="10.66.66.2"
 else
-CLIENT_ADDRESS="10.11.11.$((LASTIP+1))"
+CLIENT_ADDRESS="10.66.66.$((LASTIP+1))"
 fi
 
 # Adguard DNS by default
-CLIENT_DNS_1="1.1.1.1"
+CLIENT_DNS_1="176.103.130.130"
 
-CLIENT_DNS_2="8.8.8.8"
+CLIENT_DNS_2="176.103.130.131"
 MYIP=$(wget -qO- ifconfig.co);
 read -p "Expired (Days) : " masaaktif
 hariini=`date -d "0 days" +"%Y-%m-%d"`
@@ -94,15 +104,15 @@ sleep 0.5
 echo Generate PresharedKey
 clear
 echo -e ""
-echo -e "♤♤♤♤♤ AKUN WIREGUARD ♤♤♤♤♤"
+echo -e "======-WIREGUARD-======"
 echo -e "Remarks  : $CLIENT_NAME"
 echo -e "IP/Host  : $MYIP"
 echo -e "Domain   : $domain"
 echo -e "Port     : $portwg"
 echo -e "Created  : $hariini"
 echo -e "Expired  : $exp"
-echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo -e "======================="
 echo -e "Link WG  : http://$MYIP:89/$CLIENT_NAME.conf"
-echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo -e "Repacked By gandring"
+echo -e "======================="
+echo -e "Script By geovpn"
 rm -f /root/wg0-client-$CLIENT_NAME.conf
