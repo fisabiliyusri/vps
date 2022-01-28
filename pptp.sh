@@ -40,7 +40,7 @@ paneli
 *)
 echo "Masukkan Nomor Yang Ada"
 sleep 1
-ppt
+pptp
 ;;
 esac
 menu
