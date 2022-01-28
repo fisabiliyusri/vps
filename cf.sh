@@ -5,7 +5,7 @@ NC='\e[0m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo -e "checking vps"
 apt install jq curl -y
-DOMAIN=vpsku.space
+DOMAIN=kolocokro.xyz
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
 SUB_DOMAIN=${sub}.kolocokro.xyz
 CF_ID=djarumpentol01@gmail.com
