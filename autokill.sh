@@ -103,5 +103,3 @@ case $AutoKill in
                 exit
                 ;;
         esac
-menu
-fi
