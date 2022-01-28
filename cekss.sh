@@ -14,9 +14,9 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo -e "checking "
-echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
-echo "♤♤♤=[ SS - OBFS User Login ]=♤♤♤";
-echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
+echo "==================================";
+echo "     SS - OBFS User Login"
+echo "==================================";
 echo ""
 data=( `cat /etc/shadowsocks-libev/akun.conf | grep '^###' | cut -d ' ' -f 2`);
 x=1
@@ -55,5 +55,3 @@ echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 fi
 x=$(( "$x" + 1 ))
 done
-menu
-fi
