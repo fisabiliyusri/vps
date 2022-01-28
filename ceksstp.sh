@@ -16,5 +16,3 @@ MYIP=$(wget -qO- ifconfig.me/ip);
 echo -e "checking vps"
 accel-cmd show sessions
 echo ""
-menu
-fi
