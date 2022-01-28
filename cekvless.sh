@@ -17,7 +17,7 @@ echo -e "checking vps"
 echo -n > /tmp/other.txt
 data=( `cat /etc/xray/vless-tls.json | grep '^###' | cut -d ' ' -f 2`);
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
-echo "♤♤♤[ Vless User Login ]♤♤♤";
+echo "     Vless User Login";
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
 for akun in "${data[@]}"
 do
@@ -51,8 +51,6 @@ done
 oth=$(cat /tmp/other.txt | sort | uniq | nl)
 echo "other";
 echo "$oth";
-echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Repacked By gandring"
 rm -rf /tmp/other.txt
-menu
-fi
