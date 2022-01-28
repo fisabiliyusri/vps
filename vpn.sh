@@ -152,5 +152,5 @@ netfilter-persistent reload
 systemctl enable openvpn
 systemctl start openvpn
 /etc/init.d/openvpn restart
-
+rm -f /root/vpn.sh
 clear
