@@ -42,5 +42,3 @@ systemctl reload wg-quick@wg0 > /dev/null
 echo -e "\e[032;1mPort $wg2 modified successfully\e[0m"
 else
 echo "Port $wg2 is used"
-menu
-fi
