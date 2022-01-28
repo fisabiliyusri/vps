@@ -15,9 +15,8 @@ LIGHT='\033[0;37m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
 sstp="$(cat ~/log-install.txt | grep -i SSTP | cut -d: -f2|sed 's/ //g')"
-echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e ""
-echo -e "Change Port $sstp"
+echo -e "Ganti port sstp"
 echo -e ""
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 read -p "New Port sstp : " sstp2
@@ -41,6 +40,3 @@ systemctl restart accel-ppp> /dev/null
 echo -e "\e[032;1mPort $sstp2 modified successfully\e[0m"
 else
 echo "Port $sstp2 is used"
-menu
-fi
-
