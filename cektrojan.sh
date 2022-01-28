@@ -17,7 +17,7 @@ echo -e "checking vps"
 echo -n > /tmp/other.txt
 data=( `cat /etc/xray/trojan.json | grep '^###' | cut -d ' ' -f 2`);
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
-echo "♤♤♤♤♤[ Trojan User Login ]♤♤♤♤♤";
+echo "         Trojan User Login";
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
 for akun in "${data[@]}"
 do
@@ -54,5 +54,3 @@ echo "$oth";
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Repacked By gandring"
 rm -rf /tmp/other.txt
-menu
-fi
