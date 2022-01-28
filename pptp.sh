@@ -43,5 +43,3 @@ sleep 1
 pptp
 ;;
 esac
-menu
-fi
