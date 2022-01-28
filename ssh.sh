@@ -66,5 +66,3 @@ sleep 1
 ssh
 ;;
 esac
-menu
-fi
