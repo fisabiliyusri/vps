@@ -85,8 +85,6 @@ apt-get remove --purge exim4 -y
 apt -y install wget curl
 
 # Install Requirements Tools
-apt install apt-transport-http -y
-apt install apache2 -y
 apt install ruby -y
 apt install python -y
 apt install make -y
@@ -309,10 +307,10 @@ cp /usr/local/bin/stunnel /usr/local/gandring/stunnel5
 
 # Remove File
 #rm -r -f /usr/local/share/doc/stunnel/
-#rm -r -f /usr/local/etc/stunnel/
-#rm -f /usr/local/bin/stunnel
-#rm -f /usr/local/bin/stunnel3
-#rm -f /usr/local/bin/stunnel4
+rm -r -f /usr/local/etc/stunnel/
+rm -f /usr/local/bin/stunnel
+rm -f /usr/local/bin/stunnel3
+rm -f /usr/local/bin/stunnel4
 #rm -f /usr/local/bin/stunnel5
 
 # Restart Stunnel 5
@@ -438,8 +436,8 @@ wget -O l2tp "https://raw.githubusercontent.com/Gandring15/vps/main/l2tp.sh"
 wget -O medo "https://raw.githubusercontent.com/Gandring15/vps/main/medo.sh"
 wget -O menu "https://raw.githubusercontent.com/Gandring15/vps/main/menu.sh"
 wget -O paneli "https://raw.githubusercontent.com/Gandring15/vps/main/paneli.sh"
-wget -O pptp "https://raw.githubusercontent.com/Gandring15/vps/main/pptp.sh"
-wget -O ssh "https://raw.githubusercontent.com/Gandring15/vps/main/ssh.sh"
+wget -O ppt "https://raw.githubusercontent.com/Gandring15/vps/main/ppt.sh"
+wget -O ssh "0https://raw.githubusercontent.com/Gandring15/vps/main/ssh.sh"
 wget -O ssssr "https://raw.githubusercontent.com/Gandring15/vps/main/ssssr.sh"
 wget -O sstpp "https://raw.githubusercontent.com/Gandring15/vps/main/sstpp.sh"
 wget -O status "https://raw.githubusercontent.com/Gandring15/vps/main/status.sh"
@@ -498,7 +496,7 @@ chmod +x portsstp
 chmod +x portsquid
 chmod +x portv2ray
 chmod +x portvless
-chmod +x wbmn
+chmod +x webmin
 chmod +x xp
 chmod +x swapkvm
 chmod +x addv2ray
@@ -523,7 +521,7 @@ chmod +x l2tp
 chmod +x medo
 chmod +x menu
 chmod +x paneli
-chmod +x pptp
+chmod +x ppt
 chmod +x ssh
 chmod +x ssssr
 chmod +x sstpp
@@ -590,6 +588,10 @@ screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7800 --max-clients 500
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500
 history -c
 echo "unset HISTFILE" >> /etc/profile
+rm -f /root/key.pem
+rm -f /root/cert.pem
+rm -f /root/ssh-vpn.sh
+cd
 rm -f /root/key.pem
 rm -f /root/cert.pem
 rm -f /root/ssh-vpn.sh
