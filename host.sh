@@ -14,7 +14,7 @@ flag='\x1b[47;41m'
 clear
 sys=$(cat /etc/xray/domain)
 gandring=djarumpentol01@gmail.com
-cfdomain=okUiRiUf8wrVhuZJKddKLZFkmri43wwxNKCvQ0kV
+cfdomain=fZMEBX8Gmv3YTFH9EGHy6-dxas0TRArpcafwFABV
 DM1=kolocokro.xyz
 DM2=bothervpn.tk
 DM3=vpsku.space
@@ -156,7 +156,7 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
 -H "Content-Type: application/json" \
 --data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}')
 
-echo "IP=$SUB_DOMAIN" >> /var/lib/geovpnstore/ipvps.conf
+echo "IP=$SUB_DOMAIN" >> /var/lib/gandring/ipvps.conf
 
 sleep 0.5
 echo -e "${cyan}=================================${off}"
