@@ -48,11 +48,9 @@ sed -i "s/### $user $exp/### $user $exp4/g" /var/lib/gandring/data-user-l2tp
 clear
 echo ""
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo "   Perpanjang Akun L2TP "
+echo "Perpanjang Akun L2TP"
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Username  : $user"
 echo "Kadaluarsa   : $exp4"
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Repacked By gandring"
-menu
-fi
