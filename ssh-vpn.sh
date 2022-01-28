@@ -384,8 +384,8 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O addhost "https://raw.githubusercontent.com/Gandring15/vps/main/autoreboot.sh"
-wget -O autoreboot "https://raw.githubusercontent.com/Gandring15/vps/main/addhost.sh"
+wget -O autoreboot "https://raw.githubusercontent.com/Gandring15/vps/main/autoreboot.sh"
+wget -O addhost "https://raw.githubusercontent.com/Gandring15/vps/main/addhost.sh"
 wget -O about "https://raw.githubusercontent.com/Gandring15/vps/main/about.sh"
 wget -O menu "https://raw.githubusercontent.com/Gandring15/vps/main/menu.sh"
 wget -O addssh "https://raw.githubusercontent.com/Gandring15/vps/main/addssh.sh"
