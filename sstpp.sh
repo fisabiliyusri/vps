@@ -42,5 +42,3 @@ sleep 1
 sstpp
 ;;
 esac
-menu
-fi
