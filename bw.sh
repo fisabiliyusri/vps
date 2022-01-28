@@ -185,5 +185,3 @@ echo -e "${mg}Nomor Yang Anda Masukkan Salah!${off}"
 bw
 ;;
 esac
-menu
-if
