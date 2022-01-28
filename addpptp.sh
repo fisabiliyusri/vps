@@ -51,17 +51,15 @@ chmod 600 /etc/ppp/chap-secrets*
 echo -e "### $VPN_USER $exp">>"/var/lib/gandring/data-user-pptp"
 cat <<EOF
 
-♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤
-♤          PPTP VPN       ♤
-♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤
+=============================
+           PPTP VPN
+=============================
 IP/Host   : $PUBLIC_IP
 Domain    : $domain
 Username  : $VPN_USER
 Password  : $VPN_PASSWORD
 Created   : $hariini
 Expired   : $exp
-♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤
+=============================
 Script By gandring
 EOF
-menu
-fi
