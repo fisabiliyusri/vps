@@ -17,13 +17,13 @@ echo "Checking VPS"
 MYIP=$(wget -qO- ifconfig.me/ip);
 ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
-echo -e "          Port Ovpn"
-echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo -e "Port Ovpn"
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "[1]  Ganti Port TCP $ovpn"
 echo -e "[2]. Ganti Port UDP $ovpn2"
 echo -e "[3]. Keluar"
 echo -e ""
-echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e ""
 read -p "Select From Options [ 1-3 ] : " prot
 echo -e ""
@@ -158,6 +158,3 @@ menu
 echo "Please enter an correct number"
 ;;
 essac
-menu
-fi
-
