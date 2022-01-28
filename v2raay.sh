@@ -58,5 +58,3 @@ sleep 1
 v2raay
 ;;
 esac
-menu
-fi
