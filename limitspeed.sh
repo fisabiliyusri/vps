@@ -62,6 +62,3 @@ stop
 else
 clear
 echo " You Entered The Wrong Number"
-menu
-fi
-
