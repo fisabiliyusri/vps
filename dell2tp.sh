@@ -26,7 +26,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/gandring/data-user-l2tp")
 	echo ""
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo " ♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+	echo " ♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 	echo "   nggak ada pengguna kadal"
 	grep -E "^### " "/var/lib/gandring/data-user-l2tp" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -48,12 +48,10 @@ sed -i "/^### $VPN_USER $exp/d" /var/lib/gandring/data-user-l2tp
 chmod 600 /etc/ppp/chap-secrets* /etc/ipsec.d/passwd*
 clear
 echo ""
-echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo "    L2TP Account Deleted   "
-echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo "  L2TP Account Deleted"
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Username  : $VPN_USER"
 echo "Expired   : $exp"
 echo "=========================="
 echo "Script By gandring"
-menu
-fi
