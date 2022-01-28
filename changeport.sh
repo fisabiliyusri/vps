@@ -15,10 +15,10 @@ LIGHT='\033[0;37m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo -e "checking vps"
 echo -e ""
-echo -e "     MENU GANTI PORT LAYANAN     "
-echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo -e "     MENU GANTI PORT LAYANAN"
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "[1]. Ganti Port OpenVPN"
-echo -e "[2]. CmGanti Port Wireguard"
+echo -e "[2]. Ganti Port Wireguard"
 echo -e "[3]. Ganti Port Vmess"
 echo -e "[4]. Ganti Port Vless"
 echo -e "[5]. Ganti Port Trojan"
@@ -26,7 +26,7 @@ echo -e "[6]. Ganti Port Squid"
 echo -e "[7]. Ganti Port SSTP"
 echo -e "[8]. Keluar"
 echo -e ""
-echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e ""
 read -p "Select From Options [ 1-8 ] : " port
 echo -e ""
@@ -60,5 +60,3 @@ menu
 echo "Please enter an correct number"
 ;;
 esac
-menu
-fi
