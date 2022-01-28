@@ -16,13 +16,13 @@ MYIP=$(wget -qO- ifconfig.me/ip);
 echo "Checking VPS"
 tls="$(cat ~/log-install.txt | grep -w "Vless TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vless None TLS" | cut -d: -f2|sed 's/ //g')"
-echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo -e ""
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo -e "ganti port vless"
 echo -e "[1]. Ganti Port Vless TLS $tls"
 echo -e "[2]. Ganti Port Vless None TLS $none"
 echo -e "[3]. Keluar"
 echo -e ""
-echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e ""
 read -p "Select From Options [ 1-3 ] : " prot
 echo -e ""
@@ -83,5 +83,3 @@ menu
 echo "Please enter an correct number"
 ;;
 esac
-menu
-fi
