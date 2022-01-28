@@ -56,5 +56,4 @@ echo -e "Link Trojan-Go  : ${link}"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "Repacked By gandring"
 echo""
-menu
-fi
+
