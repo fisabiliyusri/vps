@@ -17,7 +17,7 @@ echo -e "checking vps"
 echo -n > /tmp/other.txt
 data=( `cat /etc/trojan-go/akun.conf | grep '^###' | cut -d ' ' -f 2`);
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
-echo "♤♤♤♤[ Trojan-Go User Login ]♤♤♤♤";
+echo "        Trojan-Go User Login";
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
 for akun in "${data[@]}"
 do
@@ -54,6 +54,4 @@ echo "$oth";
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
 echo "Repacked By gandring"
 rm -rf /tmp/other.txt
-menu
-fi
 
