@@ -96,7 +96,7 @@ port_http $http">>"/etc/shadowsocks-libev/akun.conf"
 service cron restart
 clear
 echo -e ""
-echo -e "♤♤♤♤♤SHADOWSOCKS♤♤♤♤♤"
+echo -e "=======SHADOWSOCKS======="
 echo -e "IP/Host     : $MYIP"
 echo -e "Domain      : $domain"
 echo -e "Port HTTPS  : $tls"
@@ -105,11 +105,9 @@ echo -e "Password    : $user"
 echo -e "Method      : aes-256-cfb"
 echo -e "Created     : $hariini"
 echo -e "Expired     : $exp"
-echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo -e "========================="
 echo -e "Link HTTPS  : $linkss1"
-echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo -e "==================/======"
 echo -e "Link HTTP   : $linkss2"
-echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo -e "========================="
 echo -e "Script By gandring"
-menu
-fi
