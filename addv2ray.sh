@@ -98,5 +98,3 @@ echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "Link No TLS : ${xrayv2ray2}"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "Repacked By gandring"
-menu
-fi
