@@ -16,9 +16,9 @@ MYIP=$(wget -qO- ifconfig.me/ip);
 echo -e "checking vps"
 echo -n > /tmp/other.txt
 data=( `cat /etc/xray/v2ray-tls.json | grep '^###' | cut -d ' ' -f 2`);
-echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
-echo "♤♤♤♤♤[ Vmess User Login ]♤♤♤♤♤♤";
-echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤{";
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
+echo "      Vmess User Login";
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤{";
 for akun in "${data[@]}"
 do
 if [[ -z "$akun" ]]; then
@@ -44,15 +44,13 @@ else
 jum2=$(cat /tmp/ipvmess.txt | nl)
 echo "user : $akun";
 echo "$jum2";
-echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 fi
 rm -rf /tmp/ipvmess.txt
 done
 oth=$(cat /tmp/other.txt | sort | uniq | nl)
 echo "other";
 echo "$oth";
-echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Repacked By gandring"
 rm -rf /tmp/other.txt
-menu
-fi
