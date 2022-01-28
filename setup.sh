@@ -150,4 +150,5 @@ echo "♤♤♤♤SELESAI INSTALASI VPN BY gandring♤♤♤♤" | tee -a log-in
 echo ""
 echo " Reboot 7 Sec"
 sleep 7
+rm -f setup.sh
 reboot
