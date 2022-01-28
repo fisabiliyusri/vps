@@ -43,9 +43,9 @@ echo -e "### $user $exp">>"/var/lib/gandring/data-user-sstp"
 clear
 cat <<EOF
 
-♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤
-♤         SSTP VPN        ♤
-♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤
+==============================
+           SSTP VPN 
+==============================
 IP/Host   : $IP
 Domain    : $domain
 Username  : $user
@@ -57,5 +57,3 @@ Expired   : $exp
 ♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤
 Repacked By gandring
 EOF
-menu
-fi
