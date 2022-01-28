@@ -26,7 +26,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/usr/local/shadowsocksr/akun.conf")
 	echo ""
 	echo " Select the existing client you want to remove"
 	echo " Press CTRL+C to return"
-	echo " ♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+	echo " ♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 	echo "    nggak ada pengguna kadal"
 	grep -E "^### " "/usr/local/shadowsocksr/akun.conf" | cut -d ' ' -f 2-3 | nl -s ') '
 	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -50,11 +50,9 @@ service cron restart
 clear
 echo ""
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo "   SSR Akun Dihapus"
+echo "SSR Akun Dihapus"
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Username  : $user"
 echo "Expired   : $exp"
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Repacked By gandring"
-menu
-fi
