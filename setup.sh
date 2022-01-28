@@ -19,15 +19,10 @@ PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
-apt install git curl -y >/dev/null 2>&1
-apt-get install figlet -y > /dev/null
-apt-get install ruby -y > /dev/null
-gem install lolcat
-clear
 # Getting
 MYIP=$(wget -qO- ifconfig.me/ip);
 clear
-if [ -f "/etc/v2ray/domain" ]; then
+if [ -f "/etc/xray/domain" ]; then
 echo "Script Already Installed"
 exit 0
 fi
@@ -51,15 +46,6 @@ wget https://raw.githubusercontent.com/Gandring15/vps/main/set-br.sh && chmod +x
 wget https://raw.githubusercontent.com/Gandring15/vps/main/edu.sh && chmod +x edu.sh && ./edu.sh
 # Ohp Server
 wget https://raw.githubusercontent.com/Gandring15/vps/main/ohp.sh && chmod +x ohp.sh && ./ohp.sh
-MYIP=$(wget -qO- https://icanhazip.com);
-host=$(hostname);
-cat > /etc/hosts <<-END
-127.0.0.1 localhost.localdomain localhost
-127.0.1.1 localhost
-$MYIP $host
-END
-apt-get install dbus -y > /dev/null
-sudo hostnamectl set-hostname Setup-gandring
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
