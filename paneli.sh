@@ -42,5 +42,3 @@ sleep 1
 paneli
 ;;
 esac
-menu
-fi
