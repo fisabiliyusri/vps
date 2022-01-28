@@ -48,7 +48,5 @@ echo -e "checking vps"
                fi
                done
                echo " "
-               echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+               echo "♤♤♤♤♤♤♤♤♤♤♤♤♤"
                echo "Script are successfully run"
-menu
-fi
