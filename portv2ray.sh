@@ -17,7 +17,7 @@ echo "Checking VPS"
 tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo -e ""
+echo -e "ganti port vmess"
 echo -e "[1]. Ganti Port Vmess TLS $tls"
 echo -e "[2]. Ganti Port Vmess None TLS $none"
 echo -e "[3]. Keluar"
@@ -84,5 +84,3 @@ menu
 echo "Please enter an correct number"
 ;;
 esac
-menu
-fi
