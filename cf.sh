@@ -7,7 +7,7 @@ echo -e "checking vps"
 apt install jq curl -y
 DOMAIN=kolocokro.xyz
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
-SUB_DOMAIN=${sub}.kolocokro.xyz
+SUB_DOMAIN=${sub}kolocokro.xyz
 CF_ID=djarumpentol01@gmail.com
 CF_KEY=fZMEBX8Gmv3YTFH9EGHy6-dxas0TRArpcafwFABV
 set -euo pipefail
@@ -39,5 +39,4 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
 echo "Host : $SUB_DOMAIN"
 echo $SUB_DOMAIN > /root/domain
 rm -f /root/cf.sh
-menu
-fi
+
