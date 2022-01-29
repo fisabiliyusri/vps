@@ -14,8 +14,8 @@ flag='\x1b[47;41m'
 clear
 sys=$(cat /etc/xray/domain)
 gandring=djarumpentol01@gmail.com
-cfdomain=fZMEBX8Gmv3YTFH9EGHy6-dxas0TRArpcafwFABV
-DM1=kolocokro.xyz
+cfdomain=gZVMQcpAAtbuo15dNyV1tmOSMrTNl5h0Zszg6WQg
+DM1=gandring.site
 DM2=bothervpn.tk
 DM3=vpsku.space
 DM4=gassfull.tech
