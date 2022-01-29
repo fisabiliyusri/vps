@@ -19,7 +19,7 @@ bd='\e[1m'
 AKTIF="$bd Aktif [ ${green}Running${NC} ]"
 ERROR="Error [ ${red}Not Running${NC} ]"
 
-wisnu=()
+keook=()
 gandring=()
 declare ingfo=()
 
