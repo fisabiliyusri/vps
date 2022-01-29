@@ -60,7 +60,7 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 
 • Nginx                   : 89
 
-• Wireguard               : 51820
+• Wireguard               : 636
 
 • L2TP/IPSEC VPN          : 1701
 
