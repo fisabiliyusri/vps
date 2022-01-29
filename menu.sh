@@ -50,11 +50,11 @@ tnggl=$(date +"%d-%B-%Y")
  echo -e  "  ╠══════════════════════════════════════════════════════════╣" | lolcat
  echo -e  "  ║                     [ MENU TUNNELING ]                   ║" |lolcat
  echo -e  "  ╠══════════════════════════════════════════════════════════╣" | lolcat
- echo -e  " $gl ║\e[m$red 1$bl.\e[m$bd SSH & OpenVPN Section      $bl                           ║"
- echo -e  " $gl ║\e[m$red 2$bl.\e[m$bd SSTP - L2TP - PPTP - Wireguard Section     $bl           ║"
- echo -e  " $mg ║\e[m$red 3$bl.\e[m$bd Shadowsocks & ShadowsocksR Section        $gl            ║"
- echo -e  " $mg ║\e[m$red 4$bl.\e[m$bd V2ray Vmess & Vless Section                 $gl          ║"
- echo -e  " $bl ║\e[m$red 5$bl.\e[m$bd Trojan & TrojanGO Section         $mg                    ║"
+ echo -e  " $gl ║\e[m$red 1$bl.\e[m$bd Menu Layanan SSH & OpenVPN       $bl                     ║"
+ echo -e  " $gl ║\e[m$red 2$bl.\e[m$bd Menu Layanan SSTP - L2TP - PPTP - Wireguard      $bl     ║"
+ echo -e  " $mg ║\e[m$red 3$bl.\e[m$bd Menu Layanan Shadowsocks & ShadowsocksR         $gl      ║"
+ echo -e  " $mg ║\e[m$red 4$bl.\e[m$bd Menu Layanan V2ray Vmess & Vless            $gl          ║"
+ echo -e  " $bl ║\e[m$red 5$bl.\e[m$bd Menu Layanan Trojan-Gfw & Trojan-GO       $mg            ║"
  echo -e  " $bl ║\e[m$red 6$bl.\e[m$bd Backup Section         $mg                               ║"
  echo -e  " $mg ║\e[m$red 7$bl.\e[m$bd System Tools Section            $mg                      ║"
  echo -e  " $mg ║\e[m$red 8$bl.\e[m$bd Update Script Section $gl Version $op($bl 2.0.4 $op)      $mg        ║"
@@ -95,7 +95,7 @@ x)
 exit
 ;;
 *)
-echo "Masukkan Nomor Yang Ada Sayang!"
+echo "Masukkan Nomor Yang Ada"
 menu
 ;;
 esac
