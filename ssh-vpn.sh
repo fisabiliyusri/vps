@@ -258,15 +258,15 @@ socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
 
 [dropbear]
-accept = 445
+accept = 8880
 connect = 127.0.0.1:200
 
 [openssh]
-accept = 2083
-connect = 127.0.0.1:22
+accept = 445
+connect = 127.0.0.1:222
 
 [stunnel5]
-accept = 1050
+accept = 1023
 connect = 127.0.0.1:442
 
 [openvpn]
