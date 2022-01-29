@@ -24,7 +24,9 @@ echo -e "[4]. Ganti Port Vless"
 echo -e "[5]. Ganti Port Trojan"
 echo -e "[6]. Ganti Port Squid"
 echo -e "[7]. Ganti Port SSTP"
-echo -e "[8]. Keluar"
+echo -e "[8]. Ganti Port Ssh Ws Tls"
+echo -e "[9]. Ganti Port Ssh Ws NonTls"
+echo -e "[10]. Keluar"
 echo -e ""
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e ""
@@ -53,6 +55,12 @@ portsquid
 portsstp
 ;;
 8)
+portsshwstls
+;;
+9)
+portsshwsnontls
+;;
+10)
 clear
 menu
 ;;
