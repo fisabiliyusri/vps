@@ -17,12 +17,12 @@ LIGHT='\033[0;37m'
 ws="$(cat ~/log-install.txt | grep -w "Websocket TLS" | cut -d: -f2|sed 's/ //g')"
 
 #input port untuk pengganti
-echo -e "======================================"
+echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e ""
-echo -e "Change Port $ws"
+echo -e "Ganti Port $ws"
 echo -e ""
-echo -e "======================================"
-read -p "New Port SSH WS : " ws2
+echo -e "♤♤♤♤♡♤♤♤♤♤♤♤♤♤♤♤♤"
+read -p "Port Baru SSH WS TLS : " ws2
 if [ -z $ws2 ]; then
 echo "Please Input Port"
 exit 0
