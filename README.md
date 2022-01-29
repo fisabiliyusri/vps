@@ -58,7 +58,7 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 
 • Badvpn/Udpgw            : 7100, 7200, 7300~7900
 
-• Nginx                   : 89
+• Nginx                   : 88
 
 • Wireguard               : 636
 
