@@ -48,7 +48,7 @@ echo -e "IP/Host       : $IP"
 echo -e "Domain        : ${domain}"
 echo -e "Username      : $Login"
 echo -e "Password      : $Pass"
-echo -e "Openssh Port  : 22
+echo -e "Openssh Port  : 22, 222"
 echo -e "Ssl Port      : 445, 442"
 echo -e "Dropbear Port : 200, 300"
 echo -e "SSL/TLS       : $ssl"
