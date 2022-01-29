@@ -37,7 +37,7 @@ case $sis in
 changeport
 ;;
 2)
-wbmn
+webmin
 ;;
 3)
 limitspeed
