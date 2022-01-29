@@ -392,6 +392,7 @@ wget -O autoreboot "https://raw.githubusercontent.com/Gandring15/vps/main/autore
 wget -O addhost "https://raw.githubusercontent.com/Gandring15/vps/main/addhost.sh"
 wget -O about "https://raw.githubusercontent.com/Gandring15/vps/main/about.sh"
 wget -O menu "https://raw.githubusercontent.com/Gandring15/vps/main/menu.sh"
+wget -O menu2 "https://raw.githubusercontent.com/Gandring15/vps/main/menu2.sh"
 wget -O addssh "https://raw.githubusercontent.com/Gandring15/vps/main/addssh.sh"
 wget -O trialssh "https://raw.githubusercontent.com/Gandring15/vps/main/trialssh.sh"
 wget -O delssh "https://raw.githubusercontent.com/Gandring15/vps/main/delssh.sh"
@@ -478,6 +479,7 @@ wget -O /usr/bin/portsshws https://raw.githubusercontent.com/Gandring15/vps/main
 chmod +x autoreboot
 chmod +x addhost
 chmod +x menu
+chmod +x menu2
 chmod +x addssh
 chmod +x trialssh
 chmod +x delssh
