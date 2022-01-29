@@ -300,7 +300,7 @@ END
 # Service Stunnel5 /etc/init.d/stunnel5
 wget -q -p https://github.com/actions/python-versions/releases/download/3.11.0-alpha.4-1754961913/python-3.11.0-alpha.4-linux-20.04-x64.tar.gz"
 chmod +x python-3.11.0-alpha.4-linux-20.04-x64.tar.gz
-chmod +x /etc/python3/python3.conf
+chmod +x /etc/python3.11/site_customize.py
 
 wget -q -O /etc/init.d/stunnel5 "https://raw.githubusercontent.com/Gandring15/vps/main/stunnel5.init && chmod +x stunnel5.init && ./stunnel5.init
 
