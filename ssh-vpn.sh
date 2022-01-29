@@ -473,6 +473,8 @@ wget -O bw "https://raw.githubusercontent.com/Gandring15/vps/main/bw.sh"
 wget -O update "https://raw.githubusercontent.com/Gandring15/vps/main/update.sh"
 wget -O host "https://raw.githubusercontent.com/Gandring15/vps/main/host.sh"
 wget -O ohpserver "https://raw.githubusercontent.com/Gandring15/vps/main/ohpserver"
+wget -O /usr/bin/portsshws https://raw.githubusercontent.com/Gandring15/vps/main/portsshwstls.sh
+wget -O /usr/bin/portsshws https://raw.githubusercontent.com/Gandring15/vps/main/portsshwsnontls.sh
 chmod +x autoreboot
 chmod +x addhost
 chmod +x menu
@@ -500,6 +502,8 @@ chmod +x portsstp
 chmod +x portsquid
 chmod +x portv2ray
 chmod +x portvless
+chmod +x portsshwstls
+chmod +x portsshwsnontls
 chmod +x webmin
 chmod +x xp
 chmod +x swapkvm
