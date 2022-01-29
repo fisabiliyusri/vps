@@ -271,7 +271,7 @@ backup
 restore
 ;;
 54)
-wbmn
+webmin
 ;;
 55)
 limitspeed
