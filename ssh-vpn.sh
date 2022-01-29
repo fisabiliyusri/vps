@@ -266,11 +266,11 @@ accept = 2083
 connect = 127.0.0.1:22
 
 [stunnel5]
-accept = 2052
+accept = 1050
 connect = 127.0.0.1:442
 
 [openvpn]
-accept = 990
+accept = 2086
 connect = 127.0.0.1:700
 
 END
