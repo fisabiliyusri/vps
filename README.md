@@ -118,7 +118,7 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 
 • Tweak Tuning Server And Limit Speed
 
-• Jangan Takut Untuk Berbagi🙏
+• Jangan Takut Menjadi Miskin Karna Berbagi🙏
 
 ### Contact 
 
