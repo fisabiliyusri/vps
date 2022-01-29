@@ -262,7 +262,7 @@ accept = 8880
 connect = 127.0.0.1:200
 
 [openssh]
-accept = 445
+accept = 2052
 connect = 127.0.0.1:222
 
 [stunnel5]
