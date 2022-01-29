@@ -76,7 +76,7 @@ bbr
 nano /etc/issue.net
 ;;
 15)
-wget https://raw.githubusercontent.com/Sangarya/root/main/root.sh && chmod +x root.sh && ./root.sh
+wget https://raw.githubusercontent.com/Gandring15/vps/main/root.sh && chmod +x root.sh && ./root.sh
 ;;
 16)
 medo
