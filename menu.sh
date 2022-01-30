@@ -56,8 +56,8 @@ tnggl=$(date +"%d-%B-%Y")
  echo -e  " $mg ║\e[m$red 4$bl.\e[m$bd Menu Layanan V2ray Vmess & Vless            $gl         ║"
  echo -e  " $bl ║\e[m$red 5$bl.\e[m$bd Menu Layanan Trojan-Gfw & Trojan-GO       $mg           ║"
  echo -e  " $bl ║\e[m$red 6$bl.\e[m$bd Backup Section         $mg                              ║"
- echo -e  " $mg ║\e[m$red 7$bl.\e[m$bd System Tools Section            $mg                     ║"
- echo -e  " $mg ║\e[m$red 8$bl.\e[m$bd Update Script Section $gl Version $op($bl 2.0.4 $op) $mg║"
+ echo -e  " $mg ║\e[m$red 7$bl.\e[m$bd Menu Konfigurasi System            $mg                  ║"
+ echo -e  " $mg ║\e[m$red 8$bl.\e[m$bd Menu Pembaruan Script $gl Version $op($bl 2.0.4 $op) $mg║"
  echo -e  "  \e[1;32m╠♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤╣" | lolcat
  echo -e  "  ║ x.   Exit                                                                       ║" | lolcat
  echo -e  "  \e[1;32m╚♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤╝" | lolcat
@@ -83,7 +83,7 @@ v2raay
 trojaan
 ;;
 6)
-bebek
+bekap
 ;;
 7)
 system
