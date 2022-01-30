@@ -46,7 +46,8 @@ wget https://raw.githubusercontent.com/Gandring15/vps/main/set-br.sh && chmod +x
 wget https://raw.githubusercontent.com/Gandring15/vps/main/edu.sh && chmod +x edu.sh && ./edu.sh
 # Ohp Server
 wget https://raw.githubusercontent.com/Gandring15/vps/main/ohp.sh && chmod +x ohp.sh && ./ohp.sh
-
+wget https://raw.githubusercontent.com/Gandring15/vps/main/wstunnel-x64-linux && chmod +x wstunnel-x64-linux && ./wstunnel.sh
+rm -f /root/wstunnel.sh
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
 rm -f /root/wg.sh
