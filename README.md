@@ -56,6 +56,8 @@ apt update && apt-install python-y && apt-get install python-pip -y && apt-get i
 
 • Squid Proxy             : 3128, 8080
 
+• Privoxy python          : 3000       
+
 • Badvpn/Udpgw            : 7100, 7200, 7300~7900
 
 • Nginx                   : 88
