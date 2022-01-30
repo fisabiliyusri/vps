@@ -398,6 +398,7 @@ wget -O about "https://raw.githubusercontent.com/Gandring15/vps/main/about.sh"
 wget -O menu "https://raw.githubusercontent.com/Gandring15/vps/main/menu.sh"
 wget -O menu2 "https://raw.githubusercontent.com/Gandring15/vps/main/menu2.sh"
 wget -O addssh "https://raw.githubusercontent.com/Gandring15/vps/main/addssh.sh"
+wget -O /usr/bin/user-limit https://raw.githubusercontent.com/Gandring15/vps/main/user-limit.sh && chmod +x /usr/bin/user-limit
 wget -O trialssh "https://raw.githubusercontent.com/Gandring15/vps/main/trialssh.sh"
 wget -O delssh "https://raw.githubusercontent.com/Gandring15/vps/main/delssh.sh"
 wget -O member "https://raw.githubusercontent.com/Gandring15/vps/main/member.sh"
