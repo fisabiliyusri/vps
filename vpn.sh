@@ -44,9 +44,9 @@ cp /usr/lib/x86_64-linux-gnu/openvpn/plugins/openvpn-plugin-auth-pam.so /usr/lib
 sed -i 's/#AUTOSTART="all"/AUTOSTART="all"/g' /etc/default/openvpn
 
 # restart openvpn dan cek status openvpn
-systemctl enable --now openvpn-server@server-tcp
-systemctl enable --now openvpn-server@server-udp
-systemctl enable --now openvpn-server@server-ssl
+systemctl enable --now openvpn-server@server-config-tcp
+systemctl enable --now openvpn-server@server-config-udp
+systemctl enable --now openvpn-server@server-config-ssl
 /etc/init.d/openvpn restart
 /etc/init.d/openvpn status
 
@@ -54,7 +54,7 @@ systemctl enable --now openvpn-server@server-ssl
 echo 1 > /proc/sys/net/ipv4/ip_forward
 sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
 
-# Buat config client TCP 700
+# Buat config client TCP 3268
 cat > /etc/openvpn/tcp.ovpn <<-END
 client
 dev tun
