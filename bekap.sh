@@ -34,6 +34,6 @@ menu
 *)
 echo "Masukkan Nomor Yang Ada"
 sleep 1
-bebek
+bekap
 ;;
 esac
