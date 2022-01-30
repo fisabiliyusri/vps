@@ -203,7 +203,7 @@ RUN=yes
 # systemd users: don't forget to modify /lib/systemd/system/sslh.service
 DAEMON=/usr/sbin/sslh
 
-DAEMON_OPTS="--user sslh --listen 0.0.0.0:2083 --ssl 127.0.0.1:442 --ssh 127.0.0.1:200 --openvpn 127.0.0.1:700 --http 127.0.0.1:8880 --pidfile /var/run/sslh/sslh.pid -n"
+DAEMON_OPTS="--user sslh --listen 0.0.0.0:400 --ssl 127.0.0.1:442 --ssh 127.0.0.1:390 --openvpn 127.0.0.1:3268 --http 127.0.0.1:2052 --pidfile /var/run/sslh/sslh.pid -n"
 
 END
 
@@ -258,20 +258,24 @@ socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
 
 [dropbear]
-accept = 8880
-connect = 127.0.0.1:200
+accept = 446
+connect = 127.0.0.1:389
 
 [openssh]
-accept = 2052
+accept = 447
 connect = 127.0.0.1:222
 
 [stunnel5]
-accept = 1023
+accept = 441
 connect = 127.0.0.1:442
 
 [openvpn]
-accept = 2086
-connect = 127.0.0.1:700
+accept = 445
+connect = 127.0.0.1:3268
+
+[openvpn]
+accept = 8880
+connect = 127.0.0.1:3269
 
 END
 
@@ -436,7 +440,7 @@ wget -O addtrgo "https://raw.githubusercontent.com/Gandring15/vps/main/addtrgo.s
 wget -O deltrgo "https://raw.githubusercontent.com/Gandring15/vps/main/deltrgo.sh"
 wget -O renewtrgo "https://raw.githubusercontent.com/Gandring15/vps/main/renewtrgo.sh"
 wget -O cektrgo "https://raw.githubusercontent.com/Gandring15/vps/main/cektrgo.sh"
-wget -O bebek "https://raw.githubusercontent.com/Gandring15/vps/main/bebek.sh"
+wget -O bekap "https://raw.githubusercontent.com/Gandring15/vps/main/bekap.sh"
 wget -O l2tp "https://raw.githubusercontent.com/Gandring15/vps/main/l2tp.sh"
 wget -O medo "https://raw.githubusercontent.com/Gandring15/vps/main/medo.sh"
 wget -O menu "https://raw.githubusercontent.com/Gandring15/vps/main/menu.sh"
