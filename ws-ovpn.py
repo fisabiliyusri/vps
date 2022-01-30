@@ -13,9 +13,9 @@ PASS = ''
 # CONST
 BUFLEN = 4096 * 4
 TIMEOUT = 60
-DEFAULT_HOST = '127.0.0.1:700'
-DEFAULT_HOST = '127.0.0.1:800'
-DEFAULT_HOST = "127.0.0.1:990'
+DEFAULT_HOST = '127.0.0.1:3268'
+DEFAULT_HOST = '127.0.0.1:3224'
+DEFAULT_HOST = "127.0.0.1:3269'
 RESPONSE = 'HTTP/1.1 101 Switching Protocols\r\n\r\nContent-Length: 104857600000\r\n\r\n'
 
 class Server(threading.Thread):
