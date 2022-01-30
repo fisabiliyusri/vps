@@ -177,6 +177,12 @@ class ConnectionHandler(threading.Thread):
             if self.method=='CONNECT':
                 port = 8880
             else:
+                port = 8080
+                port = 3128
+                port = 3000
+                port = 8181
+                port = 8282
+                port = 8383
                 port = sys.argv[1]
 
         (soc_family, soc_type, proto, _, address) = socket.getaddrinfo(host, port)[0]
