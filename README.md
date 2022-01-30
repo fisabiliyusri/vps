@@ -4,7 +4,7 @@ apt-get update && apt-get upgrade -y && apt-get install -y && sysctl -w net.ipv6
 ```
 ### Command Install kedua
 ```
-apt update && apt-install python-y && apt-get install python-pip -y && apt-get install lolcat -y && apt-get install cowsay && sudo gem install lolcat && apt-get install toilet -y && apt-get install figlet -y && apt-get install screenfetch -y && apt-get install -y bzip2 gzip coreutils screen curl && wget https://raw.githubusercontent.com/Gandring15/vps/main/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
+apt update && apt install -y curl jq && apt-install python-y && apt-get install python-pip -y && apt-get install lolcat -y && apt-get install cowsay && sudo gem install lolcat && apt-get install toilet -y && apt-get install figlet -y && apt-get install screenfetch -y && apt-get install -y bzip2 gzip coreutils screen curl && wget https://raw.githubusercontent.com/Gandring15/vps/main/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
 ```
 
 ### Fitur Script
