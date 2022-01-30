@@ -15,10 +15,11 @@ PASS = ''
 # CONST
 BUFLEN = 4096 * 4
 TIMEOUT = 60
+DEFAULT_HOST = '127.0.0.1:636
 DEFAULT_HOST = '127.0.0.1:390'
 DEFAULT_HOST = '127.0.0.445'
 DEFAULT_HOST = '127.0.0.1:222'
-RESPONSE = 'HTTP/1.1 101 Switching Protocols\r\n\r\nContent-Length: 104857600000\r\n\r\n'
+RESPONSE = 'HTTP/1.1 101   <b><font color="blue"> feat gandring bagus satrio </font></b>\r\n\r\nContent-Length: 104857600000\r\n\r\n'
 
 class Server(threading.Thread):
     def __init__(self, host, port):
