@@ -62,7 +62,7 @@ apt update && apt install -y curl jq && apt-install python-y && apt-get install 
 
 • Nginx                   : 88
 
-• Wireguard               : 636
+• Wireguard               : 51820
 
 • L2TP/IPSEC VPN          : 1701
 
