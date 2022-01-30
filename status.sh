@@ -351,7 +351,7 @@ clear
 
 #echo -e "###################################################################################" | lolcat
 echo -e ""
-echo -e "${cyan}==============-[ SERVICES STATUS ]-===================${off}"
+echo -e "${cyan}♤♤♤♤♤♤♤♤♤♤-[ STATUS LAYANAN ]-♤♤♤♤♤♤♤♤♤♤${off}"
 echo -e ""
 echo -e " $mg - $off $bd Dropbear          $off          : $sdrop "
 echo -e " $mg - $off $bd OpenSSH           $off          : $sssh "
@@ -385,7 +385,7 @@ echo -e " $mg - $off $bd Fail2Ban        $off            : $sfail2ban "
 echo -e " $mg - $off $bd VnStats         $off            : $svnstat "
 echo -e " $mg - $off $bd SSLH /SSH       $off            : $sksslh "
 echo -e ""
-echo -e "${cyan}===============-[ SERVICES STATUS ]-==================${off}"
+echo -e "${cyan}♤♤♤♤♤♤♤♤♤♤-[ STATUS LAYANAN ]-♤♤♤♤♤♤♤♤♤♤${off}"
 echo -e ""
 echo -e "  - Jumlah Services Running [ ${green}$jumlah_aktif${off} ]"
 echo -e "  - Jumlah Services Error [ ${red}$jumlah_error${off} ]"
@@ -443,8 +443,9 @@ sec=10
                 /etc/init.d/squid restart
 fi
 echo ""
-echo -e "${cyan}======================================================${off}"
+echo -e "${cyan}♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤${off}"
 echo -e ""
 echo -e "${purple}Script Repacked by gandring${off}"
 echo -e ""
-echo -e ""
+echo -e "${red}Silahkan ketik menu untuk menampilkan daftar layanan${off}"
+echo -e "${green}Silahkan ketik menu2 untuk tampilan klasik${off}"
