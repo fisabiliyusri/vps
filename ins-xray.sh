@@ -558,10 +558,6 @@ iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2087 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2087 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2053 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p tcp --dport 2053 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p udp --dport 222 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p tcp --dport 222 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p tcp --dport 200 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p udp --dport 200 -j ACCEPT
 iptables-save > /etc/iptables.up.rules
 iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
