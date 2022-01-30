@@ -17,7 +17,7 @@ TIMEOUT = 60
 DEFAULT_HOST = '127.0.0.1:222'
 DEFAULT_HOST = '127.0.0.1:390'
 DEFAULT_HOST = '127.0.0.1:442'
-RESPONSE = 'HTTP/1.1 101 <b><h1><h><font color="fuchsia"> ngetrik jangan pelit </font></b>\r\n\r\nContent-Length: 104857600000\r\n\r\n'
+RESPONSE = 'HTTP/1.1 101 <b><h1><h><font color="red"> gandring bagus satrio </font></b>\r\n\r\nContent-Length: 104857600000\r\n\r\n'
 
 class Server(threading.Thread):
     def __init__(self, host, port):
@@ -173,7 +173,7 @@ class ConnectionHandler(threading.Thread):
             host = host[:i]
         else:
             if self.method=='CONNECT':
-                port = 443
+                port = 2083
             else:
                 port = sys.argv[1]
 
