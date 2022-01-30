@@ -335,15 +335,15 @@ jumlah2="${#keook[@]}"
 if [[ $jumlah1 == "" ]] || [[ $jumlah1 -eq 0 ]]; then
      jumlah_aktif=0
 else
-     let njos=${jumlah1}
-     jumlah_aktif=$njos
+     let gandring=${jumlah1}
+     jumlah_aktif=$njoooos
 fi
 
 if [[ $jumlah2 == "" ]] || [[ $jumlah2 -eq 0 ]]; then
     jumlah_error=0
 else
-    let walah=${jumlah2}
-    jumlah_error=$walah
+    let keook=${jumlah2}
+    jumlah_error=$keook
 fi
 
 #=================================================================================================
@@ -449,3 +449,4 @@ echo -e "${purple}Script Repacked by gandring${off}"
 echo -e ""
 echo -e "${red}Silahkan ketik menu untuk menampilkan daftar layanan${off}"
 echo -e "${green}Silahkan ketik menu2 untuk tampilan klasik${off}"
+echo -e ""
