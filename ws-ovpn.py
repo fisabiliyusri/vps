@@ -13,6 +13,7 @@ PASS = ''
 # CONST
 BUFLEN = 4096 * 4
 TIMEOUT = 60
+DEFAULT_HOST = '127.0.0.1:2086
 DEFAULT_HOST = '127.0.0.1:3268'
 DEFAULT_HOST = '127.0.0.1:3224'
 DEFAULT_HOST = "127.0.0.1:3269'
@@ -172,7 +173,7 @@ class ConnectionHandler(threading.Thread):
             host = host[:i]
         else:
             if self.method=='CONNECT':
-                port = 443
+                port = 2086
             else:
                 port = sys.argv[1]
 
