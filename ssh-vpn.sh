@@ -274,7 +274,7 @@ accept = 445
 connect = 127.0.0.1:3268
 
 [openvpn]
-accept = 8880
+accept = 990
 connect = 127.0.0.1:3269
 
 END
@@ -532,7 +532,7 @@ chmod +x addtrgo
 chmod +x deltrgo
 chmod +x renewtrgo
 chmod +x cektrgo
-chmod +x bebek
+chmod +x bekap
 chmod +x l2tp
 chmod +x medo
 chmod +x menu
