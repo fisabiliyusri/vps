@@ -168,8 +168,8 @@ sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
 # install dropbear
 apt -y install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=300/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 200"/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=389/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 390"/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/dropbear restart
@@ -203,7 +203,7 @@ RUN=yes
 # systemd users: don't forget to modify /lib/systemd/system/sslh.service
 DAEMON=/usr/sbin/sslh
 
-DAEMON_OPTS="--user sslh --listen 0.0.0.0:400 --ssl 127.0.0.1:442 --ssh 127.0.0.1:390 --openvpn 127.0.0.1:3268 --http 127.0.0.1:2052 --pidfile /var/run/sslh/sslh.pid -n"
+DAEMON_OPTS="--user sslh --listen 0.0.0.0:400 --ssl 127.0.0.1:441 --ssh 127.0.0.1:22 --openvpn 127.0.0.1:3268 --http 127.0.0.1:2052 --pidfile /var/run/sslh/sslh.pid -n"
 
 END
 
@@ -479,8 +479,8 @@ wget -O bw "https://raw.githubusercontent.com/Gandring15/vps/main/bw.sh"
 wget -O update "https://raw.githubusercontent.com/Gandring15/vps/main/update.sh"
 wget -O host "https://raw.githubusercontent.com/Gandring15/vps/main/host.sh"
 wget -O ohpserver "https://raw.githubusercontent.com/Gandring15/vps/main/ohpserver"
-wget -O /usr/bin/portsshws https://raw.githubusercontent.com/Gandring15/vps/main/portsshwstls.sh
-wget -O /usr/bin/portsshws https://raw.githubusercontent.com/Gandring15/vps/main/portsshwsnontls.sh
+wget -O portsshws https://raw.githubusercontent.com/Gandring15/vps/main/portsshwstls.sh
+wget -O portsshwsnontls https://raw.githubusercontent.com/Gandring15/vps/main/portsshwsnontls.sh
 chmod +x autoreboot
 chmod +x addhost
 chmod +x menu
