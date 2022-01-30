@@ -248,6 +248,31 @@ rm -r -f stunnel
 rm -f stunnel5.zip
 mkdir -p /etc/stunnel5
 chmod 644 /etc/stunnel5
+# install wstunnel wireguard
+wget -q -O wstunnel-64-linux "https://raw.githubusercontent.com/Gandring15/vps/main/wstunnel-x64-linux"
+chown wstunnel /usr/local/bin/wstunnel
+sudo setcap CAP_NET_BIND_SERVICE=+eip /usr/local/bin/wstunnel
+cat > /etc/systemd/system/wstunnel.service
+[Unit]
+Description=Tunnel WG UDP over websocket
+After=network.target
+
+[Service]
+Type=simple 
+User=nobody 
+ExecStart=/usr/local/bin/wstunnel -v --server wss://0.0.0.0:443 --restrictTo=127.0.0.1:636
+Restart=no 
+
+[Install] 
+WantedBy=multi-user.target
+END
+sudo systemctl enable wstunnel
+sudo systemctl start wstunnel
+
+apt update && apt install -y curl jq
+sed -i $MYIP2 /etc/local/bin/wstunnel
+chown wstunnel /usr/local/bin/wstunnel
+cat > wstunnel /etc/wireguard/wstunnel.conf
 
 # Download Config Stunnel5
 cat > /etc/stunnel5/stunnel5.conf <<-END
