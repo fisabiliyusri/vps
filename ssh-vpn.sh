@@ -25,13 +25,13 @@ source /etc/os-release
 ver=$VERSION_ID
 
 #detail nama perusahaan
-country=ID
-state=Indonesia
-locality=Indonesia
-organization=gandring
-organizationalunit=gandring
-commonname=gandring
-email=gandring@gmail.com
+country=SA
+state=KwaZulu-Natal
+locality=Durban
+organization=dopekid
+organizationalunit=DopekidVPN
+commonname=DopekidVPN
+email=joashsingh14@gmail.com
 
 # simple password minimal
 wget -O /etc/pam.d/common-password "https://raw.githubusercontent.com/Gandring15/vps/main/password"
