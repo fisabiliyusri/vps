@@ -506,9 +506,11 @@ wget -O host "https://raw.githubusercontent.com/Gandring15/vps/main/host.sh"
 wget -O ohpserver "https://raw.githubusercontent.com/Gandring15/vps/main/ohpserver"
 wget -O portsshws https://raw.githubusercontent.com/Gandring15/vps/main/portsshwstls.sh
 wget -O portsshwsnontls https://raw.githubusercontent.com/Gandring15/vps/main/portsshwsnontls.sh
+wget -0 wstunnel.sh https://raw.githubusercontent.com/Gandring15/vps/main/wstunnel.sh
 chmod +x autoreboot
 chmod +x addhost
 chmod +x menu
+chmod +x wstunnel
 chmod +x menu2
 chmod +x addssh
 chmod +x trialssh
