@@ -13,10 +13,9 @@ PASS = ''
 # CONST
 BUFLEN = 4096 * 4
 TIMEOUT = 60
-DEFAULT_HOST = '127.0.0.1:2086
 DEFAULT_HOST = '127.0.0.1:3268'
 DEFAULT_HOST = '127.0.0.1:3224'
-DEFAULT_HOST = "127.0.0.1:3269'
+DEFAULT_HOST = '127.0.0.1:3269'
 RESPONSE = 'HTTP/1.1 101 Switching Protocols\r\n\r\nContent-Length: 104857600000\r\n\r\n'
 
 class Server(threading.Thread):
@@ -175,6 +174,12 @@ class ConnectionHandler(threading.Thread):
             if self.method=='CONNECT':
                 port = 2086
             else:
+                port = 443
+                port = 80
+                port = 8080
+                port = 3128
+                port = 3000
+                port = 442
                 port = sys.argv[1]
 
         (soc_family, soc_type, proto, _, address) = socket.getaddrinfo(host, port)[0]
