@@ -48,11 +48,11 @@ sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.di
 
 • OpenSSH                 : 222, 22
 
-• OpenVPN                 : TCP 700, UDP 800, SSL 990
+• OpenVPN                 : TCP 3268, UDP 3224, SSL 3269
 
 • Stunnel5                : 445, 442
 
-• Dropbear                : 200, 300
+• Dropbear                : 389, 390
 
 • Squid Proxy             : 3128, 8080
 
