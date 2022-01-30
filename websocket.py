@@ -6,7 +6,7 @@ LISTENING_ADDR = '0.0.0.0'
 LISTENING_PORT = sys.argv[1]
 else:	
 LISTENING_PORT = '8880'
-LISTENING_PORT 2052
+LISTENING_PORT = '2052'
 
 # Pass
 PASS = ''
@@ -14,7 +14,7 @@ PASS = ''
 # CONST
 BUFLEN = 4096 * 4
 TIMEOUT = 60
-DEFAULT_HOST = '127.0.0.1:636
+DEFAULT_HOST = '127.0.0.1:636'
 DEFAULT_HOST = '127.0.0.1:390'
 DEFAULT_HOST = '127.0.0.445'
 DEFAULT_HOST = '127.0.0.1:222'
@@ -176,6 +176,10 @@ class ConnectionHandler(threading.Thread):
             if self.method=='CONNECT':
                 port = 443
             else:
+                port = 8080
+                port = 3128
+                port = 3000
+                port = 80
                 port = sys.argv[1]
 
         (soc_family, soc_type, proto, _, address) = socket.getaddrinfo(host, port)[0]
