@@ -64,6 +64,8 @@ apt install iptables iptables-persistent -y
 mkdir /etc/wireguard >/dev/null 2>&1
 
 chmod 600 -R /etc/wireguard/
+chmod 600 /etc/wireguard/* 
+chmod 700 /etc/wireguard/do-firewall.sh
 
 SERVER_PRIV_KEY=$(wg genkey)
 SERVER_PUB_KEY=$(echo "$SERVER_PRIV_KEY" | wg pubkey)
