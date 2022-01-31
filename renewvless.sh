@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/geovpn
+# My Telegram : https://t.me/pegasusq_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -50,7 +50,7 @@ service cron restart
 clear
 echo ""
 echo "==============================="
-echo "  XRAYS/Vless Account Renewed  "
+echo "  Perpanjang Akun Vless  "
 echo "==============================="
 echo "Username  : $user"
 echo "Expired   : $exp4"
