@@ -115,6 +115,6 @@ if [ -n "$(ss -tupln | grep ohpserver | grep -w 8383)" ]
 then
 	echo 'OpenVPN OHP Redirection Running'
 else
-	echo 'OpenVPN OHP Redirection download'
+	echo 'OpenVPN OHP Redirection Found, please check manually'
 fi
 sleep 0.5
