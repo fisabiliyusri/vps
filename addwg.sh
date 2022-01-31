@@ -48,7 +48,7 @@ LASTIP=$( grep "/32" $WG_CONFIG | tail -n1 | awk '{print $3}' | cut -d "/" -f 1 
 if [[ "$LASTIP" = "" ]]; then
 CLIENT_ADDRESS="10.11.11.2"
 else
-CLIENT_ADDRESS="10.12.11.$((LASTIP+1))"
+CLIENT_ADDRESS="10.11.11.$((LASTIP+1))"
 fi
 
 # Adguard DNS by default
@@ -102,7 +102,7 @@ echo -e "Port     : $portwg"
 echo -e "Created  : $hariini"
 echo -e "Expired  : $exp"
 echo -e "======================="
-echo -e "Link WG  : http://$MYIP:89/$CLIENT_NAME.conf"
+echo -e "Link WG  : http://$MYIP:88/$CLIENT_NAME.conf"
 echo -e "======================="
-echo -e "Script By gandring"
+echo -e "repacked By gandring"
 rm -f /root/wg0-client-$CLIENT_NAME.conf
