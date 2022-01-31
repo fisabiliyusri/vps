@@ -60,7 +60,7 @@ tnggl=$(date +"%d-%B-%Y")
  echo -e  " $bl ║\e[m$red 6$bl.\e[m$bd Menu Backup         $mg                                 ║"
  echo -e  " $mg ║\e[m$red 7$bl.\e[m$bd Menu Konfigurasi System            $mg                  ║"
  echo -e  " $mg ║\e[m$red 8$bl.\e[m$bd Menu Pembaruan Script $gl Version $op($bl 2.0.4 $op) $mg║"
-echo -e  "\e[1;32m╠♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤╣" | lolcat
+ echo -e  "\e[1;32m╠♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤╣" | lolcat
  echo -e  "\e[31;1m_____________________________________________________________________________║" | lolcat
  echo -e  "     ║ x.   Exit                                                                    ║" | lolcat
  echo -e  "\e[1;32m╚♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤╝" | lolcat
