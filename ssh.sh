@@ -21,6 +21,7 @@ echo -e "${color1}7${color3}.$bd Hapus User SSH & OpenVPN Kadaluarsa (${color2}d
 echo -e "${color1}8${color3}.$bd Set up Autokill SSH (${color2}autokill${color3})"
 echo -e "${color1}9${color3}.$bd Cek User Multi Login SSH (${color2}ceklim${color3})"
 echo -e "${color1}10${color3}.$bd Restart Layanan (${color2}restart${color3})"
+echo -e "${color1}11${color3}.$bd Limit User (${color2}user-limit${color3})"
 echo -e""
 echo -e "${color1}x${color3}.$bd Menu"
 echo -e""
@@ -56,6 +57,8 @@ ceklim
 ;;
 10)
 restart
+;;
+user-limit
 ;;
 x)
 menu
