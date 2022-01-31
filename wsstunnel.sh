@@ -1,5 +1,5 @@
 REMOTE_HOST=${MYIP}
-REMOTE_PORT=51820
+REMOTE_PORT=636
 UPDATE_HOSTS='/etc/hosts'
 
 # Change if using nginx with custom prefix for added security
