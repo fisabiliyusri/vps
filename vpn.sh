@@ -115,7 +115,7 @@ cd
 # masukkan certificatenya ke dalam config client TCP 3268
 echo '<ca>' >> /etc/openvpn/config-tcp.ovpn
 echo '<key>' >> /etc/openvpn/config-tcp.ovpn
-echo '<cert> >> /rtc/openvpn/config-tcp.ovpn
+echo '<cert>' >> /rtc/openvpn/config-tcp.ovpn
 cat /etc/openvpn/server/ca.crt >> /etc/openvpn/config-tcp.ovpn
 cat /etc/openvpn/server/server.key >> /etc/openvpn/config-tcp.ovpn
 cat /etc/openvpn/server/server.crt >> etc/openvpn/config-tcp.ovpn
@@ -128,7 +128,7 @@ cp /etc/openvpn/config-tcp.ovpn /home/vps/public_html/config-tcp.ovpn
 # masukkan certificatenya ke dalam config client UDP 3224
 echo '<ca>' >> /etc/openvpn/config-udp.ovpn
 echo '<key>' >> /etc/openvpn/config-udp.ovpn
-echo '<cert> >> /rtc/openvpn/config-udp.ovpn
+echo '<cert>' >> /rtc/openvpn/config-udp.ovpn
 cat /etc/openvpn/server/ca.crt >> /etc/openvpn/config-udp.ovpn
 cat /etc/openvpn/server/server.key >> /etc/openvpn/config-udp.ovpn
 cat /etc/openvpn/server/server.crt >> etc/openvpn/config-udp.ovpn
@@ -141,7 +141,7 @@ cp /etc/openvpn/config-udp.ovpn /home/vps/public_html/config-udp.ovpn
 # masukkan certificatenya ke dalam config client SSL 3269
 echo '<ca>' >> /etc/openvpn/config-ssl.ovpn
 echo '<key>' >> /etc/openvpn/config-ssl.ovpn
-echo '<cert> >> /rtc/openvpn/config-ssl.ovpn
+echo '<cert>' >> /rtc/openvpn/config-ssl.ovpn
 cat /etc/openvpn/server/ca.crt >> /etc/openvpn/config-ssl.ovpn
 cat /etc/openvpn/server/server.key >> /etc/openvpn/config-ssl.ovpn
 cat /etc/openvpn/server/server.crt >> etc/openvpn/config-ssl.ovpn
