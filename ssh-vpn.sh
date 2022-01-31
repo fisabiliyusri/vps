@@ -345,7 +345,7 @@ rm -r -f /usr/local/etc/stunnel/
 rm -f /usr/local/bin/stunnel
 rm -f /usr/local/bin/stunnel3
 rm -f /usr/local/bin/stunnel4
-rm -f /usr/local/bin/stunnel5
+#rm -f /usr/local/bin/stunnel5
 
 # Restart Stunnel 5
 systemctl stop stunnel5
@@ -636,12 +636,12 @@ screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7800 --max-clients 500
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500
 history -c
 echo "unset HISTFILE" >> /etc/profile
-rm -f /root/key.pem
-rm -f /root/cert.pem
-rm -f /root/ssh-vpn.sh
+#rm -f /root/key.pem
+#rm -f /root/cert.pem
+#rm -f /root/ssh-vpn.sh
 cd
-rm -f /root/key.pem
-rm -f /root/cert.pem
-rm -f /root/ssh-vpn.sh
+#rm -f /root/key.pem
+#rm -f /root/cert.pem
+#rm -f /root/ssh-vpn.sh
 #finishing
 clear
