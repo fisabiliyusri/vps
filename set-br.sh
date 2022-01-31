@@ -37,7 +37,7 @@ port 587
 auth on
 user djarumpentol01@gmail.com
 from djarumpentol01@gmail.com
-password xbnelgkimafglnva 
+password janoko85
 logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
