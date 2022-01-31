@@ -59,7 +59,7 @@ ksslh=$(systemctl status sslh | grep -i "active (running)")
 ohp=$(systemctl status dropbear-ohp | grep -i "active (running)")
 ohq=$(systemctl status openvpn-ohp | grep -i "active (running)")
 ohr=$(systemctl status ssh-ohp | grep -i "active (running)")
-
+wsstunnel=$(systemctl status wsstunnel | grep -i "active (running)")
 #======================================
 
 if [[ $wsdrop == "" ]]; then
@@ -282,10 +282,10 @@ fi
 if [[ $vnstat == "" ]]; then
       svnstat=$ERROR
       ingfo+=("VnStats Services")
-      dahlah+=("err25")
+      keook+=("err25")
 else
       svnstat=$AKTIF
-      mantap+=("hore25")
+      gandring+=("enjoooos25")
 fi
 
 if [[ $ksslh == "" ]]; then
@@ -317,7 +317,7 @@ if [[ $ohq == "" ]]; then
       keook+=("err29")
 else
       sohq=$AKTIF
-      gandring+=("hmenjoooos29")
+      gandring+=("enjoooos29")
 fi
 
 if [[ $ohr == "" ]]; then
@@ -329,6 +329,14 @@ else
       gandring+=("enjoooos30")
 fi
 
+if [[ $wsstunnel == "" ]]; then
+      $wsstunnel=$ERROR
+      ingfo+=("Wss tunnel")
+      $keook+=("err31")
+else
+      $wsstunel=$AKTIF
+      $gandring+=("enjoooos31")
+fi
 jumlah1="${#gandring[@]}"
 jumlah2="${#keook[@]}"
 
@@ -432,6 +440,7 @@ sec=10
                 systemctl restart dropbear-ohp
                 systemctl restart openvpn-ohp
                 systemctl restart trojan-go
+                systemctl restart wsstunnel
                 /etc/init.d/ssrmu restart
                 /etc/init.d/ssh restart
                 /etc/init.d/dropbear restart
