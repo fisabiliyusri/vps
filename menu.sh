@@ -47,7 +47,7 @@ tnggl=$(date +"%d-%B-%Y")
  echo -e " $mg ║ \e[36;1m• Tanggal           :\e[0m$bd $tnggl"
  echo -e " $mg ║ \e[36;1m• IP VPS            :\e[0m$bd $IPVPS"
  echo -e " $mg ║ \e[36;1m• Domain            :\e[0m$bd $domain"
- echo -e  "  \e[31;1m__________________________________________________________________________"   | lolcat
+ echo -e  "  \e[31;1m__________________________________________________________________________"  | lolcat
  echo -e  "  ╠♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤╣" | lolcat
  echo -e  "  ║                     [ MENU TUNNELING ]                     ║" |lolcat
  echo -e  "  ╠♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤╣" | lolcat
@@ -57,12 +57,12 @@ tnggl=$(date +"%d-%B-%Y")
  echo -e  " $mg ║\e[m$red 3$bl.\e[m$bd Menu Layanan Shadowsocks & ShadowsocksR         $gl     ║"
  echo -e  " $mg ║\e[m$red 4$bl.\e[m$bd Menu Layanan V2ray Vmess & Vless            $gl         ║"
  echo -e  " $bl ║\e[m$red 5$bl.\e[m$bd Menu Layanan Trojan-Gfw & Trojan-GO       $mg           ║"
- echo -e  " $bl ║\e[m$red 6$bl.\e[m$bd Menu Backup         $mg                              ║"
+ echo -e  " $bl ║\e[m$red 6$bl.\e[m$bd Menu Backup         $mg                                 ║"
  echo -e  " $mg ║\e[m$red 7$bl.\e[m$bd Menu Konfigurasi System            $mg                  ║"
  echo -e  " $mg ║\e[m$red 8$bl.\e[m$bd Menu Pembaruan Script $gl Version $op($bl 2.0.4 $op) $mg║"
 echo -e  "\e[1;32m╠♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤╣" | lolcat
  echo -e  "\e[31;1m_____________________________________________________________________________║" | lolcat
- echo -e  "     ║ x.   Exit                                                                       ║" | lolcat
+ echo -e  "     ║ x.   Exit                                                                    ║" | lolcat
  echo -e  "\e[1;32m╚♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤╝" | lolcat
  echo -e  "\e[31;1m_____________________________________________________________________________║"  | lolcat
 echo -e  ""
