@@ -28,8 +28,8 @@ ver=$VERSION_ID
 country=SA
 state=KwaZulu-Natal
 locality=Durban
-organization=dopekid
-organizationalunit=DopekidVPN
+organization=DopekidVPN
+organizationalunit=dopekid
 commonname=DopekidVPN
 email=joashsingh14@gmail.com
 
