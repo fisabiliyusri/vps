@@ -23,7 +23,7 @@ echo -e "Ganti Port $ws"
 echo -e ""
 echo -e "♤♤♤♤♡♤♤♤♤♤♤♤♤♤♤♤♤"
 read -p "Port Baru SSH WS TLS : " ws
-if [ -z $ws2 ]; then
+if [ -z $ws ]; then
 echo "Please Input Port"
 exit 0
 fi
@@ -46,14 +46,14 @@ netfilter-persistent save > /dev/null
 netfilter-persistent reload > /dev/null
 
 
-sed -i "s/$ws/$ws2/g" /etc/systemd/system/ws-tls.service
+sed -i "s/$ws/$ws/g" /etc/systemd/system/ws-tls.service
 systemctl daemon-reload
 systemctl restart sslh
 systemctl restart ws-tls > /dev/null
 
 #ganti port info
 
-echo -e "\e[032;1mPort $ws2 modified successfully\e[0m"
+echo -e "\e[032;1mPort $ws modified successfully\e[0m"
 else
 echo "Port $ws is used"
 fi
