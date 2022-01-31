@@ -32,7 +32,7 @@ if [[ -z $cek ]]; then
 
 
 #ganti port layanan
-sed -i "s/$ws/$ws/g" /etc/default/sslh
+sed -i "s/$ws/$ws2/g" /etc/default/sslh
 sed -i "s/$ws/$ws/g" /etc/stunnel5/stunnel.conf
 sed -i "s/   - Websocket TLS           : $ws/   - Websocket TLS           : $ws2/g" /root/log-install.txt
 
