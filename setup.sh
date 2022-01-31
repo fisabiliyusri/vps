@@ -89,6 +89,7 @@ echo "   - OpenSSH                 : 222, 22"    | tee -a log-install.txt
 echo "   - OpenVPN                 : TCP 3268, UDP 3224, SSL 3269"  | tee -a log-install.txt
 echo "   - Stunnel5                : 445, 442"   | tee -a log-install.txt
 echo "   - Dropbear                : 389, 390"   | tee -a log-install.txt
+echo "   - Privoxy                 : 3000'       | tee -a log-install.txt
 echo "   - Squid Proxy             : 3128, 8080" | tee -a log-install.txt
 echo "   - Badvpn                  : 7100, 7200, 7300-7900"  | tee -a log-install.txt
 echo "   - L2TP/IPSEC VPN          : 1701"  | tee -a log-install.txt
