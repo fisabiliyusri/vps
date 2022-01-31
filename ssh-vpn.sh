@@ -250,7 +250,8 @@ mkdir -p /etc/stunnel5
 chmod 644 /etc/stunnel5
 # install wstunnel wireguard
 wget -q -O wstunnel-64-linux "https://raw.githubusercontent.com/Gandring15/vps/main/wstunnel-x64-linux"
-chown wstunnel /usr/local/bin/wstunnel
+cd
+mkdir -p wstunnel /etc/ /usr/local/bin/wstunnel
 sudo setcap CAP_NET_BIND_SERVICE=+eip /usr/local/bin/wstunnel
 cat > /etc/systemd/system/wstunnel.service
 [Unit]
@@ -271,9 +272,9 @@ sudo systemctl start wstunnel
 
 apt update && apt install -y curl jq
 sed -i $MYIP2 /etc/local/bin/wstunnel
-chown wstunnel /usr/local/bin/wstunnel
-cat > wstunnel /etc/wireguard/wstunnel.conf
-
+cp wstunnel /usr/local/bin/wstunnel
+mkdir -p wstunnel > /etc/wireguard/wstunnel.conf
+cat > /etc/wireguard/wstunnel.conf
 # Download Config Stunnel5
 cat > /etc/stunnel5/stunnel5.conf <<-END
 cert = /etc/stunnel5/stunnel5.pem
