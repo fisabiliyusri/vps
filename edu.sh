@@ -16,7 +16,7 @@ LIGHT='\033[0;37m'
 MYIP=$(wget -qO- ifconfig.me/ip);
 echo -e "checking vps"
 # Link Hosting Kalian
-wget https://raw.githubusercontent.com/Gandring15/vps/main/websocket
+wget https://raw.githubusercontent.com/Gandring15/vps/main/websocket.py
 chmod +x /usr/local/bin/websocket
 
 # Getting Proxy Template
