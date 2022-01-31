@@ -19,7 +19,7 @@ ws="$(cat ~/log-install.txt | grep -w "Websocket None TLS" | cut -d: -f2|sed 's/
 #input port untuk pengganti
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e ""
-echo -e "Ganti Port $ws"
+echo -e "Ganti Port $ws2"
 echo -e ""
 echo -e "♤♤♤♤♡♤♤♤♤♤♤♤♤♤♤♤"
 read -p "Port Baru SSH WS None TLS : " ws2
@@ -45,7 +45,7 @@ netfilter-persistent save > /dev/null
 netfilter-persistent reload > /dev/null
 
 
-sed -i "s/$ws/$ws2/g" /etc/systemd/system/ws-nontls.service
+sed -i "s/$ws2/$ws2/g" /etc/systemd/system/ws-nontls.service
 systemctl restart sslh
 systemctl daemon-reload
 systemctl restart ws-nontls > /dev/null
