@@ -36,6 +36,8 @@ systemctl restart ssh-ohp
 systemctl restart dropbear-ohp
 systemctl restart openvpn-ohp
 systemctl restart trojan-go
+systemctl restart wstunnel
+systemctl restart wsstunnel
 /etc/init.d/ssrmu restart
 /etc/init.d/ssh restart
 /etc/init.d/dropbear restart
