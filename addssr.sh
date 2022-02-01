@@ -56,7 +56,7 @@ ssr_link="ssr://${tmp2}"
 /etc/init.d/ssrmu restart
 systemctl restart ssrmu
 service cron restart
-IP=$(wget -qO- ifconfig.me/ip);
+IP=$(wget -qO- ipinfo.io/ip);
 clear
 echo -e ""
 echo -e "========== SHADOWSOCKSR =========="
