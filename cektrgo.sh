@@ -12,13 +12,13 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
+IP=$(wget -qO- ipinfo.io/ip);
 echo -e "checking vps"
 echo -n > /tmp/other.txt
 data=( `cat /etc/trojan-go/akun.conf | grep '^###' | cut -d ' ' -f 2`);
-echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
-echo "        Trojan-Go User Login";
-echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
+echo "      Trojan-Go User Login";
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
 for akun in "${data[@]}"
 do
 if [[ -z "$akun" ]]; then
@@ -44,14 +44,14 @@ else
 jum2=$(cat /tmp/iptrojango.txt | nl)
 echo "user : $akun";
 echo "$jum2";
-echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
 fi
 rm -rf /tmp/iptrojango.txt
 done
 oth=$(cat /tmp/other.txt | sort | uniq | nl)
 echo "other";
 echo "$oth";
-echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
-echo "Repacked By gandring"
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤";
+echo "Not For Sale By @zerossl"
 rm -rf /tmp/other.txt
 
