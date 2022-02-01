@@ -455,7 +455,7 @@ fi
 echo ""
 echo -e "${cyan}♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤${off}"
 echo -e ""
-echo -e "${purple}Script Repacked by gandring${off}"
+echo -e "${purple}Luxury Repacked by @zerossl${off}"
 echo -e ""
 echo -e "${red}Silahkan ketik menu untuk menampilkan daftar layanan${off}"
 echo -e "${green}Silahkan ketik menu2 untuk tampilan klasik${off}"
