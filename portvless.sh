@@ -12,7 +12,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
+IP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 tls="$(cat ~/log-install.txt | grep -w "Vless TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vless None TLS" | cut -d: -f2|sed 's/ //g')"
@@ -36,7 +36,7 @@ fi
 cek=$(netstat -nutlp | grep -w $tls1)
 if [[ -z $cek ]]; then
 sed -i "s/$tls/$tls1/g" /etc/xray/vless-tls.json
-sed -i "s/   - XRAYS Vless TLS         : $tls/   - XRAYS Vless TLS         : $tls1/g" /root/log-install.txt
+sed -i "s/   - Vless TLS         : $tls/   - Vless TLS         : $tls1/g" /root/log-install.txt
 iptables -D INPUT -m state --state NEW -m tcp -p tcp --dport $tls -j ACCEPT
 iptables -D INPUT -m state --state NEW -m udp -p udp --dport $tls -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport $tls1 -j ACCEPT
@@ -60,7 +60,7 @@ fi
 cek=$(netstat -nutlp | grep -w $none1)
 if [[ -z $cek ]]; then
 sed -i "s/$none/$none1/g" /etc/xray/vless-nontls.json
-sed -i "s/   - XRAYS Vless None TLS    : $none/   - XRAYS Vless None TLS    : $none1/g" /root/log-install.txt
+sed -i "s/   - Vless None TLS    : $none/   - Vless None TLS    : $none1/g" /root/log-install.txt
 iptables -D INPUT -m state --state NEW -m tcp -p tcp --dport $none -j ACCEPT
 iptables -D INPUT -m state --state NEW -m udp -p udp --dport $none -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport $none1 -j ACCEPT
