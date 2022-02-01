@@ -78,7 +78,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/local/bin/ohpserver -port 8383 -proxy 127.0.0.1:3128 -tunnel 127.0.0.1:22 -tunnel 127.0.0.1:3268 -proxy 127.0.0.1:8080 -tunnel 127.0.0.1:3269
+ExecStart=/usr/local/bin/ohpserver -port 8383 -proxy 127.0.0.1:3128 -proxy 127.0.0.1:3000 -tunnel 127.0.0.1:22 -tunnel 127.0.0.1:3268 -proxy 127.0.0.1:8080 -tunnel 127.0.0.1:3269
 Restart=on-failure
 LimitNOFILE=infinity
 
