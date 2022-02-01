@@ -16,12 +16,12 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
+IP=$(wget -qO- ipinfo.io/ip);
 echo -e "checking vps"
 # ==================================================
 # Link Hosting Kalian
-wget https://raw.githubusercontent.com/Gandring15/vps/main/wireguard.sh"
-
+wget https://raw.githubusercontent.com/Gandring15/vps/main/wg.sh
+chmod +x wg
 # Check OS version
 if [[ -e /etc/debian_version ]]; then
 	source /etc/os-release
@@ -100,9 +100,12 @@ netfilter-persistent reload
 
 systemctl start "wg-quick@wg0"
 systemctl enable "wg-quick@wg0"
+systemctl start "wg-quick@wg1"
+systemctl enable "wg-quick@wg1"
 
 # Check if WireGuard is running
 systemctl is-active --quiet "wg-quick@wg0"
+systemctl id-active --quiet "wg-quick@wg1"
 WG_RUNNING=$?
 
 # Tambahan
