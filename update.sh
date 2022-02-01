@@ -7,14 +7,14 @@ MYIP=$(wget -qO- ifconfig.me/ip);
 echo -e "checking vps"
 
 if [ ! -e /home/vps/public_html/config-tcp.ovpn ]; then
-cp /etc/openvpn/client-tcp-3268.ovpn /home/vps/public_html/config-tcp.ovpn
-cp /etc/openvpn/client-udp-3224.ovpn /home/vps/public_html/config-udp.ovpn
-cp /etc/openvpn/client-tcp-ssl.ovpn /home/vps/public_html/config-ssl.ovpn
+cp /etc/openvpn/config-tcp.ovpn /home/vps/public_html/config-tcp.ovpn
+cp /etc/openvpn/config-udp.ovpn /home/vps/public_html/config-udp.ovpn
+cp /etc/openvpn/config-ssl.ovpn /home/vps/public_html/config-ssl.ovpn
 
 mkdir /root/OpenVPN
-cp -r /etc/openvpn/client-tcp-ssl.ovpn OpenVPN/ssl.ovpn
-cp -r /etc/openvpn/client-udp-3224.ovpn OpenVPN/udp.ovpn
-cp -r /etc/openvpn/client-tcp-3268.ovpn OpenVPN/tcp.ovpn
+cp -r /etc/openvpn/confiv-ssl.ovpn OpenVPN/ssl.ovpn
+cp -r /etc/openvpn/config-udp.ovpn OpenVPN/udp.ovpn
+cp -r /etc/openvpn/config-tcp-3268.ovpn OpenVPN/tcp.ovpn
 cd /root
 zip -r openvpn.zip OpenVPN > /dev/null 2>&1
 cp -r /root/openvpn.zip /home/vps/public_html/openvpn.zip
