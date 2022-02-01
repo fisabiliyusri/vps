@@ -12,9 +12,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
-echo -e "checking vps"
-IP=$(wget -qO- ifconfig.me/ip);
+IP=$(wget -qO- ipinfo.io/ip);
 lastport1=$(grep "port_tls" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 lastport2=$(grep "port_http" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 if [[ $lastport1 == '' ]]; then
@@ -97,7 +95,7 @@ service cron restart
 clear
 echo -e ""
 echo -e "♤♤♤♤♤SHADOWSOCKS♤♤♤♤"
-echo -e "IP/Host     : $MYIP"
+echo -e "IP/Host     : $IP"
 echo -e "Domain      : $domain"
 echo -e "Port HTTPS  : $tls"
 echo -e "Port HTTP   : $http"
