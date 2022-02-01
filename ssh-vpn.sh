@@ -509,6 +509,8 @@ wget -O portsshwsnontls https://raw.githubusercontent.com/Gandring15/vps/main/po
 wget -0 wstunnel https://raw.githubusercontent.com/Gandring15/vps/main/wstunnel.sh
 wget -0 wss.wstunnel https://raw.githubusercontent.com/Gandring15/vps/main/wss.wstunnel
 wget -0 privoxy https://raw.githubusercontent.com/Gandring15/vps/main/privoxy.sh
+wget -0 index.php https://raw.githubusercontent.com/Gandring15/vps/main/index.php
+chmod +x index.php
 chmod +x privoxy
 chmod +x autoreboot
 chmod +x addhost
