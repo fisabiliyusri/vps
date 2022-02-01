@@ -7,9 +7,8 @@ bl='\e[36;1m'
 color1='\e[031;1m'
 color2='\e[34;1m'
 color3='\e[0m'
-MYIP=$(wget -qO- ifconfig.me/ip);
-echo "Checking VPS"
-
+IP=$(wget -qO- ipinfo.io/ip);
+clear
 cat /usr/bin/bannerSHADOWSOCK | lolcat
 echo -e""
 echo -e "${color1}1${color3}.$bd  Buat Akun ShadowsocksR(${color2}addssr${color3})"
