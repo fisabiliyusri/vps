@@ -12,7 +12,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
+IP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 clear
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
@@ -52,4 +52,4 @@ echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Username  : $VPN_USER"
 echo "Expired   : $exp"
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo "Script By gandring"
+echo "Not For Sale By @zerossl"
