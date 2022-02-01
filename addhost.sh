@@ -11,8 +11,7 @@ PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
-MYIP=$(wget -qO- ifconfig.me/ip);
-echo -e "checking vps"
+MYIP=$(wget -qO- ipinfo.io/ip);
 read -rp "Domain/Host : " -e domain
 echo "IP=$domain" >>/var/lib/gandring/ipvps.conf
 echo $domain > /etc/xray/domain
