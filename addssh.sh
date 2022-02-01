@@ -12,20 +12,13 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
-echo -e "checking vps"
-source /var/lib/gandring/ipvps.conf
-if [[ "$IP2" = "" ]]; then
 domain=$(cat /etc/xray/domain)
-else
-domain=$IP2
-fi
 clear
 read -p "Username : " Login
 read -p "Password : " Pass
 read -p "Expired (Days): " masaaktif
 
-IP=$(wget -qO- ifconfig.me/ip);
+IP=$(wget -qO- ipinfo.io/ip);
 ssl="$(cat ~/log-install.txt | grep -w "Stunnel5" | cut -d: -f2)"
 sqd="$(cat ~/log-install.txt | grep -w "Squid" | cut -d: -f2)"
 ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
