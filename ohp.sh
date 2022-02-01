@@ -27,7 +27,7 @@ cp ohpserver /usr/local/bin/ohpserver
 cat > /etc/systemd/system/ssh-ohp.service << END
 [Unit]
 Description=SSH OHP Redirection Service
-Documentation=https://raw.githubusercontent.com/Gandring15/vps/main/
+Documentation=https://github.com/Gandring15/vps"
 After=network.target nss-lookup.target
 
 [Service]
@@ -48,7 +48,7 @@ END
 cat > /etc/systemd/system/dropbear-ohp.service << END
 [Unit]]
 Description=Dropbear OHP Redirection Service
-Documentation=https://raw.githubusercontent.com/Gandring15/vps/main/
+Documentation=https://github.com/Gandring15/vps"
 After=network.target nss-lookup.target
 
 [Service]
@@ -57,7 +57,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/local/bin/ohpserver -port 8282 -proxy 127.0.0.1:3128 -tunnel 127.0.0.1:200
+ExecStart=/usr/local/bin/ohpserver -port 8282 -proxy 127.0.0.1:8080 -proxy 127.0.0.1:3000 -proxy 127.0.0.1:3128 -tunnel 127.0.0.1:389
 Restart=on-failure
 LimitNOFILE=infinity
 
@@ -69,7 +69,7 @@ END
 cat > /etc/systemd/system/openvpn-ohp.service << END
 [Unit]]
 Description=OpenVPN OHP Redirection Service
-Documentation=https://raw.githubusercontent.com/Gandring15/vps/main/
+Documentation=https://github.com/Gandring15/vps"
 After=network.target nss-lookup.target
 
 [Service]
@@ -78,7 +78,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/local/bin/ohpserver -port 8383 -proxy 127.0.0.1:3128 -tunnel 127.0.0.1:700 -tunnel 127.0.0.1:800 -proxy 127.0.0.1:8080 -tunnel 127.0.0.1:990
+ExecStart=/usr/local/bin/ohpserver -port 8383 -proxy 127.0.0.1:3128 -tunnel 127.0.0.1:22 -tunnel 127.0.0.1:3268 -proxy 127.0.0.1:8080 -tunnel 127.0.0.1:3269
 Restart=on-failure
 LimitNOFILE=infinity
 
