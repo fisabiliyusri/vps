@@ -7,12 +7,12 @@ bd='\e[1m'
 color1='\e[031;1m'
 color2='\e[34;1m'
 color3='\e[0m'
-MYIP=$(wget -qO- ifconfig.me/ip);
+IP=$(wget -qO- ipinfo.io/ip);
 
 cat /usr/bin/bannerSSTP | lolcat
 echo -e""
-echo -e "${color1}1${color3}.$bd Create Account SSTP (${color2}addsstp${color3})"
-echo -e "${color1}2${color3}.$bd Delete SSTP Account (${color2}delsstp${color3})"
+echo -e "${color1}1${color3}.$bd Buat Akun SSTP (${color2}addsstp${color3})"
+echo -e "${color1}2${color3}.$bd Hapus Akun SSTP (${color2}delsstp${color3})"
 echo -e "${color1}3${color3}.$bd Renew SSTP Account (${color2}renewsstp${color3})"
 echo -e "${color1}4${color3}.$bd Check User Login SSTP (${color2}ceksstp${color3})"
 echo -e""
