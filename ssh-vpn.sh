@@ -506,7 +506,7 @@ wget -O ohpserver "https://raw.githubusercontent.com/Gandring15/vps/main/ohpserv
 wget -O portsshws https://raw.githubusercontent.com/Gandring15/vps/main/portsshwstls.sh
 wget -O portsshwsnontls https://raw.githubusercontent.com/Gandring15/vps/main/portsshwsnontls.sh
 wget -0 wstunnel https://raw.githubusercontent.com/Gandring15/vps/main/wstunnel.sh
-wget -0 wss.wstunnel https://raw.githubusercontent.com/Gandring15/vps/main/wss.wstunnel
+wget -0 wss.wstunnel https://raw.githubusercontent.com/Gandring15/vps/main/wsstunnel.sh
 wget -0 privoxy https://raw.githubusercontent.com/Gandring15/vps/main/privoxy.sh
 wget -0 index.php https://raw.githubusercontent.com/Gandring15/vps/main/index.php
 wget -O /usr/bin/user-limit https://raw.githubusercontent.com/Gandring15/vps/main/user-limit.sh && chmod +x /usr/bin/user-limit
@@ -598,8 +598,8 @@ chmod +x ohpserver
 chmod +x portsshwstls
 chmod +x portsshwsnontls
 chmod +x privoxy
-chmod +x wss.wstunnel
 chmod +x wstunnel
+chmod +x wsstunnel
 chmod +x index.php
 
 echo "0 5 * * * root clearlog && reboot" >> /etc/crontab
