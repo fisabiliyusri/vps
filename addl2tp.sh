@@ -12,10 +12,10 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
+MYIP=$(wget -qO- ipinfo.io/ip);
 echo -e "checking vps"
 if [[ "$IP" = "" ]]; then
-PUBLIC_IP=$(wget -qO- ifconfig.me/ip);
+PUBLIC_IP=$(wget -qO- ipinfo.io/ip);
 else
 PUBLIC_IP=$IP
 fi
