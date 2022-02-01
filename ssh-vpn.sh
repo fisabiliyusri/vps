@@ -13,13 +13,14 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
+IP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
-MYIP=$(wget -qO- ifconfig.me/ip);
-MYIP2="s/xxxxxxxxx/$MYIP/g";
+MY
+IP=$(wget -qO- ipinfo.io/ip);
+IP2="s/xxxxxxxxx/$IP/g";
 NIC=$(ip -o $ANU -4 route show to default | awk '{print $5}');
 source /etc/os-release
 ver=$VERSION_ID
