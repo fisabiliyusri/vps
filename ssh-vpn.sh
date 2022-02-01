@@ -296,7 +296,7 @@ accept = 440
 connect = 127.0.0.1:442
 
 [openvpn]
-accept = 3269
+accept = 446
 connect = 127.0.0.1:3268
 
 [openvpn]
@@ -500,7 +500,6 @@ wget -O addwg "https://raw.githubusercontent.com/Gandring15/vps/main/addwg.sh"
 wget -O cff "https://raw.githubusercontent.com/Gandring15/vps/main/cff.sh"
 wget -O cfh "https://raw.githubusercontent.com/Gandring15/vps/main/cfh.sh"
 wget -O host "https://raw.githubusercontent.com/Gandring15/vps/main/host.sh"
-wget -O pointing "https://raw.githubusercontent.com/Gandring15/vps/main/pointing.sh"
 wget -O bw "https://raw.githubusercontent.com/Gandring15/vps/main/bw.sh"
 wget -O update "https://raw.githubusercontent.com/Gandring15/vps/main/update.sh"
 wget -O host "https://raw.githubusercontent.com/Gandring15/vps/main/host.sh"
@@ -598,7 +597,6 @@ chmod +x cfd
 chmod +x cff
 chmod +x cfh
 chmod +x host
-chmod +x pointing
 chmod +x bw
 chmod +x host
 echo "0 5 * * * root clearlog && reboot" >> /etc/crontab
