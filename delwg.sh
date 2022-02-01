@@ -12,7 +12,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
+IP=$(wget -qO- ipinfo.io/ip);
 echo -e "checking vps"
 source /etc/wireguard/params
 	NUMBER_OF_CLIENTS=$(grep -c -E "^### Client" "/etc/wireguard/$SERVER_WG_NIC.conf")
@@ -55,9 +55,9 @@ service cron restart
 clear
 echo ""
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo "Wireguard Akun Dihapus"
+echo "  Wireguard Akun Dihapus"
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Username  : $user"
 echo "Expired   : $exp"
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo "Repacked By gandring"
+echo "Not For Sale By @zerossl"
