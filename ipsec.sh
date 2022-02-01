@@ -16,12 +16,12 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
+IP=$(wget -qO- ipinfo.io/ip);
 echo -e "checking vps"
 # ==================================================
 # Link Hosting Kalian
-Gandring15="raw.githubusercontent.com/Gandring15/vps/main/ipsec"
-
+wget https://raw.githubusercontent.com/Gandring15/vps/main/ipsec.sh"
+chmod +x ipsec
 VPN_IPSEC_PSK='gandring'
 NET_IFACE=$(ip -o $NET_IFACE -4 route show to default | awk '{print $5}');
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
@@ -36,7 +36,7 @@ mkdir -p /opt/src
 cd /opt/src
 
 bigecho "Trying to auto discover IP of this server..."
-PUBLIC_IP=$(wget -qO- ifconfig.me/ip);
+PUBLIC_IP=$(wget -qO- ipinfo.io/ip);
 
 bigecho "Installing packages required for the VPN..."
 if [[ ${OS} == "centos" ]]; then
