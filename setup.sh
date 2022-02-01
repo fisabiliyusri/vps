@@ -20,7 +20,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
+IP=$(wget -qO- ipinfo.io/ip);
 clear
 if [ -f "/etc/xray/domain" ]; then
 echo "Script Already Installed"
@@ -61,7 +61,7 @@ rm -f /root/ohp.sh
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
-Documentation=https://github.com/Gandring15/vps/main/
+Documentation=https://github.com/Gandring15/vps"
 
 [Service]
 Type=oneshot
@@ -134,7 +134,7 @@ echo "   - Telegram                : T.me/pegasusq_governor"  | tee -a log-insta
 echo "   - Instagram               : ~"  | tee -a log-install.txt
 echo "   - Whatsapp                : ~"  | tee -a log-install.txt
 echo "   - Facebook                : ~" | tee -a log-install.txt
-echo "♤♤♤♤SELESAI INSTALASI VPN BY gandring♤♤♤♤" | tee -a log-install.txt
+echo "♤♤♤♤♤SOLO THE SPIRIT OF JAVA♤♤♤♤♤" | tee -a log-install.txt
 echo ""
 echo " Reboot 7 Sec"
 sleep 7
