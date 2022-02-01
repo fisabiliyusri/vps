@@ -12,14 +12,13 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
-echo "Checking VPS"
-
+IP=$(wget -qO- ipinfo.io/ip);
+clear
 # Link Hosting Kalian
-geovpn="raw.githubusercontent.com/geovpn/scriptvps/main/sstp"
-
-MYIP=$(wget -qO- ifconfig.me/ip);
-MYIP2="s/xxxxxxxxx/$MYIP/g";
+wget -0 https://raw.githubusercontent.com/Gandring15/vps/main/sstp.sh
+chmod +x sstp
+IP=$(wget -qO- ipinfo.io/ip);
+IP2="s/xxxxxxxxx/$IP/g";
 NIC=$(ip -o $ANU -4 route show to default | awk '{print $5}');
 source /etc/os-release
 OS=$ID
@@ -41,13 +40,13 @@ mkdir /home/sstp
 touch /home/sstp/sstp_account
 touch /var/lib/gandring/data-user-sstp
 #detail nama perusahaan
-country=ID
-state=Indonesia
-locality=Indonesia
-organization=gandring
-organizationalunit=gandring
-commonname=gandring
-email=djarumpentol01@gmail.com
+country=SA
+state=KwaZulu-Natal
+locality=Durban
+organization=DopekidVPN
+organizationalunit=dopekid
+commonname=dopekid
+email=joashsingh14@gmail.com
 
 #install sstp
 apt-get install -y build-essential cmake gcc linux-headers-`uname -r` git libpcre3-dev libssl-dev liblua5.1-0-dev ppp
