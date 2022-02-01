@@ -73,6 +73,8 @@ connect-timeout  5
 tun-mtu 1342
 tun-mtu-extra 32
 mssfix 1450
+sndbuf 524288
+rcvbuf 524288
 persist-key
 persist-tun
 ping 0
@@ -112,6 +114,8 @@ connect-timeout  5
 tun-mtu 1342
 tun-mtu-extra 32
 mssfix 1450
+sndbuf 524288
+rcvbuf 524288
 route-method exe
 nobind
 persist-key
@@ -145,6 +149,8 @@ connect-timeout  5
 tun-mtu 1342
 tun-mtu-extra 32
 mssfix 1450
+sndbuf 524288
+rcvbuf 524288
 route-method exe
 nobind
 persist-key
