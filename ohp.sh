@@ -101,20 +101,20 @@ if [ -n "$(ss -tupln | grep ohpserver | grep -w 8181)" ]
 then
 	echo 'SSH OHP Redirection Running'
 else
-	echo 'SSH OHP Redirection Found, please check manually'
+	echo 'SSH OHP Redirection Not Found, please check manually'
 fi
 sleep 0.5
 if [ -n "$(ss -tupln | grep ohpserver | grep -w 8282)" ]
 then
 	echo 'Dropbear OHP Redirection Running'
 else
-	echo 'Dropbear OHP Redirection Found, please check manually'
+	echo 'Dropbear OHP Redirection Not Found, please check manually'
 fi
 sleep 0.5
 if [ -n "$(ss -tupln | grep ohpserver | grep -w 8383)" ]
 then
 	echo 'OpenVPN OHP Redirection Running'
 else
-	echo 'OpenVPN OHP Redirection Found, please check manually'
+	echo 'OpenVPN OHP Redirection Not Found, please check manually'
 fi
 sleep 0.5
