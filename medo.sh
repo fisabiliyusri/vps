@@ -7,8 +7,7 @@ bd='\e[1m'
 color1='\e[031;1m'
 color2='\e[34;1m'
 color3='\e[0m'
-MYIP=$(wget -qO- ifconfig.me/ip);
-echo "Checking VPS"
+IP=$(wget -qO- ipinfo.io/ip);
 clear
 echo -e ""
 cat /usr/bin/bannerDOMAIN | lolcat
