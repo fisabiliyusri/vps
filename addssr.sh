@@ -12,9 +12,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
-echo -e "checking vps"
-IP=$(wget -qO- ifconfig.me/ip);
+IP=$(wget -qO- ipinfo.io/ip);
 read -e -p "Username : " ssr_user
 CLIENT_EXISTS=$(grep -w $ssr_user /usr/local/shadowsocksr/akun.conf | wc -l)
 if [[ ${CLIENT_EXISTS} == '1' ]]; then
@@ -62,8 +60,8 @@ IP=$(wget -qO- ifconfig.me/ip);
 clear
 echo -e ""
 echo -e "========== SHADOWSOCKSR =========="
-echo -e "IP/Host     : ${IP}"
-echo -e "Domain      : $domain"
+echo -e "IP/Host     : $IP"
+echo -e "Domain      : ${domain}"
 echo -e "Port        : ${ssr_port}"
 echo -e "Password    : ${ssr_password}"
 echo -e "Encryption  : ${ssr_method}"
@@ -75,4 +73,4 @@ echo -e "Expired     : ${exp} "
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "Link SSR    : ${ssr_link}"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo -e "Repacked By gandring"
+echo -e "NOT FOR SALE BY @zerossl"
