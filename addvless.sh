@@ -12,13 +12,13 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
+IP=$(wget -qO- ipinfo.io/ip);
 echo -e "checking vps"
 source /var/lib/gandring/ipvps.conf
-if [[ "$IP" = "" ]]; then
+if [[ "$IP2" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
-domain=$IP
+domain=$IP2
 fi
 tls="$(cat ~/log-install.txt | grep -w "Vless TLS" | cut -d: -f2|sed 's/ //g')"
 nontls="$(cat ~/log-install.txt | grep -w "Vless None TLS" | cut -d: -f2|sed 's/ //g')"
@@ -49,7 +49,7 @@ clear
 echo -e ""
 echo -e "♤♤♤♤♤ AKUN VLESS ♤♤♤♤♤"
 echo -e "Remarks     : ${user}"
-echo -e "IP/Host     : ${MYIP}"
+echo -e "IP/Host     : ${IP}"
 echo -e "Address     : ${domain}"
 echo -e "Port TLS    : $tls"
 echo -e "Port No TLS : $nontls"
@@ -64,4 +64,4 @@ echo -e "Link TLS    : ${xrayvless1}"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "Link No TLS : ${xrayvless2}"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo -e "Repacked By gandring"
+echo -e "Not For Sale By @zerossl"
