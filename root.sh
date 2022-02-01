@@ -13,13 +13,13 @@ read -p "Tolong Input Password Baru Buat User Root : " Pass
 rm -f /etc/ssh/sshd_config
 wget -O /etc/ssh/sshd_config https://raw.githubusercontent.com/Gandring15/vps/main/sshd
 echo -e "$Pass\n$Pass\n"|passwd root &> /dev/null
-IPANDA=$(wget -qO- ifconfig.co);
+IP=$(wget -qO- ipinfo.io/ip);
 
 # Successful
 clear
 echo "Please Save This VPS Account Information" | lolcat
 echo "============================================" | lolcat
-echo "  IP ADDRESS = $IPANDA" | lolcat
+echo "  IP ADDRESS = $IP" | lolcat
 echo "  Username   = root" | lolcat
 echo "  Password   = $Pass" | lolcat
 echo "============================================" | lolcat
