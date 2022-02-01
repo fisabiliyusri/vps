@@ -56,7 +56,7 @@ apt update && apt install -y curl jq && apt-install python -y && apt-get install
 
 • Squid Proxy             : 3128, 8080
 
-• Privoxy python          : 3000       
+• Privoxy                 : 3000       
 
 • Badvpn/Udpgw            : 7100, 7200, 7300~7900
 
