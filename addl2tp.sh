@@ -12,7 +12,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
+IP=$(wget -qO- ipinfo.io/ip);
 echo -e "checking vps"
 if [[ "$IP" = "" ]]; then
 PUBLIC_IP=$(wget -qO- ipinfo.io/ip);
@@ -67,5 +67,5 @@ Password   : $VPN_PASSWORD
 Created    : $hariini
 Expired    : $exp
 =============================
-Script By gandring
+NOT FOR SALE BY @zerossl
 EOF
