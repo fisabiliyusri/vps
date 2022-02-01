@@ -18,9 +18,8 @@ echo "Checking VPS"
 
 # initializing var
 export DEBIAN_FRONTEND=noninteractive
-MY
 IP=$(wget -qO- ipinfo.io/ip);
-IP2="s/xxxxxxxxx/$IP/g";
+IP2="s/xxxxxxxxx/$I2P/g";
 NIC=$(ip -o $ANU -4 route show to default | awk '{print $5}');
 source /etc/os-release
 ver=$VERSION_ID
