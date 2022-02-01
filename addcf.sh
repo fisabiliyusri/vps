@@ -36,4 +36,4 @@ systemctl stop xray@v2ray-nontls
 echo -e "[${GREEN}Done${NC}]"
 echo "Location Your Domain : /etc/xray/domain"
 echo ""
-echo -e "${BLUE}Script By gandring${NC}"
+echo -e "${BLUE}NOT FOR SALE BY @zerossl${NC}"
