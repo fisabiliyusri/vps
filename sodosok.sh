@@ -13,12 +13,12 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
+IP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 
 # Link Hosting Kalian
-geovpn="raw.githubusercontent.com/geovpn/scriptvps/main/shadowsocks"
-
+wget -0 https://raw.githubusercontent.com/Gandring15/vps/main/sodosok.sh"
+chmod +x sadosok
 source /etc/os-release
 OS=$ID
 ver=$VERSION_ID
