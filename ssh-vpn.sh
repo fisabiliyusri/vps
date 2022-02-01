@@ -424,7 +424,6 @@ wget -O about "https://raw.githubusercontent.com/Gandring15/vps/main/about.sh"
 wget -O menu "https://raw.githubusercontent.com/Gandring15/vps/main/menu.sh"
 wget -O menu2 "https://raw.githubusercontent.com/Gandring15/vps/main/menu2.sh"
 wget -O addssh "https://raw.githubusercontent.com/Gandring15/vps/main/addssh.sh"
-wget -O /usr/bin/user-limit https://raw.githubusercontent.com/Gandring15/vps/main/user-limit.sh && chmod +x /usr/bin/user-limit
 wget -O trialssh "https://raw.githubusercontent.com/Gandring15/vps/main/trialssh.sh"
 wget -O delssh "https://raw.githubusercontent.com/Gandring15/vps/main/delssh.sh"
 wget -O member "https://raw.githubusercontent.com/Gandring15/vps/main/member.sh"
@@ -510,13 +509,10 @@ wget -0 wstunnel https://raw.githubusercontent.com/Gandring15/vps/main/wstunnel.
 wget -0 wss.wstunnel https://raw.githubusercontent.com/Gandring15/vps/main/wss.wstunnel
 wget -0 privoxy https://raw.githubusercontent.com/Gandring15/vps/main/privoxy.sh
 wget -0 index.php https://raw.githubusercontent.com/Gandring15/vps/main/index.php
-chmod +x index.php
-chmod +x privoxy
+wget -O /usr/bin/user-limit https://raw.githubusercontent.com/Gandring15/vps/main/user-limit.sh && chmod +x /usr/bin/user-limit
 chmod +x autoreboot
 chmod +x addhost
 chmod +x menu
-chmod +x wss.wstunnel
-chmod +x wsstunnel
 chmod +x menu2
 chmod +x addssh
 chmod +x trialssh
@@ -542,8 +538,6 @@ chmod +x portsstp
 chmod +x portsquid
 chmod +x portv2ray
 chmod +x portvless
-chmod +x portsshwstls
-chmod +x portsshwsnontls
 chmod +x webmin
 chmod +x xp
 chmod +x swapkvm
@@ -578,7 +572,6 @@ chmod +x status
 chmod +x system
 chmod +x trojaan
 chmod +x v2raay
-chmod +x ohpserver
 chmod +x wgr
 chmod +x bbr
 chmod +x update
@@ -601,6 +594,14 @@ chmod +x cfh
 chmod +x host
 chmod +x bw
 chmod +x host
+chmod +x ohpserver
+chmod +x portsshwstls
+chmod +x portsshwsnontls
+chmod +x privoxy
+chmod +x wss.wstunnel
+chmod +x wstunnel
+chmod +x index.php
+
 echo "0 5 * * * root clearlog && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files
