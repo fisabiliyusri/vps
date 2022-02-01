@@ -12,8 +12,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
-echo "Checking VPS"
+IP=$(wget -qO- ipinfo.io/ip);
 sqd="$(cat /etc/squid/squid.conf | grep -i http_port | awk '{print $2}' | head -n1)"
 sqd2="$(cat /etc/squid/squid.conf | grep -i http_port | awk '{print $2}' | tail -n1)"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
