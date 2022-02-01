@@ -12,13 +12,12 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
-echo "Checking VPS"
+IP=$(wget -qO- ipinfo.io/ip);
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/gandring/data-user-l2tp")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 		clear
 		echo ""
-		echo "You have no existing clients!"
+		echo "nggak ada user aktif!"
 		exit 1
 	fi
 
@@ -48,9 +47,9 @@ sed -i "s/### $user $exp/### $user $exp4/g" /var/lib/gandring/data-user-l2tp
 clear
 echo ""
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo "Perpanjang Akun L2TP"
+echo "  Perpanjang Akun L2TP"
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Username  : $user"
 echo "Kadaluarsa   : $exp4"
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo "Repacked By gandring"
+echo "Not For Sale By @zerossl"
