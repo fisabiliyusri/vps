@@ -7,7 +7,7 @@ bd='\e[1m'
 color1='\e[031;1m'
 color2='\e[34;1m'
 color3='\e[0m'
-MYIP=$(wget -qO- ifconfig.me/ip);
+IP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 cat /usr/bin/bannerSSH | lolcat
 echo -e""
@@ -58,6 +58,7 @@ ceklim
 10)
 restart
 ;;
+11)
 user-limit
 ;;
 x)
