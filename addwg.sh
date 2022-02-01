@@ -12,13 +12,13 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
+IP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 # Load params
 source /etc/wireguard/params
 source /var/lib/gandring/ipvps.conf
 if [[ "$IP" = "" ]]; then
-SERVER_PUB_IP=$(wget -qO- ifconfig.me/ip);
+SERVER_PUB_IP=$(wget -qO- ipinfo.io/ip);
 else
 SERVER_PUB_IP=$IP
 fi
@@ -94,15 +94,15 @@ sleep 0.5
 echo Generate PresharedKey
 clear
 echo -e ""
-echo -e "======-WIREGUARD-======"
+echo -e "♤♤♤♤♤ WIREGUARD ♤♤♤♤♤"
 echo -e "Remarks  : $CLIENT_NAME"
-echo -e "IP/Host  : $MYIP"
+echo -e "IP/Host  : $IP"
 echo -e "Domain   : $domain"
 echo -e "Port     : $portwg"
 echo -e "Created  : $hariini"
 echo -e "Expired  : $exp"
 echo -e "======================="
-echo -e "Link WG  : http://$MYIP:88/$CLIENT_NAME.conf"
+echo -e "Link WG  : http://$IP:88/$CLIENT_NAME.conf"
 echo -e "======================="
-echo -e "repacked By gandring"
+echo -e "Not For Sale By @zerossl"
 rm -f /root/wg0-client-$CLIENT_NAME.conf
