@@ -36,7 +36,7 @@ fi
 cek=$(netstat -nutlp | grep -w $tls1)
 if [[ -z $cek ]]; then
 sed -i "s/$tls/$tls1/g" /etc/xray/vless-tls.json
-sed -i "s/   - Vless TLS         : $tls/   - Vless TLS         : $tls1/g" /root/log-install.txt
+sed -i "s/   -xray Vless TLS         : $tls/   -xray Vless TLS         : $tls1/g" /root/log-install.txt
 iptables -D INPUT -m state --state NEW -m tcp -p tcp --dport $tls -j ACCEPT
 iptables -D INPUT -m state --state NEW -m udp -p udp --dport $tls -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport $tls1 -j ACCEPT
@@ -60,7 +60,7 @@ fi
 cek=$(netstat -nutlp | grep -w $none1)
 if [[ -z $cek ]]; then
 sed -i "s/$none/$none1/g" /etc/xray/vless-nontls.json
-sed -i "s/   - Vless None TLS    : $none/   - Vless None TLS    : $none1/g" /root/log-install.txt
+sed -i "s/   -Xray Vless None TLS    : $none/   -xray Vless None TLS    : $none1/g" /root/log-install.txt
 iptables -D INPUT -m state --state NEW -m tcp -p tcp --dport $none -j ACCEPT
 iptables -D INPUT -m state --state NEW -m udp -p udp --dport $none -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport $none1 -j ACCEPT
