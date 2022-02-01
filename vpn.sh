@@ -60,7 +60,7 @@ client
 dev tun
 proto tcp
 remote xxxxxxxxx 3268
-http-proxy-option xxxxxxxxx 3000
+http-proxy xxxxxxxxx 3000
 resolv-retry infinite
 dhcp-option DNS 8.8.8.8
 dhcp-option DNS 8.8.4.4
@@ -101,7 +101,7 @@ client
 dev tun
 proto udp
 remote xxxxxxxxx 3224
-http-proxy-option xxxxxxxxx 3000
+http-proxy xxxxxxxxx 3000
 resolv-retry infinite
 dhcp-option DNS 8.8.8.8
 dhcp-option DNS 8.8.4.4
@@ -136,7 +136,7 @@ client
 dev tun
 proto tcp
 remote xxxxxxxxx 3269
-http-proxy-option xxxxxxxxx 3000
+http-proxy xxxxxxxxx 3000
 resolv-retry infinite
 dhcp-option DNS 8.8.8.8
 dhcp-option DNS 8.8.4.4
