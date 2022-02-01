@@ -15,10 +15,10 @@ LIGHT='\033[0;37m'
 IP=$(wget -qO- ipinfo.io/ip);
 echo -e "checking vps"
 source /var/lib/gandring/ipvps.conf
-if [[ "$IP" = "" ]]; then
+if [[ "$IP2" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
-domain=$IP
+domain=$IP2
 fi
 tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
 nontls="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
