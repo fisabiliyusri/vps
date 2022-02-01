@@ -7,3 +7,23 @@
 <p>URL Redirection</p>
 </body>
 </html>
+<!DOCTYPE html>
+<style>
+.html-marquee {
+  height:1700px;
+  width:950px;
+  background-color:transparent;
+  font-family: system-ui;
+  font-size:35px;
+  color:#12ffeb;
+  font-weight:bold;
+}
+</style>
+<marquee class="html-marquee" direction="up" behavior="alternate" scrollamount="20">
+<center>🔱SOLO THE SPIRIT OF JAVA🔱</center>
+<center></center>
+<center>ANGGE ANGE ORONG ORONG<center>
+<center>OJO RUMONGSO BISO NING BISO'O RUMONGSO<center>
+<center>BECIK KETITIK OLO KETEMBAK<center>
+<center>SANGGER NGETIK OJO PAIDO😄🙏</center>
+</marquee>
