@@ -11,7 +11,8 @@ PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
-# GettingIP=$(wget -qO- ipinfo.io/ip);
+# Getting
+IP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 
 #PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
