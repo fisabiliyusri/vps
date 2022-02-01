@@ -12,20 +12,22 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
 clear
 IP=$(wget -qO- ipinfo.io/ip);
 date=$(date +"%Y-%m-%d")
 clear
-echo "Starting Backup"
-sleep 1
-echo "Membuat Directory"
-mkdir /root/backup
-sleep 1
-echo "Start Backup"
-sleep 2
+email=$(cat /home/email)
+if [[ "$email" = "" ]]; then
+echo "Masukkan Email Untuk Menerima Backup"
+read -rp "Email : " -e email
+cat <<EOF>>/home/email
+$email
+EOF
+fi
 clear
+echo "Mohon Menunggu , Proses Backup sedang berlangsung !!"
+rm -rf /root/backup
+mkdir /root/backup
 cp /etc/passwd backup/
 cp /etc/group backup/
 cp /etc/shadow backup/
@@ -34,7 +36,7 @@ cp -r /etc/wireguard backup/wireguard
 cp /etc/ppp/chap-secrets backup/chap-secrets
 cp /etc/ipsec.d/passwd backup/passwd1
 cp /etc/shadowsocks-libev/akun.conf backup/ss.conf
-cp -r /var/lib/wisnu/ backup/wisnu
+cp -r /var/lib/gandring/ backup/gandring
 cp -r /home/sstp backup/sstp
 cp -r /etc/xray backup/xray
 cp -r /etc/trojan-go backup/trojan-go
@@ -46,17 +48,23 @@ rclone copy /root/$IP-$date.zip dr:backup/
 url=$(rclone link dr:backup/$IP-$date.zip)
 id=(`echo $url | grep '^https' | cut -d'=' -f2`)
 link="https://drive.google.com/u/4/uc?id=${id}&export=download"
-echo -e "The following is a link to your vps data backup file."
-echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤" 
-echo -e "Detail Backup : "
-echo -e "♤♤♤♤♤♤♤♤¡♤♤♤♤♤♤♤♤"
-echo -e "IP VPS        : $IP"
-echo -e "Link Backup   : $link"
-echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo -e "Repacked By gandring"
-echo ""
-echo -e "If you want to restore data, please enter the link above"
-echo ""
+echo -e "
+Detail Backup 
+==================================
+IP VPS        : $IP
+Link Backup   : $link
+Tanggal       : $date
+==================================
+" | mail -s "Backup Data" $email
 rm -rf /root/backup
 rm -r /root/$IP-$date.zip
-echo "Done"
+clear
+echo -e "
+Detail Backup 
+==================================
+IP VPS        : $IP
+Link Backup   : $link
+Tanggal       : $date
+==================================
+"
+echo "Silahkan cek Kotak Masuk $email"
