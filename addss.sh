@@ -26,7 +26,7 @@ else
 http="$((lastport2+1))"
 fi
 source /var/lib/gandring/ipvps.conf
-if [[ "$IP2" = "" ]]; then
+if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
 domain=$IP2
