@@ -12,7 +12,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
+IP=$(wget -qO- ipinfo.io/ip);
 echo -e "checking vps"
 # Repacked By gandring
 # ==================================================
@@ -22,8 +22,8 @@ geovpn="raw.githubusercontent.com/Gandring15/vps/main/ssh"
 # initialisasi var
 export DEBIAN_FRONTEND=noninteractive
 OS=`uname -m`;
-MYIP=$(wget -qO- ifconfig.me/ip);
-MYIP2="s/xxxxxxxxx/$MYIP/g";
+IP=$(wget -qO- ipinfo.io/ip);
+IP2="s/xxxxxxxxx/$IP/g";
 NIC=$(ip -o $NIC -4 route show to default | awk '{print $5}');
 
 # Install OpenVPN dan Easy-RSA
@@ -93,7 +93,7 @@ comp-lzo
 verb 1
 END
 
-sed -i $MYIP2 /etc/openvpn/config-tcp.ovpn;
+sed -i $IP2 /etc/openvpn/config-tcp.ovpn;
 
 # Buat config client UDP 3224
 cat > /etc/openvpn/config-udp.ovpn <<-END
@@ -128,7 +128,7 @@ comp-lzo
 verb 1
 END
 
-sed -i $MYIP2 /etc/openvpn/config-udp.ovpn;
+sed -i $IP2 /etc/openvpn/config-udp.ovpn;
 
 # Buat config client SSL 3269
 cat > /etc/openvpn/config-ssl.ovpn <<-END
@@ -163,7 +163,7 @@ comp-lzo
 verb 1
 END
 
-sed -i $MYIP2 /etc/openvpn/config-ssl.ovpn;
+sed -i $IP2 /etc/openvpn/config-ssl.ovpn;
 
 cd
 # pada tulisan xxx ganti dengan alamat ip address VPS anda 
