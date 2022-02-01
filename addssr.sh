@@ -59,7 +59,7 @@ service cron restart
 IP=$(wget -qO- ipinfo.io/ip);
 clear
 echo -e ""
-echo -e "========== SHADOWSOCKSR =========="
+echo -e "♤♤♤♤♤ SHADOWSOCKSR ♤♤♤♤♤"
 echo -e "IP/Host     : $IP"
 echo -e "Domain      : ${domain}"
 echo -e "Port        : ${ssr_port}"
