@@ -12,9 +12,9 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
+IP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-
+clear
 data=( `cat /etc/shadowsocks-libev/akun.conf | grep '^###' | cut -d ' ' -f 2`);
 now=`date +"%Y-%m-%d"`
 for user in "${data[@]}"
