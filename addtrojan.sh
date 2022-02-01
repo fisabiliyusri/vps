@@ -12,7 +12,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
+IP=$(wget -qO- ipinfo.io/ip);
 echo -e " checking vps"
 source /var/lib/gandring/ipvps.conf
 if [[ "$IP" = "" ]]; then
@@ -43,13 +43,13 @@ clear
 echo -e ""
 echo -e "♤♤♤♤♤ TROJAN-GFW ♤♤♤♤♤"
 echo -e "Remarks  : ${user}"
-echo -e "IP/Host  : ${MYIP}"
+echo -e "IP/Host  : ${IP}"
 echo -e "Address  : ${domain}"
 echo -e "Port     : ${tr}"
 echo -e "Key      : ${user}"
 echo -e "Created  : $hariini"
 echo -e "Expired  : $exp"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo -e "Link TR  : ${trojanlink}"
+echo -e "Link Trojan-Gfw : ${trojanlink}"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo -e "Repacked By gandring"
+echo -e "NOT FOR SALE BY @zerossl"
