@@ -60,11 +60,32 @@ client
 dev tun
 proto tcp
 remote xxxxxxxxx 3268
+http-proxy-option xxxxxxxxx 3000
 resolv-retry infinite
+dhcp-option DNS 8.8.8.8
+dhcp-option DNS 8.8.4.4
+allow-recursive-routing
+ifconfig-nowarn
+connect-retry-max 1
+connect-retry 1 300
+resolv-retry 60
+connect-timeout  5
+tun-mtu 1342
+tun-mtu-extra 32
+mssfix 1450
+persist-key
+persist-tun
+ping 0
+ping-restart 0
+ping-timer-rem
+reneg-sec 0
 route-method exe
 nobind
 persist-key
 persist-tun
+pull
+fast-io
+cipher AES-256-CBC
 auth-user-pass
 comp-lzo
 verb 1
@@ -78,11 +99,26 @@ client
 dev tun
 proto udp
 remote xxxxxxxxx 3224
+http-proxy-option xxxxxxxxx 3000
 resolv-retry infinite
+dhcp-option DNS 8.8.8.8
+dhcp-option DNS 8.8.4.4
+allow-recursive-routing
+ifconfig-nowarn
+connect-retry-max 1
+connect-retry 1 300
+resolv-retry 60
+connect-timeout  5
+tun-mtu 1342
+tun-mtu-extra 32
+mssfix 1450
 route-method exe
 nobind
 persist-key
 persist-tun
+pull
+fast-io
+cipher AES-256-CBC
 auth-user-pass
 comp-lzo
 verb 1
@@ -96,11 +132,26 @@ client
 dev tun
 proto tcp
 remote xxxxxxxxx 3269
+http-proxy-option xxxxxxxxx 3000
 resolv-retry infinite
+dhcp-option DNS 8.8.8.8
+dhcp-option DNS 8.8.4.4
+allow-recursive-routing
+ifconfig-nowarn
+connect-retry-max 1
+connect-retry 1 300
+resolv-retry 60
+connect-timeout  5
+tun-mtu 1342
+tun-mtu-extra 32
+mssfix 1450
 route-method exe
 nobind
 persist-key
 persist-tun
+pull
+fast-io
+cipher AES-256-CBC
 auth-user-pass
 comp-lzo
 verb 1
