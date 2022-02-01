@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/pegasusq_governor
+# My Telegram : https://pegasusq_governor
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -12,50 +12,119 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
-echo -e "checking vps"
-IP=$(wget -qO- ifconfig.me/ip);
-date=$(date +"%Y-%m-%d")
 clear
-echo "Starting Backup"
+Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
+Info="${Green_font_prefix}[ON]${Font_color_suffix}"
+Error="${Red_font_prefix}[OFF]${Font_color_suffix}"
+cek=$(grep -c -E "^# BEGIN_Backup" /etc/crontab)
+if [[ "$cek" = "1" ]]; then
+sts="${Info}"
+else
+sts="${Error}"
+fi
+function start() {
+email=$(cat /home/email)
+if [[ "$email" = "" ]]; then
+echo "Please enter your email"
+read -rp "Email : " -e email
+cat <<EOF>>/home/email
+$email
+EOF
+fi
+cat << EOF >> /etc/crontab
+# BEGIN_Backup
+5 0 * * * root backup
+# END_Backup
+EOF
+service cron restart
 sleep 1
-echo "Membuat Directory"
-mkdir /root/backup
-sleep 1
-echo "Start Backup"
-sleep 2
+echo " Please Wait"
 clear
-cp /etc/passwd backup/
-cp /etc/group backup/
-cp /etc/shadow backup/
-cp /etc/gshadow backup/
-cp -r /etc/wireguard backup/wireguard
-cp /etc/ppp/chap-secrets backup/chap-secrets
-cp /etc/ipsec.d/passwd backup/passwd1
-cp /etc/shadowsocks-libev/akun.conf backup/ss.conf
-cp -r /var/lib/geovpnstore/ backup/geovpnstore
-cp -r /home/sstp backup/sstp
-cp -r /etc/xray backup/xray
-cp -r /etc/trojan-go backup/trojan-go
-cp -r /usr/local/shadowsocksr/ backup/shadowsocksr
-cp -r /home/vps/public_html backup/public_html
-cd /root
-zip -r $IP-$date.zip backup > /dev/null 2>&1
-rclone copy /root/$IP-$date.zip dr:backup/
-url=$(rclone link dr:backup/$IP-$date.zip)
-id=(`echo $url | grep '^https' | cut -d'=' -f2`)
-link="https://drive.google.com/u/4/uc?id=${id}&export=download"
-echo -e "The following is a link to your vps data backup file."
-echo -e "=================================" 
-echo -e "Detail Backup : "
-echo -e "================================="
-echo -e "IP VPS        : $IP"
-echo -e "Link Backup   : $link"
-echo -e "================================="
-echo -e "Script By gandring"
-echo ""
-echo -e "If you want to restore data, please enter the link above"
-echo ""
-rm -rf /root/backup
-rm -r /root/$IP-$date.zip
-echo "Done"
+echo " Autobackup Has Been Started"
+echo " Data Will Be Backed Up Automatically at 00:04 GMT +7"
+exit 0
+}
+function stop() {
+email=$(cat /home/email)
+sed -i "/^$email/d" /home/email
+sed -i "/^# BEGIN_Backup/,/^# END_Backup/d" /etc/crontab
+service cron restart
+sleep 1
+echo " Please Wait"
+clear
+echo " Autobackup Has Been Stopped"
+exit 0
+}
+
+function gantipenerima() {
+rm -rf /home/email
+echo "Please enter your email"
+read -rp "Email : " -e email
+cat <<EOF>>/home/email
+$email
+EOF
+}
+function gantipengirim() {
+echo "Please enter your email"
+read -rp "Email : " -e email
+echo "Please enter your Password email"
+read -rp "Password : " -e pwdd
+rm -rf /etc/msmtprc
+cat<<EOF>>/etc/msmtprc
+defaults
+tls on
+tls_starttls on
+tls_trust_file /etc/ssl/certs/ca-certificates.crt
+account default
+host smtp.gmail.com
+port 587
+auth on
+user $email
+from $email
+password $pwdd
+logfile ~/.msmtp.log
+EOF
+}
+function testemail() {
+email=$(cat /home/email)
+if [[ "$email" = "" ]]; then
+start
+fi
+email=$(cat /home/email)
+echo -e "
+Ini adalah isi email percobaaan kirim email dari vps
+IP VPS : $IP
+Tanggal : $date
+" | mail -s "Percobaan Pengiriman Email" $email
+}
+clear
+echo -e "=============================="
+echo -e "     Autobackup Data $sts     "
+echo -e "=============================="
+echo -e "1. Start Autobackup"
+echo -e "2. Stop Autobackup"
+echo -e "3. Ganti Email Penerima"
+echo -e "4. Ganti Email Pengirim"
+echo -e "5. Test kirim Email"
+echo -e "=============================="
+read -rp "Please Enter The Correct Number : " -e num
+case $num in
+1)
+start
+;;
+2)
+stop
+;;
+3)
+gantipenerima
+;;
+4)
+gantipengirim
+;;
+5)
+testemail
+;;
+*)
+clear
+;;
+esac
