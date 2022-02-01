@@ -12,8 +12,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
-echo "Checking VPS"
+IP=$(wget -qO- ipinfo.io/ip);
 clear
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/gandring/data-user-l2tp")
@@ -53,5 +52,5 @@ echo "  L2TP Account Deleted"
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Username  : $VPN_USER"
 echo "Expired   : $exp"
-echo "=========================="
-echo "Script By gandring"
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo "Not For Sale By @zerossl"
