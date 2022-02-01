@@ -12,7 +12,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
+IP=$(wget -qO- ipinfo.io/ip);
 echo -e "checking vps"
 source /etc/wireguard/params
 	NUMBER_OF_CLIENTS=$(grep -c -E "^### Client" "/etc/wireguard/$SERVER_WG_NIC.conf")
@@ -49,10 +49,10 @@ exp4=`date -d "$exp3 days" +"%Y-%m-%d"`
 sed -i "s/### Client $user $exp/### Client $user $exp4/g" /etc/wireguard/wg0.conf
 clear
 echo ""
-echo "============================="
-echo "  Wireguard Account Renewed  "
-echo "============================="
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo "  Perpanjang Akun Wireguard"
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Username  : $user"
 echo "Expired   : $exp4"
-echo "============================="
-echo "Script By gandring"
+echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
+echo "Not For Sale By @zerossl"
