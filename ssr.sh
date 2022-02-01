@@ -12,11 +12,11 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
+IP=$(wget -qO- ipinfo.io/ip);
 echo -e "checking vps"
 # Link Hosting Kalian
-geovpn="raw.githubusercontent.com/Gandring15/vps/main/ssr"
-
+wget -0 https://raw.githubusercontent.com/Gandring15/vps/main/ssr.sh
+chmod +x ssr
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
