@@ -13,8 +13,8 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
-echo -e "checking vps"
+IP=$(wget -qO- ipinfo.io/ip);
+clear
 # Link Hosting Kalian
 wget https://raw.githubusercontent.com/Gandring15/vps/main/websocket.py
 chmod +x /usr/local/bin/websocket
@@ -27,7 +27,7 @@ chmod +x /usr/local/bin/ws-tls
 cat > /etc/systemd/system/ws-tls.service << END
 [Unit]
 Description=Python Proxy Mod By gandring
-Documentation=https://raw.githubusercontent.com/Gandring15/vps/main/
+Documentation=https://github.com/Gandring15/vps"
 After=network.target nss-lookup.target
 
 [Service]
@@ -36,7 +36,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/bin/python -O /usr/local/bin/ws-tls 2083
+ExecStart=/usr/bin/python -O /usr/local/bin/ws-tls 2083 
 Restart=on-failure
 
 [Install]
@@ -55,7 +55,7 @@ chmod +x /usr/local/bin/ws-nontls
 cat > /etc/systemd/system/ws-nontls.service << END
 [Unit]
 Description=Python Proxy Mod By gandring
-Documentation=https://raw.githubusercontent.com/Gandring15/vps/main/
+Documentation=https://github.com/Gandring15/vps"
 After=network.target nss-lookup.target
 
 [Service]
@@ -83,7 +83,7 @@ chmod +x /usr/local/bin/ws-ovpn
 cat > /etc/systemd/system/ws-ovpn.service << END
 [Unit]
 Description=Python Proxy Mod By gandring
-Documentation=https://raw.githubusercontent.com/Gandring15/vps/main/
+Documentation=https://github.com/Gandring15/vps"
 After=network.target nss-lookup.target
 
 [Service]
