@@ -12,7 +12,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
+IP=$(wget -qO- ipinfo.io/ip);
 echo -e "checking vps"
 echo " "
 echo " "
@@ -75,5 +75,5 @@ echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤�
         cat /tmp/vpn-login-udp.txt
 fi
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤{♤♤";
-echo "Script By gandring"
+echo "Not For Sale By @zerossl"
 echo ""
