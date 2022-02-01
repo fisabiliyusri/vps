@@ -496,7 +496,7 @@ wget -O bannerVPN "https://raw.githubusercontent.com/Gandring15/vps/main/bannerV
 wget -O bannerWIREGUARD "https://raw.githubusercontent.com/Gandring15/vps/main/bannerWIREGUARD"
 wget -O bannerBACKUP "https://raw.githubusercontent.com/Gandring15/vps/main/bannerBACKUP"
 wget -O addcf "https://raw.githubusercontent.com/Gandring15/vps/main/addcf.sh"
-wget -O addwg "https://raw.githubusercontent.com/Gandring15/vps/main/addwg.sh"
+wget -O wg "https://raw.githubusercontent.com/Gandring15/vps/main/wg.sh"
 wget -O cff "https://raw.githubusercontent.com/Gandring15/vps/main/cff.sh"
 wget -O cfh "https://raw.githubusercontent.com/Gandring15/vps/main/cfh.sh"
 wget -O host "https://raw.githubusercontent.com/Gandring15/vps/main/host.sh"
@@ -545,7 +545,7 @@ chmod +x portsshwsnontls
 chmod +x webmin
 chmod +x xp
 chmod +x swapkvm
-chmod +x addwg
+chmod +x wg
 chmod +x addv2ray
 chmod +x addvless
 chmod +x addtrojan
