@@ -12,8 +12,8 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ifconfig.me/ip);
-echo -e "checking vps"
+IP=$(wget -qO- ipinfo.io/ip);
+clear
 echo -e ""
 echo -e "Starting Restart All Service"
 sleep 2
