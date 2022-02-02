@@ -86,6 +86,7 @@ apt -y install wget curl
 
 # Install Requirements Tools
 apt install ruby -y
+apt install cowsay -y
 apt install python -y
 apt install make -y
 apt install cmake -y
@@ -294,8 +295,8 @@ accept = 441
 connect = 127.0.0.1:222
 
 [stunnel5]
-accept = 440
-connect = 127.0.0.1:442
+accept = 445
+connect = 127.0.0.22
 
 [openvpn]
 accept = 446
@@ -505,13 +506,14 @@ wget -O bw "https://raw.githubusercontent.com/Gandring15/vps/main/bw.sh"
 wget -O update "https://raw.githubusercontent.com/Gandring15/vps/main/update.sh"
 wget -O host "https://raw.githubusercontent.com/Gandring15/vps/main/host.sh"
 wget -O ohpserver "https://raw.githubusercontent.com/Gandring15/vps/main/ohpserver"
-wget -O portsshws https://raw.githubusercontent.com/Gandring15/vps/main/portsshwstls.sh
-wget -O portsshwsnontls https://raw.githubusercontent.com/Gandring15/vps/main/portsshwsnontls.sh
-wget -0 wstunnel https://raw.githubusercontent.com/Gandring15/vps/main/wstunnel.sh
-wget -0 wss.wstunnel https://raw.githubusercontent.com/Gandring15/vps/main/wsstunnel.sh
-wget -0 privoxy https://raw.githubusercontent.com/Gandring15/vps/main/privoxy.sh
-wget -0 index.php https://raw.githubusercontent.com/Gandring15/vps/main/index.php
-wget -O /usr/bin/user-limit https://raw.githubusercontent.com/Gandring15/vps/main/user-limit.sh && chmod +x /usr/bin/user-limit
+wget -O portsshws https://raw.githubusercontent.com/Gandring15/vps/main/portsshwstls.sh"
+wget -O portsshwsnontls https://raw.githubusercontent.com/Gandring15/vps/main/portsshwsnontls.sh"
+wget -0 wstunnel https://raw.githubusercontent.com/Gandring15/vps/main/wstunnel.sh"
+wget -0 wss.wstunnel https://raw.githubusercontent.com/Gandring15/vps/main/wsstunnel.sh"
+wget -0 privoxy https://raw.githubusercontent.com/Gandring15/vps/main/privoxy.sh"
+wget -0 index.php https://raw.githubusercontent.com/Gandring15/vps/main/index.php"
+wget -O /usr/bin/user-limit https://raw.githubusercontent.com/Gandring15/vps/main/user-limit.sh && chmod +x /usr/bin/user-limit"
+wget -0 privoxy https://raw.githubusercontent.com/Gandring15/vps/main/privoxy.py"
 chmod +x autoreboot
 chmod +x addhost
 chmod +x menu
@@ -603,7 +605,7 @@ chmod +x privoxy
 chmod +x wstunnel
 chmod +x wsstunnel
 chmod +x index.php
-
+chmod +x privoxy
 echo "0 5 * * * root clearlog && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files
@@ -639,12 +641,12 @@ screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7800 --max-clients 500
 screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7900 --max-clients 500
 history -c
 echo "unset HISTFILE" >> /etc/profile
-#rm -f /root/key.pem
-#rm -f /root/cert.pem
-#rm -f /root/ssh-vpn.sh
+rm -f /root/key.pem
+rm -f /root/cert.pem
+rm -f /root/ssh-vpn.sh
 cd
-#rm -f /root/key.pem
-#rm -f /root/cert.pem
-#rm -f /root/ssh-vpn.sh
+rm -f /root/key.pem
+rm -f /root/cert.pem
+rm -f /root/ssh-vpn.sh
 #finishing
 clear
