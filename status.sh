@@ -29,7 +29,7 @@ declare ingfo=()
 
 wsdrop=$(systemctl status ws-nontls | grep -i "active (running)")
 wstls=$(systemctl status ws-tls | grep -i "active (running)")
-#wsopen=$(systemctl status ws-openssh | grep -i "active (running)")
+wsopen=$(systemctl status ws-openssh | grep -i "active (running)")
 wsovpn=$(systemctl status ws-ovpn | grep -i "active (running)")
 v2ray=$(systemctl status xray@v2ray-tls | grep -i "active (running)")
 v2none=$(systemctl status xray@v2ray-nontls | grep -i "active (running)")
@@ -38,28 +38,29 @@ vnone=$(systemctl status xray@vless-nontls | grep -i "active (running)")
 trojan=$(systemctl status xray@trojan | grep -i "active (running)")
 trojang=$(systemctl status trojan-go | grep -i "active (running)")
 ipsec=$(systemctl status ipsec | grep -i "active (running)")
-shadow=$(systemctl status shadowsocks-libev | grep -i "active (running)")
-#shadown=$(systemctl status shadowsocks-libev-server@http | grep -i "active (running)")
+shadowo=$(systemctl status shadowsocks-libev | grep -i "active (running)")
+shadowh=$(systemctl status shadowsocks-libev-server@http | grep -i "active (running)")
 ssr=$(systemctl status ssrmu | grep -i "active (running)")
 sstp=$(systemctl status accel-ppp | grep -i "active (running)")
 l2tp=$(systemctl status xl2tpd | grep -i "active (running)")
 pptp=$(systemctl status pptpd | grep -i "active (running)")
-wg=$(systemctl status wg-quick@wg0 | grep -i "active (exited)")
-
+wg=$(systemctl status wg-quick@wg0 | grep -i "active (running)")
+wgws=$(systemctl status wg-quick@wg1 | grep -i "active (running)")
 ssh=$(systemctl status ssh | grep -i "active (running)")
 ssl=$(systemctl status stunnel5 | grep -i "active (running)")
 drop=$(systemctl status dropbear | grep -i "active (running)")
-ovpn=$(systemctl status openvpn | grep -i "active (exited)")
+ovpn=$(systemctl status openvpn | grep -i "active (running)")
 nginx=$(systemctl status nginx | grep -i "active (running)")
 squid=$(systemctl status squid | grep -i "active (running)")
 cron=$(systemctl status cron | grep -i "active (running)")
 fail2ban=$(systemctl status fail2ban | grep -i "active (running)")
 vnstat=$(systemctl status vnstat | grep -i "active (running)")
-ksslh=$(systemctl status sslh | grep -i "active (running)")
+sslh=$(systemctl status sslh | grep -i "active (running)")
 ohp=$(systemctl status dropbear-ohp | grep -i "active (running)")
 ohq=$(systemctl status openvpn-ohp | grep -i "active (running)")
 ohr=$(systemctl status ssh-ohp | grep -i "active (running)")
 wsstunnel=$(systemctl status wsstunnel | grep -i "active (running)")
+wstunnel=$(systemctl status wstunnel | grep -i "active (running)")
 #======================================
 
 if [[ $wsdrop == "" ]]; then
@@ -70,272 +71,270 @@ else
       swsdrop=$AKTIF
       gandring+=("enjoooos1")
 fi
-
+if [[ $wsopen == "" ]]; then
+      swsdrop=$ERROR
+      info+=("WebSocket Openssh")
+      keook+=("err2")
+else
+      swsdrop=$AKTIF
+      gandring+=("enjoooos2")
+fi
 if [[ $wstls == "" ]]; then
       swstls=$ERROR
       wstls+=("WebSocket TLS")
-      keook+=("err2")
+      keook+=("err3")
 else
       swstls=$AKTIF
-      gandring+=("enjoooos2")
+      gandring+=("enjoooos3")
 fi
-
 if [[ $wsovpn == "" ]]; then
       swsovpn=$ERROR
       info+=("WebSocket ovpn")
-      keook+=("err3")
-else
-      swsovpn=$AKTIF
-      gandring+=("enjoooos3")
-
-fi
-
-if [[ $v2ray == "" ]]; then
-      sv2ray=$ERROR
-      info+=("V2ray/VMess TLS")
       keook+=("err4")
 else
-      sv2ray=$AKTIF
+      swsovpn=$AKTIF
       gandring+=("enjoooos4")
-fi
 
-if [[ $v2none == "" ]]; then
-      sv2none=$ERROR
-      info+=("V2ray/VMess NON-TLS")
+fi
+if [[ $v2ray == "" ]]; then
+      sv2ray=$ERROR
+      info+=("VMess TLS")
       keook+=("err5")
 else
-      sv2none=$AKTIF
+      sv2ray=$AKTIF
       gandring+=("enjoooos5")
 fi
-
-if [[ $vless == "" ]]; then
-      svless=$ERROR
-      info+=("V2ray/VLess TLS")
+if [[ $v2none == "" ]]; then
+      sv2none=$ERROR
+      info+=("VMess NON-TLS")
       keook+=("err6")
 else
-      svless=$AKTIF
+      sv2none=$AKTIF
       gandring+=("enjoooos6")
 fi
-
-if [[ $vnone == "" ]]; then
-      svnone=$ERROR
-      ingfo+=("V2ray/VLess NON-TLS")
+if [[ $vless == "" ]]; then
+      svless=$ERROR
+      info+=("VLess TLS")
       keook+=("err7")
 else
-      svnone=$AKTIF
+      svless=$AKTIF
       gandring+=("enjoooos7")
 fi
-
-if [[ $trojan == "" ]]; then
-      strojan=$ERROR
-      ingfo+=("Trojan")
+if [[ $vnone == "" ]]; then
+      svnone=$ERROR
+      ingfo+=("VLess NON-TLS")
       keook+=("err8")
 else
-      strojan=$AKTIF
+      svnone=$AKTIF
       gandring+=("enjoooos8")
 fi
-
-if [[ $trojang == "" ]]; then
-      strojang=$ERROR
-      ingfo+=("TrojanGO")
+if [[ $trojan == "" ]]; then
+      strojan=$ERROR
+      ingfo+=("Trojan-Gfw")
       keook+=("err9")
 else
-      strojang=$AKTIF
+      strojan=$AKTIF
       gandring+=("enjoooos9")
 fi
-
+if [[ $trojang == "" ]]; then
+      strojang=$ERROR
+      ingfo+=("Trojan-GO")
+      keook+=("err10")
+else
+      strojang=$AKTIF
+      gandring+=("enjoooos10")
+fi
 if [[ $ipsec == "" ]]; then
       sipsec=$ERROR
       ingfo+=("IPSec Services")
-      keook+=("err10")
+      keook+=("err11")
 else
       sipsec=$AKTIF
-      gandring+=("enjoooos10")
+      gandring+=("enjoooos11")
 fi
-
 if [[ $shadow == "" ]]; then
       sshadow=$ERROR
       ingfo+=("Shadowsocks OBFS")
-      keook+=("err11")
-else
-      sshadow=$AKTIF
-      gandring+=("enjoooos11")
-fi
-
-if [[ $ssr == "" ]]; then
-      sssr=$ERROR
-      ingfo+=("ShadowsocksR/SSR")
       keook+=("err12")
 else
-      sssr=$AKTIF
+      sshadow=$AKTIF
       gandring+=("enjoooos12")
 fi
-
+if [[ $ssr == "" ]]; then
+      sssr=$ERROR
+      ingfo+=("ShadowsocksR")
+      keook+=("err13")
+else
+      sssr=$AKTIF
+      gandring+=("enjoooos13")
+fi
 if [[ $sstp == "" ]]; then
       ssstp=$ERROR
       ingfo+=("SSTP")
-      keook+=("err13")
+      keook+=("err14")
 else
       ssstp=$AKTIF
-      gandring+=("enjoooos13")
+      gandring+=("enjoooos14")
 fi
-
 if [[ $l2tp == "" ]]; then
       sl2tp=$ERROR
       ingfo+=("L2TP")
-      keook+=("err14")
+      keook+=("err15")
 else
       sl2tp=$AKTIF
-      gandrin+=("enjoooos14")
+      gandrin+=("enjoooos15")
 fi
-
 if [[ $pptp == "" ]]; then
       spptp=$ERROR
       ingfo+=("PPTP")
-      keook+=("err15")
-else
-      spptp=$AKTIF
-      gandring+=("enjoooos15")
-fi
-
-if [[ $wg == "" ]]; then
-      swg=$ERROR
-      ingfo+=("Wireguard")
       keook+=("err16")
 else
-      swg=$AKTIF
+      spptp=$AKTIF
       gandring+=("enjoooos16")
 fi
-
+if [[ $wgws == "" ]]; then
+      swgws =$ERROR
+      ingfo+=("Wireguard Websocket")
+      keook+=("err17")
+else
+      swg=$AKTIF
+      gandring+=("enjoooos17")
+fi
 if [[ $ssh == "" ]]; then
       sssh=$ERROR
       ingfo+=("OpenSSH")
-      keook+=("err17")
-else
-      sssh=$AKTIF
-      gandring+=("enjoooos17")
-fi
-
-if [[ $ssl == "" ]]; then
-      sssl=$ERROR
-      ingfo+=("Stunnel4")
       keook+=("err18")
 else
-      sssl=$AKTIF
+      sssh=$AKTIF
       gandring+=("enjoooos18")
 fi
-
+if [[ $ssl == "" ]]; then
+      sssl=$ERROR
+      ingfo+=("Stunnel5")
+      keook+=("err19")
+else
+      sssl=$AKTIF
+      gandring+=("enjoooos19")
+fi
 if [[ $drop == "" ]]; then
       sdrop=$ERROR
       ingfo+=("Dropbear")
-      keook+=("err19")
+      keook+=("err20")
 else
       sdrop=$AKTIF
-      gandring+=("enjoooos19")
+      gandring+=("enjoooos20")
 fi
-
 if [[ $ovpn == "" ]]; then
       sovpn=$ERROR
       ingfo+=("OpenVPN")
-      keook+=("err20")
+      keook+=("err21")
 else
       sovpn=$AKTIF
-      gandring+=("enjoooos20")
+      gandring+=("enjoooos21")
 fi
-
 if [[ $nginx == "" ]]; then
       snginx=$ERROR
       ingfo+=("Nginx")
-      keook+=("err21")
+      keook+=("err22")
 else
       snginx=$AKTIF
-      gandring+=("enjoooos21")
+      gandring+=("enjoooos22")
 fi
-
 if [[ $squid == "" ]]; then
       ssquid=$ERROR
       ingfo+=("Squid")
-      keook+=("err22")
+      keook+=("err23")
 else
       ssquid=$AKTIF
-      gandring+=("enjoooos22")
+      gandring+=("enjoooos23")
 fi
-
 if [[ $cron == "" ]]; then
       scron=$ERROR
       ingfo+=("Cron Services")
-      keook+=("err23")
+      keook+=("err24")
 else
       scron=$AKTIF
-      gandring+=("enjoooos23")
+      gandring+=("enjoooos24")
 fi
-
 if [[ $fail2ban == "" ]]; then
       sfail2ban=$ERROR
       ingfo+=("Fail2Ban Services")
-      keook+=("err24")
+      keook+=("err25")
 else
       sfail2ban=$AKTIF
-      gandring+=("enjoooos24")
+      gandring+=("enjoooos25")
 fi
-
 if [[ $vnstat == "" ]]; then
       svnstat=$ERROR
       ingfo+=("VnStats Services")
-      keook+=("err25")
-else
-      svnstat=$AKTIF
-      gandring+=("enjoooos25")
-fi
-
-if [[ $ksslh == "" ]]; then
-      sksslh=$ERROR
-      ingfo+=("SSLH Services")
       keook+=("err26")
 else
-      sksslh=$AKTIF
+      svnstat=$AKTIF
       gandring+=("enjoooos26")
 fi
-
-if [[ $shadown == "" ]]; then
-      sshadown=$ERROR
-
+if [[ $sslh == "" ]]; then
+      ssslh=$ERROR
+      ingfo+=("SSLH Services")
+      keook+=("err27")
+else
+      ssslh=$AKTIF
+      gandring+=("enjoooos27")
 fi
-
+if [[ $shadowo == "" ]]; then
+      sshadowo=$ERROR
+      ingfo+=("Shadosocks Obfs")
+      keook+=("err28")
+else
+      sshadowo=$AKTIF
+      gandring+=("enjoooos28")
+fi
+if [[ $shadowh == "" ]]; then
+      sshadowh=$ERROR
+      ingfo+=("Shadosocks Http")
+      keook+=("err29")
+else
+      sshadowh=$AKTIF
+      gandring+=("enjoooos29")
+fi
 if [[ $ohp == "" ]]; then
       sohp=$ERROR
       ingfo+=("OHP Dropbear")
-      keook+=("err28")
+      keook+=("err30")
 else
       sohp=$AKTIF
-      gandring+=("enjoooos28")
+      gandring+=("enjoooose30")
 fi
-
 if [[ $ohq == "" ]]; then
       sohq=$ERROR
       ingfo+=("OHP Ovpn")
-      keook+=("err29")
+      keook+=("err31")
 else
       sohq=$AKTIF
-      gandring+=("enjoooos29")
+      gandring+=("enjoooos31")
 fi
-
 if [[ $ohr == "" ]]; then
       sohr=$ERROR
       ingfo+=("OHP SSH")
-      keook+=("err3O")
+      keook+=("err32")
 else
       sohr=$AKTIF
-      gandring+=("enjoooos30")
+      gandring+=("enjoooos32")
 fi
-
 if [[ $wsstunnel == "" ]]; then
-      $wsstunnel=$ERROR
+      swsstunnel=$ERROR
       ingfo+=("Wss tunnel")
-      $keook+=("err31")
+      keook+=("err33")
 else
-      $wsstunel=$AKTIF
-      $gandring+=("enjoooos31")
+      swsstunel=$AKTIF
+      gandring+=("enjoooos33")
+fi
+if [[ $wstunnel == "" ]]; then
+      swstunnel=$ERROR
+      ingfo+=("Ws tunnel")
+      keook+=("err34")
+else
+      swstunel=$AKTIF
+      gandring+=("enjoooos34")
 fi
 jumlah1="${#gandring[@]}"
 jumlah2="${#keook[@]}"
@@ -359,7 +358,7 @@ clear
 
 #echo -e "###################################################################################" | lolcat
 echo -e ""
-echo -e "${cyan}♤♤♤♤♤♤♤♤♤♤-[ STATUS LAYANAN ]-♤♤♤♤♤♤♤♤♤♤${off}"
+echo -e "${purple}♤♤♤♤♤♤♤♤♤♤-[ STATUS LAYANAN ]-♤♤♤♤♤♤♤♤♤♤${off}"
 echo -e ""
 echo -e " $mg - $off $bd Dropbear          $off          : $sdrop "
 echo -e " $mg - $off $bd OpenSSH           $off          : $sssh "
@@ -378,11 +377,11 @@ echo -e " $mg - $off $bd VLess TLS          $off         : $svless "
 echo -e " $mg - $off $bd VLess NON-TLS      $off         : $svnone "
 echo -e " $mg - $off $bd Shadowsocks OBFS  $off          : $sshadow "
 echo -e " $mg - $off $bd Shadowsocks HTTP  $off          : $sshadown "
+echo -e " $mg - $off $bd ShadowsocksR    $off            : $sssr "
 echo -e " $mg - $off $bd Wireguard        $off           : $swg "
 echo -e " $mg - $off $bd Trojan-Gfw       $off           : $strojan "
 echo -e " $mg - $off $bd Trojan-GO       $off            : $strojang "
 echo -e " $mg - $off $bd IPSec           $off            : $sipsec "
-echo -e " $mg - $off $bd ShadowsocksR    $off            : $sssr "
 echo -e " $mg - $off $bd SSTP            $off            : $ssstp "
 echo -e " $mg - $off $bd PPTP            $off            : $spptp "
 echo -e " $mg - $off $bd L2TP            $off            : $sl2tp"
@@ -393,8 +392,9 @@ echo -e " $mg - $off $bd Fail2Ban        $off            : $sfail2ban "
 echo -e " $mg - $off $bd VnStats         $off            : $svnstat "
 echo -e " $mg - $off $bd SSLH            $off            : $sksslh "
 echo -e " $mg - $off $bd WSS Tunnel      $off            : $swsstunnel "
+echo -e " $mg - $off $bd Ws Tunnel       $off            : $swstunnel "
 echo -e ""
-echo -e "${cyan}♤♤♤♤♤♤♤♤♤♤-[ STATUS LAYANAN ]-♤♤♤♤♤♤♤♤♤♤${off}"
+echo -e "${purple}♤♤♤♤♤♤♤-[ SOLO THE SPIRIT OF JAVA ]-♤♤♤♤♤♤♤${off}"
 echo -e ""
 echo -e "  - Jumlah Services Running [ ${green}$jumlah_aktif${off} ]"
 echo -e "  - Jumlah Services Error [ ${red}$jumlah_error${off} ]"
