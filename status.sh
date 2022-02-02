@@ -61,6 +61,7 @@ ohq=$(systemctl status openvpn-ohp | grep -i "active (running)")
 ohr=$(systemctl status ssh-ohp | grep -i "active (running)")
 wsstunnel=$(systemctl status wsstunnel | grep -i "active (running)")
 wstunnel=$(systemctl status wstunnel | grep -i "active (running)")
+privoxy=$(systemctl status proxypython | grep -i "active (running)")
 #======================================
 
 if [[ $wsdrop == "" ]]; then
@@ -336,6 +337,14 @@ else
       swstunel=$AKTIF
       gandring+=("enjoooos34")
 fi
+if [[ $privoxy == "" ]]; then
+      sprivoxy=$ERROR
+      ingfo+=("Privoxy")
+      keook+=("err3t")
+else
+      sprivoxy=$AKTIF
+      gandring+=("enjoooos35")
+fi
 jumlah1="${#gandring[@]}"
 jumlah2="${#keook[@]}"
 
@@ -393,6 +402,7 @@ echo -e " $mg - $off $bd VnStats          $off           : $svnstat "
 echo -e " $mg - $off $bd SSLH            $off            : $ssslh "
 echo -e " $mg - $off $bd WSS Tunnel    $off              : $swsstunnel "
 echo -e " $mg - $off $bd Ws Tunnel    $off               : $swstunnel "
+echo -e " $mg - $off $bd Privoxy    $off                 : $sprivoxy "
 echo -e "_____________________________________________________________" | lolcat
 echo -e "${purple}♤♤♤♤♤♤♤-[ SOLO THE SPIRIT OF JAVA ]-♤♤♤♤♤♤♤${off}"
 echo -e "${green}_______________________________________________________${off}" | lolcat
@@ -447,6 +457,7 @@ sec=10
                 systemctl restart wstunnel
                 systemctl restart sslh
                 systemctl restart stunnel
+                systemctl restart pythonproxy
                 /etc/init.d/ssrmu restart
                 /etc/init.d/ssh restart
                 /etc/init.d/dropbear restart
