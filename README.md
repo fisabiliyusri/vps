@@ -1,6 +1,6 @@
 ### Command Install pertama
 ```
-apt-get update && apt update && apt-get install lolcat && gem install lolcat && apt-get install toilet && apt-get install figlet -y && apt-get upgrade -y --fix-missing && update-grub && sleep 2 && reboot
+apt-get update && apt-get install lolcat && gem install lolcat && apt-get install toilet -y && apt-get install figlet -y && apt-get upgrade -y --fix-missing && update-grub && sleep 2 && reboot
 ```
 ### Command Install Kedua
 ```
