@@ -1,10 +1,10 @@
 ### Command Install pertama
 ```
-apt-get update && apt-get upgrade && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && update-grub && reboot
+apt-get update && apt update && apt-get install lolcat && gem install lolcat && apt-get install toilet && apt-get install figlet -y && apt-get upgrade -y --fix-missing && update-grub && sleep 2 && reboot
 ```
 ### Command Install Kedua
 ```
-rm -f setup.sh && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt-get install lolcat && gem install lolcat && apt-get install toilet && apt-get install figlet && apt-get install -y bzip2 gzip coreutils screen curl && wget -0 setup.sh https://raw.githubusercontent.com/Gandring15/vps/main/setup.sh && chmod +x setup.sh && screen -S setup ./setup.sh
+sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen && wget -0 https://raw.githubusercontent.com/Gandring15/vps/main/setup.sh && chmod +x setup.sh && screen -S setup ./setup.sh && rm -rf ./setup.sh   
 ```
 ### Fitur Script
 • SSH & OpenVPN
