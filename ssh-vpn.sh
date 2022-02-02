@@ -178,7 +178,7 @@ echo "/usr/sbin/nologin" >> /etc/shells
 cd
 apt -y install squid3
 wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/Gandring15/vps/main/squid3.conf"
-sed -i $MYIP2 /etc/squid/squid.conf
+sed -i $IP2 /etc/squid/squid.conf
 
 # Install SSLH
 apt -y install sslh
@@ -270,8 +270,10 @@ END
 sudo systemctl enable wstunnel
 sudo systemctl start wstunnel
 
+sudo systemctl enable wsstunnel
+sudo systemctl start wsstunnel
 apt update && apt install -y curl jq
-sed -i $MYIP2 /etc/local/bin/wstunnel
+sed -i $IP2 /etc/local/bin/wstunnel
 cp wstunnel /usr/local/bin/wstunnel
 mkdir -p wstunnel > /etc/wireguard/wstunnel.conf
 cat > /etc/wireguard/wstunnel.conf
