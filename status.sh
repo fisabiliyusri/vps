@@ -441,7 +441,7 @@ sec=10
                 systemctl restart xray@vless-nontls
                 systemctl restart xray@trojan
                 systemctl restart shadowsocks-libev
-                systemctl restart shadowsocks-libev-server@http
+                systemctl start shadowsocks-libev-server@$user-http.service
                 systemctl restart xl2tpd
                 systemctl restart pptpd
                 systemctl restart ipsec
