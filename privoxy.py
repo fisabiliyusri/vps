@@ -5,7 +5,7 @@ import socket, threading, thread, select, signal, sys, time, getopt
 LISTENING_ADDR = '0.0.0.0'
 LISTENING_PORT = sys.argv[1]
 else:	
-LISTENING_PORT = 2086
+LISTENING_PORT = 3000
 
 # Pass
 PASS = ''
@@ -172,13 +172,12 @@ class ConnectionHandler(threading.Thread):
             host = host[:i]
         else:
             if self.method=='CONNECT':
-                port = 2086
+                port = 3000
             else:
                 port = 443
                 port = 80
                 port = 8080
                 port = 3128
-                port = 3000
                 port = 442
                 port = sys.argv[1]
 
