@@ -356,46 +356,46 @@ fi
 #=================================================================================================
 clear
 
-#echo -e "###################################################################################" | lolcat
+#echo -e "____________________________________________________________${off}" | lolcat
 echo -e ""
 echo -e "${purple}♤♤♤♤♤♤♤♤♤♤-[ STATUS LAYANAN ]-♤♤♤♤♤♤♤♤♤♤${off}"
 echo -e ""
-echo -e " $mg - $off $bd Dropbear          $off          : $sdrop "
-echo -e " $mg - $off $bd OpenSSH           $off          : $sssh "
-echo -e " $mg - $off $bd Stunnel5          $off          : $sssl "
-echo -e " $mg - $off $bd OpenVPN            $off         : $sovpn "
+echo -e " $mg - $off $bd Dropbear   $off                 : $sdrop "
+echo -e " $mg - $off $bd OpenSSH      $off               : $sssh "
+echo -e " $mg - $off $bd Stunnel5       $off             : $sssl "
+echo -e " $mg - $off $bd OpenVPN           $off          : $sovpn "
 echo -e " $mg - $off $bd Open HTTP Puncher Dropbear $off : $sohp "
 echo -e " $mg - $off $bd Open HTTP Puncher OpenVPN $off  : $sohq "
 echo -e " $mg - $off $bd Open HTTP Puncher SSH $off      : $sohr "
 echo -e " $mg - $off $bd WebSocket Dropbear $off         : $swsdrop"
-echo -e " $mg - $off $bd WebSocket OpenSSH $off       : $swsopen"
-echo -e " $mg - $off $bd WebSocket OpenVPN  $off         : $swsovpn"
-echo -e " $mg - $off $bd WebSocket TLS      $off           : $swstls"
-echo -e " $mg - $off $bd VMess TLS          $off          : $sv2ray "
-echo -e " $mg - $off $bd VMess NON-TLS      $off           : $sv2none "
-echo -e " $mg - $off $bd VLess TLS          $off         : $svless "
-echo -e " $mg - $off $bd VLess NON-TLS      $off         : $svnone "
-echo -e " $mg - $off $bd Shadowsocks OBFS  $off          : $sshadow "
-echo -e " $mg - $off $bd Shadowsocks HTTP  $off          : $sshadown "
-echo -e " $mg - $off $bd ShadowsocksR    $off            : $sssr "
-echo -e " $mg - $off $bd Wireguard        $off           : $swg "
-echo -e " $mg - $off $bd Trojan-Gfw       $off           : $strojan "
-echo -e " $mg - $off $bd Trojan-GO       $off            : $strojang "
-echo -e " $mg - $off $bd IPSec           $off            : $sipsec "
-echo -e " $mg - $off $bd SSTP            $off            : $ssstp "
-echo -e " $mg - $off $bd PPTP            $off            : $spptp "
-echo -e " $mg - $off $bd L2TP            $off            : $sl2tp"
-echo -e " $mg - $off $bd Nginx           $off            : $snginx "
-echo -e " $mg - $off $bd Squid           $off            : $ssquid "
+echo -e " $mg - $off $bd WebSocket OpenSSH $off          : $swsopen"
+echo -e " $mg - $off $bd WebSocket OpenVPN $off          : $swsovpn"
+echo -e " $mg - $off $bd WebSocket TLS      $off         : $swstls"
+echo -e " $mg - $off $bd VMess TLS        $off           : $sv2ray "
+echo -e " $mg - $off $bd VMess NON-TLS  $off             : $sv2none "
+echo -e " $mg - $off $bd VLess TLS     $off              : $svless "
+echo -e " $mg - $off $bd VLess NON-TLS    $off           : $svnone "
+echo -e " $mg - $off $bd Shadowsocks OBFS   $off         : $sshadow "
+echo -e " $mg - $off $bd Shadowsocks HTTP    $off        : $sshadown "
+echo -e " $mg - $off $bd ShadowsocksR        $off        : $sssr "
+echo -e " $mg - $off $bd Wireguard Web    $off           : $swg "
+echo -e " $mg - $off $bd Trojan-Gfw    $off              : $strojan "
+echo -e " $mg - $off $bd Trojan-GO    $off               : $strojang "
+echo -e " $mg - $off $bd IPSec       $off                : $sipsec "
+echo -e " $mg - $off $bd SSTP       $off                 : $ssstp "
+echo -e " $mg - $off $bd PPTP      $off                  : $spptp "
+echo -e " $mg - $off $bd L2TP       $off                 : $sl2tp"
+echo -e " $mg - $off $bd Nginx       $off                : $snginx "
+echo -e " $mg - $off $bd Squid        $off               : $ssquid "
 echo -e " $mg - $off $bd Cron            $off            : $scron "
-echo -e " $mg - $off $bd Fail2Ban        $off            : $sfail2ban "
-echo -e " $mg - $off $bd VnStats         $off            : $svnstat "
-echo -e " $mg - $off $bd SSLH            $off            : $sksslh "
-echo -e " $mg - $off $bd WSS Tunnel      $off            : $swsstunnel "
-echo -e " $mg - $off $bd Ws Tunnel       $off            : $swstunnel "
-echo -e ""
+echo -e " $mg - $off $bd Fail2Ban          $off          : $sfail2ban "
+echo -e " $mg - $off $bd VnStats          $off           : $svnstat "
+echo -e " $mg - $off $bd SSLH            $off            : $ssslh "
+echo -e " $mg - $off $bd WSS Tunnel    $off              : $swsstunnel "
+echo -e " $mg - $off $bd Ws Tunnel    $off               : $swstunnel "
+echo -e "_____________________________________________________________" | lolcat
 echo -e "${purple}♤♤♤♤♤♤♤-[ SOLO THE SPIRIT OF JAVA ]-♤♤♤♤♤♤♤${off}"
-echo -e ""
+echo -e "${green}_______________________________________________________${off}" | lolcat
 echo -e "  - Jumlah Services Running [ ${green}$jumlah_aktif${off} ]"
 echo -e "  - Jumlah Services Error [ ${red}$jumlah_error${off} ]"
 
@@ -422,6 +422,7 @@ sec=10
          sleep 1
                 systemctl restart ssrmu
                 systemctl restart ws-tls
+                systemctl restart ws-open
                 systemctl restart ws-nontls
                 systemctl restart ws-ovpn
                 systemctl restart xray@v2ray-tls
@@ -430,17 +431,22 @@ sec=10
                 systemctl restart xray@vless-nontls
                 systemctl restart xray@trojan
                 systemctl restart shadowsocks-libev
+                systemctl restart shadowsocks-libev-server@http
                 systemctl restart xl2tpd
                 systemctl restart pptpd
                 systemctl restart ipsec
                 systemctl restart accel-ppp
                 systemctl restart ws-ovpn
                 systemctl restart wg-quick@wg0
+                systemctl restart wg-quick@wg1
                 systemctl restart ssh-ohp
                 systemctl restart dropbear-ohp
                 systemctl restart openvpn-ohp
                 systemctl restart trojan-go
                 systemctl restart wsstunnel
+                systemctl restart wstunnel
+                systemctl restart sslh
+                systemctl restart stunnel
                 /etc/init.d/ssrmu restart
                 /etc/init.d/ssh restart
                 /etc/init.d/dropbear restart
@@ -453,8 +459,8 @@ sec=10
                 /etc/init.d/squid restart
 fi
 echo ""
-echo -e "${cyan}♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤${off}"
-echo -e ""
+echo -e "${pink}♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤${off}"
+echo -e "${orange}_________________________________________________${off}" | lolcat
 echo -e "${purple}Luxury Repacked by @zerossl${off}"
 echo -e ""
 echo -e "${red}Silahkan ketik menu untuk menampilkan daftar layanan${off}"
