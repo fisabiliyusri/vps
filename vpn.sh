@@ -41,7 +41,7 @@ mkdir -p /usr/lib/openvpn/
 cp /usr/lib/x86_64-linux-gnu/openvpn/plugins/openvpn-plugin-auth-pam.so /usr/lib/openvpn/openvpn-plugin-auth-pam.so
 
 # nano /etc/default/openvpn
-sed -i 's/#AUTOSTART="all"/AUTOSTART="all"/g' /etc/default/openvpn
+sed -i 's/AUTOSTART="all"/AUTOSTART="all"/g' /etc/default/openvpn
 
 # restart openvpn dan cek status openvpn
 systemctl enable --now openvpn-server@server-config-tcp
@@ -52,7 +52,7 @@ systemctl enable --now openvpn-server@server-config-ssl
 
 # aktifkan ip4 forwarding
 echo 1 > /proc/sys/net/ipv4/ip_forward
-sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
+sed -i 's/net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
 
 # Buat config client TCP 3268
 cat > /etc/openvpn/config-tcp.ovpn <<-END
