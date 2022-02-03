@@ -12,7 +12,7 @@ CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 # ==========================================
 # Getting
-MYIP=$(wget -qO- ipinfo.io/ip);
+IP=$(wget -qO- ipinfo.io/ip);
 domain=$(cat /etc/xray/domain)
 clear
 IP=$(wget -qO- ipinfo.io/ip);
@@ -55,7 +55,7 @@ echo -e "Port SSL      : 3269"
 echo -e "OVPN TCP      : http://$IP:88/config-tcp.ovpn"
 echo -e "OVPN UDP      : http://$IP:88/config-udp.ovpn"
 echo -e "OVPN SSL      : http://$IP:88/config-ssl.ovpn"
-echo -e "BadVpn        : 7100-7200-7300-upto 7900"
+echo -e "Udpgw/BadVpn  : 7100-7200-7300-upto 7900"
 echo -e "Created       : $hariini"
 echo -e "Expired       : $expi"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
@@ -67,4 +67,4 @@ echo -e "Payload Websocket No TLS"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "CONNECT wss://bugmu.com /HTTP/1.1[crlf]Host: ${domain}[crlf]Upgrade: websocket[crlf][crlf]"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo -e "Repacked By gandring"
+echo -e "Mot For Sale By @zerossl"
