@@ -104,5 +104,5 @@ echo -e "Expired  : $exp"
 echo -e "======================="
 echo -e "Link WG  : http://$IP:88/$CLIENT_NAME.conf"
 echo -e "======================="
-echo -e "Not For Sale By @zerossl"
+echo -e "Luxury Edition by @zerossl"
 rm -f /root/wg0-client-$CLIENT_NAME.conf
