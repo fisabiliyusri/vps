@@ -52,5 +52,5 @@ oth=$(cat /tmp/other.txt | sort | uniq | nl)
 echo "other";
 echo "$oth";
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo "Not For Sale By @zerossl"
+echo "Luxury Edition by @zerossl"
 rm -rf /tmp/other.txt
