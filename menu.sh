@@ -34,24 +34,24 @@ tnggl=$(date +"%d-%B-%Y")
 	tram=$( free -m | awk 'NR==2 {print $2}' )
 	swap=$( free -m | awk 'NR==4 {print $2}' )
 	up=$(uptime|awk '{ $1=$2=$(NF-6)=$(NF-5)=$(NF-4)=$(NF-3)=$(NF-2)=$(NF-1)=$NF=""; print }')
- echo -e  "  ║                                  [ INFORMASI VPS ]                               ║" |lolcat
- echo -e  "  ╠♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤╣"| lolcat
- echo -e " $bl ║ \e[36;1m• ISP Name  :\e[0m$bd $ISP"                                            ║"
- echo -e " $bl ║ \e[36;1m• City      :\e[0m$bd $CITY"                                           ║"
- echo -e " $bl ║ \e[36;1m• CPU Model :\e[0m$bd$cname"                                           ║"
- echo -e " $bl ║ \e[36;1m• Cores     :\e[0m$bd $cores"                                          ║"
- echo -e " $gl ║ \e[36;1m• CPU Freq  :\e[0m$bd$freq MHz"                                        ║"
- echo -e " $gl ║ \e[36;1m• Total RAM :\e[0m$bd $tram MB"                                        ║"
- echo -e " $gl ║ \e[36;1m• Waktu     :\e[0m$bd $jam"                                            ║"
- echo -e " $mg ║ \e[36;1m• Hari      :\e[0m$bd $hari"                                           ║"
- echo -e " $mg ║ \e[36;1m• Tanggal   :\e[0m$bd $tnggl"                                          ║"
- echo -e " $mg ║ \e[36;1m• IP VPS    :\e[0m$bd $IPVPS"                                          ║"
- echo -e " $mg ║ \e[36;1m• Domain    :\e[0m$bd $domain"                                         ║"
+ echo -e  "$bl ║                                 [ INFORMASI VPS ]                               ║" |lolcat
+ echo -e  "$op ║♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤║"| lolcat
+ echo -e " $bl ║ \e[36;1m• ISP Name  :\e[0m$bd $ISP"                                             ║"
+ echo -e " $bl ║ \e[36;1m• City      :\e[0m$bd $CITY"                                            ║"
+ echo -e " $bl ║ \e[36;1m• CPU Model :\e[0m$bd$cname"                                            ║"
+ echo -e " $bl ║ \e[36;1m• Cores     :\e[0m$bd $cores"                                           ║"
+ echo -e " $gl ║ \e[36;1m• CPU Freq  :\e[0m$bd$freq MHz"                                         ║"
+ echo -e " $gl ║ \e[36;1m• Total RAM :\e[0m$bd $tram MB"                                         ║"
+ echo -e " $gl ║ \e[36;1m• Waktu     :\e[0m$bd $jam"                                             ║"
+ echo -e " $mg ║ \e[36;1m• Hari      :\e[0m$bd $hari"                                            ║"
+ echo -e " $mg ║ \e[36;1m• Tanggal   :\e[0m$bd $tnggl"                                           ║"
+ echo -e " $mg ║ \e[36;1m• IP VPS    :\e[0m$bd $IPVPS"                                           ║"
+ echo -e " $mg ║ \e[36;1m• Domain    :\e[0m$bd $domain"                                          ║"
  echo -e  "  \e[31;1m_____________________________________________________________________________║" | lolcat
- echo -e  "  ╠♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤╣" | lolcat
- echo -e  "  ║                     [ MENU TUNNELING ]                     ║" |lolcat
- echo -e  "  ╠♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤╣" | lolcat
- echo -e  "\e[31;2m________________________________________________________________________________║"| lolcat
+ echo -e  "  ║.♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤║" | lolcat
+ echo -e  "  ║                                 [ MENU TUNNELING ]                                ║" |lolcat
+ echo -e  "  ║.♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤║" | lolcat
+ echo -e  "\e[31;2m_______________________________________________________________________________║"| lolcat
  echo -e  " $gl ║\e[m$red 1$bl.\e[m$bd Menu Layanan SSH & OpenVPN       $bl                      ║"
  echo -e  " $op ║.♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤║"
  echo -e  " $gl ║\e[m$red 2$bl.\e[m$bd Menu Layanan SSTP - L2TP - PPTP - Wireguard      $bl      ║"
@@ -67,13 +67,11 @@ tnggl=$(date +"%d-%B-%Y")
  echo -e  " $mg ║\e[m$red 7$bl.\e[m$bd Menu Konfigurasi System            $mg                    ║"
  echo -e  " $op ║.♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤║
  echo -e  " $mg ║\e[m$red 8$bl.\e[m$bd Menu Pembaruan Script $gl Version $op($bl 2.0.4 $op) $mg  ║"
- echo -e  "\e[1;32m╠♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤╣" | lolcat
- echo -e  "\e[31;1m_______________________________________________________________________________║" | lolcat
- echo -e  "     ║ x.   Exit                                                                       ║" | lolcat
- echo -e  "\e[1;32m╚♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤╝" | lolcat
- echo -e  "\e[31;1m________________________________________________________________________________║"  | lolcat
+ echo -e  " $bl ║.♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤║" | lolcat
+ echo -e  " $rd ║ x.   Exit                                                                      ║" | lolcat
+ echo -e  " $bl ║.♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤║" | lolcat
 echo -e  ""
-read -p "  Select From Options [1-8 or x] :  " menu
+read -p "       silahkan Pilih Angka[1-8 or x] :  " menu
 echo -e   ""
 echo -e   ""
 echo -e   ""
