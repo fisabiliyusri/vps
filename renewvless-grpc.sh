@@ -50,7 +50,7 @@ service cron restart
 clear
 echo ""
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo "     Perpanjang Akun Vless gRPC"
+echo  "Perpanjang Akun Vless gRPC"
 echo "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo "Username  : $user"
 echo "Expired   : $exp4"
