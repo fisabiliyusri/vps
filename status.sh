@@ -34,6 +34,7 @@ wsovpn=$(systemctl status ws-ovpn | grep -i "active (running)")
 v2ray=$(systemctl status xray@v2ray-tls | grep -i "active (running)")
 v2none=$(systemctl status xray@v2ray-nontls | grep -i "active (running)")
 vless=$(systemctl status xray@vless-tls | grep -i "active (running)")
+vless-grpc==$(systemctl status xray@vless-grpc | grep -i "active (running)")
 vnone=$(systemctl status xray@vless-nontls | grep -i "active (running)")
 trojan=$(systemctl status xray@trojan | grep -i "active (running)")
 trojang=$(systemctl status trojan-go | grep -i "active (running)")
@@ -354,7 +355,14 @@ else
      let gandring=${jumlah1}
      jumlah_aktif=$njoooos
 fi
-
+if [[ $vless-grpc == "" ]]; then
+      svless-grpc=$ERROR
+      info+=("VLess gRPC")
+      keook+=("err7")
+else
+      svless-grpc=$AKTIF
+      gandring+=("enjoooos7")
+fi
 if [[ $jumlah2 == "" ]] || [[ $jumlah2 -eq 0 ]]; then
     jumlah_error=0
 else
@@ -384,6 +392,7 @@ echo -e " $mg - $off $bd VMess TLS        $off           : $sv2ray "
 echo -e " $mg - $off $bd VMess NON-TLS  $off             : $sv2none "
 echo -e " $mg - $off $bd VLess TLS     $off              : $svless "
 echo -e " $mg - $off $bd VLess NON-TLS    $off           : $svnone "
+echo -r " $mg - $off $bd Vless gRPC         $off         : $svless-grpc "
 echo -e " $mg - $off $bd Shadowsocks OBFS   $off         : $sshadow "
 echo -e " $mg - $off $bd Shadowsocks HTTP    $off        : $sshadown "
 echo -e " $mg - $off $bd ShadowsocksR        $off        : $sssr "
@@ -439,6 +448,7 @@ sec=10
                 systemctl restart xray@v2ray-nontls
                 systemctl restart xray@vless-tls
                 systemctl restart xray@vless-nontls
+                systemctl restart xray@vless-grpc
                 systemctl restart xray@trojan
                 systemctl restart shadowsocks-libev
                 systemctl start shadowsocks-libev-server@$user-http.service
@@ -472,8 +482,8 @@ fi
 echo ""
 echo -e "${pink}♤♤♤♤♤♤♤♤♤♤SOLO THE SPIRIT OF JAVA♤♤♤♤♤♤♤♤♤♤${off}" | lolcat
 echo -e "${orange}_________________________________________________${off}" | lolcat
-echo -e "${purple}Luxury Repacked by @zerossl${off}"
+echo -e "${purple}Luxury Edition by @zerossl${off}"
 echo -e ""
 echo -e "${red}Silahkan ketik menu untuk menampilkan daftar layanan${off}"
-echo -e "${green}Silahkan ketik menu2 untuk tampilan klasik${off}"
+echo -e "${blue}Silahkan ketik menu2 untuk tampilan klasik${off}"
 echo -e ""
