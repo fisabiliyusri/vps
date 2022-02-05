@@ -261,7 +261,7 @@ echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
 echo "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
 echo "   - Dflate                  : [ON]"  | tee -a log-install.txt
-echo "   - IPtables                : [ON]"  | tee -a log-install.txt
+echo "   - IPtables                : [OFF]"  | tee -a log-install.txt
 echo "   - Auto-Reboot             : [ON]"  | tee -a log-install.txt
 echo "   - IPv6                    : [OFF]"  | tee -a log-install.txt
 echo "   - Autoreboot On 04.30 GMT +7" | tee -a log-install.txt
