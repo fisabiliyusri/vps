@@ -358,10 +358,10 @@ fi
 if [[ $vless-grpc == "" ]]; then
       svless-grpc=$ERROR
       info+=("VLess gRPC")
-      keook+=("err7")
+      keook+=("err36")
 else
       svless-grpc=$AKTIF
-      gandring+=("enjoooos7")
+      gandring+=("enjoooos36")
 fi
 if [[ $jumlah2 == "" ]] || [[ $jumlah2 -eq 0 ]]; then
     jumlah_error=0
@@ -451,7 +451,7 @@ sec=10
                 systemctl restart xray@vless-grpc
                 systemctl restart xray@trojan
                 systemctl restart shadowsocks-libev
-                systemctl start shadowsocks-libev-server@$user-http.service
+                systemctl start shadowsocks-libev-server@$user-http
                 systemctl restart xl2tpd
                 systemctl restart pptpd
                 systemctl restart ipsec
