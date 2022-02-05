@@ -53,12 +53,19 @@ tnggl=$(date +"%d-%B-%Y")
  echo -e  "  ╠♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤╣" | lolcat
  echo -e  "\e[31;2m________________________________________________________________________________║"| lolcat
  echo -e  " $gl ║\e[m$red 1$bl.\e[m$bd Menu Layanan SSH & OpenVPN       $bl                      ║"
+ echo -e  " $op ║.♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤║"
  echo -e  " $gl ║\e[m$red 2$bl.\e[m$bd Menu Layanan SSTP - L2TP - PPTP - Wireguard      $bl      ║"
+ echo -e  " $op ║.♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤║"
  echo -e  " $mg ║\e[m$red 3$bl.\e[m$bd Menu Layanan Shadowsocks & ShadowsocksR         $gl       ║"
+ echo -e  " $op ║.♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤║
  echo -e  " $mg ║\e[m$red 4$bl.\e[m$bd Menu Layanan V2ray Vmess & Vless            $gl           ║"
+ echo -e  " $op ║.♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤║"
  echo -e  " $bl ║\e[m$red 5$bl.\e[m$bd Menu Layanan Trojan-Gfw & Trojan-GO       $mg             ║"
+ echo -e  " $op ║.♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤║"
  echo -e  " $bl ║\e[m$red 6$bl.\e[m$bd Menu Backup         $mg                                   ║"
+ echo -e  " $op ║.♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤║
  echo -e  " $mg ║\e[m$red 7$bl.\e[m$bd Menu Konfigurasi System            $mg                    ║"
+ echo -e  " $op ║.♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤║
  echo -e  " $mg ║\e[m$red 8$bl.\e[m$bd Menu Pembaruan Script $gl Version $op($bl 2.0.4 $op) $mg  ║"
  echo -e  "\e[1;32m╠♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤╣" | lolcat
  echo -e  "\e[31;1m_______________________________________________________________________________║" | lolcat
