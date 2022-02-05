@@ -215,6 +215,8 @@ WantedBy=multi-user.target
 EOF
 systemctl daemon-reload
 systemctl enable autosett
+echo "0 5 * * * root reboot" >> /etc/crontab
+echo "0 0 * * * root xp" >> /etc/crontab
 wget -O /etc/set.sh "https://raw.githubusercontent.com/Gandring15/vps/main/set.sh"
 chmod +x /etc/set.sh
 history -c
