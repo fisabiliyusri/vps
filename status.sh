@@ -184,7 +184,7 @@ if [[ $l2tp == "" ]]; then
       keook+=("err15")
 else
       sl2tp=$AKTIF
-      gandrin+=("enjoooos15")
+      gandring+=("enjoooos15")
 fi
 if [[ $pptp == "" ]]; then
       spptp=$ERROR
@@ -346,6 +346,14 @@ else
       sprivoxy=$AKTIF
       gandring+=("enjoooos35")
 fi
+if [[ $vless-grpc == "" ]]; then
+      svless-grpc=$ERROR
+      info+=("VLess gRPC")
+      keook+=("err36")
+else
+      svless-grpc=$AKTIF
+      gandring+=("enjoooos36")
+fi
 jumlah1="${#gandring[@]}"
 jumlah2="${#keook[@]}"
 
@@ -354,14 +362,6 @@ if [[ $jumlah1 == "" ]] || [[ $jumlah1 -eq 0 ]]; then
 else
      let gandring=${jumlah1}
      jumlah_aktif=$njoooos
-fi
-if [[ $vless-grpc == "" ]]; then
-      svless-grpc=$ERROR
-      info+=("VLess gRPC")
-      keook+=("err36")
-else
-      svless-grpc=$AKTIF
-      gandring+=("enjoooos36")
 fi
 if [[ $jumlah2 == "" ]] || [[ $jumlah2 -eq 0 ]]; then
     jumlah_error=0
@@ -451,7 +451,7 @@ sec=10
                 systemctl restart xray@vless-grpc
                 systemctl restart xray@trojan
                 systemctl restart shadowsocks-libev
-                systemctl start shadowsocks-libev-server@$user-http
+                systemctl restart shadowsocks-libev-server@$user-http
                 systemctl restart xl2tpd
                 systemctl restart pptpd
                 systemctl restart ipsec
