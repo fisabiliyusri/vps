@@ -61,7 +61,7 @@ ohq=$(systemctl status openvpn-ohp | grep -i "active (running)")
 ohr=$(systemctl status ssh-ohp | grep -i "active (running)")
 wsstunnel=$(systemctl status wsstunnel | grep -i "active (running)")
 wstunnel=$(systemctl status wstunnel | grep -i "active (running)")
-privoxy=$(systemctl status proxypython | grep -i "active (running)")
+privoxy=$(systemctl status privoxy | grep -i "active (running)")
 #======================================
 
 if [[ $wsdrop == "" ]]; then
@@ -367,7 +367,7 @@ clear
 
 #echo -e "____________________________________________________________${off}" | lolcat
 echo -e ""
-echo -e "${purple}♤♤♤♤♤♤♤♤♤♤-[ STATUS LAYANAN ]-♤♤♤♤♤♤♤♤♤♤${off}"
+echo -e "${purple}♤♤♤♤♤♤♤♤♤♤-[ STATUS LAYANAN ]-♤♤♤♤♤♤♤♤♤♤${off}" | lolcat
 echo -e ""
 echo -e " $mg - $off $bd Dropbear   $off                 : $sdrop "
 echo -e " $mg - $off $bd OpenSSH      $off               : $sssh "
@@ -404,7 +404,7 @@ echo -e " $mg - $off $bd WSS Tunnel    $off              : $swsstunnel "
 echo -e " $mg - $off $bd Ws Tunnel    $off               : $swstunnel "
 echo -e " $mg - $off $bd Privoxy    $off                 : $sprivoxy "
 echo -e "_____________________________________________________________" | lolcat
-echo -e "${purple}♤♤♤♤♤♤♤-[ SOLO THE SPIRIT OF JAVA ]-♤♤♤♤♤♤♤${off}"
+echo -e "${purple}♤♤♤♤♤♤♤♤♤♤-[ SOLO THE SPIRIT OF JAVA ]-♤♤♤♤♤♤♤♤♤♤${off}"  | lolcat
 echo -e "${green}_______________________________________________________${off}" | lolcat
 echo -e "  - Jumlah Services Running [ ${green}$jumlah_aktif${off} ]"
 echo -e "  - Jumlah Services Error [ ${red}$jumlah_error${off} ]"
@@ -457,7 +457,7 @@ sec=10
                 systemctl restart wstunnel
                 systemctl restart sslh
                 systemctl restart stunnel
-                systemctl restart pythonproxy
+                systemctl restart privoxy
                 /etc/init.d/ssrmu restart
                 /etc/init.d/ssh restart
                 /etc/init.d/dropbear restart
@@ -470,7 +470,7 @@ sec=10
                 /etc/init.d/squid restart
 fi
 echo ""
-echo -e "${pink}♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤${off}"
+echo -e "${pink}♤♤♤♤♤♤♤♤♤♤SOLO THE SPIRIT OF JAVA♤♤♤♤♤♤♤♤♤♤${off}" | lolcat
 echo -e "${orange}_________________________________________________${off}" | lolcat
 echo -e "${purple}Luxury Repacked by @zerossl${off}"
 echo -e ""
