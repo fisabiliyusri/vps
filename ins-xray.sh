@@ -428,6 +428,137 @@ cat > /etc/xray/vless-nontls.json << END
   }
 }
 END
+cat > /etc/xray/vless-grpc.json <<END
+{
+  "log": {
+    "access": "/var/log/xray/vless-grpc-login.log",
+    "error": "/var/log/xray/vless-grpc-error.log",
+    "loglevel": "info"
+  },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 24468,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "address": "127.0.0.1"
+      },
+      "tag": "api"
+    },
+    {
+      "port": 443,
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "${uuid}"
+#xray-vless-grpc
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "grpc",
+        "security": "tls",
+        "tlsSettings": {
+          "certificates": [
+            {
+              "certificateFile": "/etc/xray/xray.crt",
+              "keyFile": "/etc/xray/xray.key"
+            }
+          ],
+          "alpn": [
+            "h2"
+          ]
+        },
+        "tcpSettings": {},
+        "kcpSettings": {},
+        "wsSettings": {},
+        "httpSettings": {},
+        "quicSettings": {},
+        "grpcSettings": {
+          "serviceName": "gandring"
+        }
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": [
+          "http",
+          "tls"
+        ]
+      },
+      "domain": "${domain}"
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {},
+      "tag": "blocked"
+    }
+  ],
+  "routing": {
+    "rules": [
+      {
+        "type": "field",
+        "ip": [
+          "0.0.0.0/8",
+          "10.0.0.0/8",
+          "100.64.0.0/10",
+          "169.254.0.0/16",
+          "172.16.0.0/12",
+          "192.0.0.0/24",
+          "192.0.2.0/24",
+          "192.168.0.0/16",
+          "198.18.0.0/15",
+          "198.51.100.0/24",
+          "203.0.113.0/24",
+          "::1/128",
+          "fc00::/7",
+          "fe80::/10"
+        ],
+        "outboundTag": "blocked"
+      },
+      {
+        "type": "field",
+        "outboundTag": "blocked",
+        "protocol": [
+          "bittorrent"
+        ]
+      },
+      {
+        "inboundTag": [
+          "api"
+        ],
+        "outboundTag": "api",
+        "type": "field"
+      }
+    ]
+  },
+  "stats": {},
+  "api": {
+    "services": [
+      "StatsService"
+    ],
+    "tag": "api"
+  },
+  "policy": {
+    "levels": {
+      "0": {
+        "statsUserDownlink": true,
+        "statsUserUplink": true
+      }
+    },
+    "system": {
+      "statsInboundUplink": true,
+      "statsInboundDownlink": true
+    }
+  }
+}
 cat > /etc/xray/trojan.json <<END
 {
   "log": {
@@ -442,7 +573,7 @@ cat > /etc/xray/trojan.json <<END
       "settings": {
         "clients": [
           {
-            "password": "${user}"
+            "password": "${uuid}"
 #xray-trojan
           }
         ],
@@ -572,18 +703,20 @@ systemctl start xray@v2ray-tls
 systemctl start xray@v2ray-nontls 
 systemctl start xray@vless-tls 
 systemctl start xray@vless-nontls 
-systemctl start xray@trojan 
+systemctl start xray@trojan
+systemctl start xray@vless-grpc 
 systemctl enable xray@v2ray-tls
 systemctl enable xray@v2ray-nontls
 systemctl enable xray@vless-tls
 systemctl enable xray@vless-nontls
 systemctl enable xray@trojan
+systemctl enable xray@vless-grpc
 systemctl restart xray@v2ray-tls
 systemctl restart xray@v2ray-nontls
 systemctl restart xray@vless-tls
 systemctl restart xray@vless-nontls
 systemctl restart xray@trojan
-
+systemctl restart xray@vless-grpc
 # Install Trojan Go
 latest_version="$(curl -s "https://api.github.com/repos/p4gefau1t/trojan-go/releases" | grep tag_name | sed -E 's/.*"v(.*)".*/\1/' | head -n 1)"
 trojango_link="https://github.com/p4gefau1t/trojan-go/releases/download/v${latest_version}/trojan-go-linux-amd64.zip"
@@ -606,12 +739,13 @@ cat > /etc/trojan-go/config.json << END
   "local_addr": "0.0.0.0",
   "local_port": 2053,
   "remote_addr": "127.0.0.1",
-  "remote_port": 89,
+  "remote_port": 88,
   "log_level": 1,
   "log_file": "/var/log/trojan-go/trojan-go.log",
-  "password": [
+ "password": [
       "$uuid"
   ],
+  },
   "disable_http_check": true,
   "udp_timeout": 60,
   "ssl": {
