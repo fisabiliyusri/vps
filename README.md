@@ -4,7 +4,7 @@ apt-get update && apt-get install lolcat && gem install lolcat && apt-get instal
 ```
 ### Command Install Kedua
 ```
-sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen && wget --no-check-certificate -0 setup.sh "https://raw.githubusercontent.com/Gandring15/vps/main/setup.sh" && chmod +x setup.sh && screen -S setup ./setup.sh && rm -rf ./setup.sh   
+apt install wget -y && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen && wget https://raw.githubusercontent.com/Gandring15/vps/main/setup.sh && chmod +x setup.sh && screen -S setup ./setup.sh && rm -rf ./setup.sh   
 ```
 ### Fitur Script
 • SSH & OpenVPN
