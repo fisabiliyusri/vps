@@ -130,6 +130,7 @@ rm -f "/home/vps/public_html/$user.conf"
 fi
 done
 systemctl restart wg-quick@wg0
+systemctl restart wg-quick@wg1
 data=( `cat /etc/xray/v2ray-tls.json | grep '^###' | cut -d ' ' -f 2`);
 now=`date +"%Y-%m-%d"`
 for user in "${data[@]}"
@@ -157,7 +158,15 @@ exp2=$(( (d1 - d2) / 86400 ))
 if [[ "$exp2" = "0" ]]; then
 sed -i "/^### $user $exp/,/^},{/d" /etc/xray/vless-tls.json
 sed -i "/^### $user $exp/,/^},{/d" /etc/xray/vless-nontls.json
+do
+exp=$(grep -w "^### $user" "/etc/xray/vless-grpc.json" | cut -d ' ' -f 3)
+d1=$(date -d "$exp" +%s)
+d2=$(date -d "$now" +%s)
+exp2=$(( (d1 - d2) / 86400 ))
+if [[ "$exp2" = "0" ]]; then
+sed -i "/^### $user $exp/,/^},{/d" /etc/xray/vless-grpc.json
 fi
 done
 systemctl restart xray@vless-tls
 systemctl restart xray@vless-nontls
+systemctl restart xray@vless-grpc
