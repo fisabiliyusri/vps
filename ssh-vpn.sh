@@ -204,7 +204,7 @@ RUN=yes
 # systemd users: don't forget to modify /lib/systemd/system/sslh.service
 DAEMON=/usr/sbin/sslh
 
-DAEMON_OPTS="--user sslh --listen 0.0.0.0:443 --ssl 127.0.0.1:389 --ssh 127.0.0.1:22 --openvpn 127.0.0.1:3268 --http 127.0.0.1:2052 --pidfile /var/run/sslh/sslh.pid -n"
+DAEMON_OPTS="--user sslh --listen 0.0.0.0:2093 --ssl 127.0.0.1:389 --ssh 127.0.0.1:22 --openvpn 127.0.0.1:3268 --http 127.0.0.1:2052 --pidfile /var/run/sslh/sslh.pid -n"
 
 END
 
@@ -291,7 +291,7 @@ accept = 442
 connect = 127.0.0.1:389
 
 [openssh]
-accept = 441
+accept = 447
 connect = 127.0.0.1:222
 
 [stunnel5]
@@ -454,15 +454,19 @@ wget -O xp "https://raw.githubusercontent.com/Gandring15/vps/main/xp.sh"
 wget -O swapkvm "https://raw.githubusercontent.com/Gandring15/vps/main/swapkvm.sh"
 wget -O addv2ray "https://raw.githubusercontent.com/Gandring15/vps/main/addv2ray.sh"
 wget -O addvless "https://raw.githubusercontent.com/Gandring15/vps/main/addvless.sh"
+wget -O addvless-grpc "https://raw.githubusercontent.com/Gandring15/vps/main/addvless-grpc.sh"
 wget -O addtrojan "https://raw.githubusercontent.com/Gandring15/vps/main/addtrojan.sh"
 wget -O delv2ray "https://raw.githubusercontent.com/Gandring15/vps/main/delv2ray.sh"
 wget -O delvless "https://raw.githubusercontent.com/Gandring15/vps/main/delvless.sh"
+wget -O delvless-grpc "https://raw.githubusercontent.com/Gandring15/vps/main/delvless-grpc.sh"
 wget -O deltrojan "https://raw.githubusercontent.com/Gandring15/vps/main/deltrojan.sh"
 wget -O cekv2ray "https://raw.githubusercontent.com/Gandring15/vps/main/cekv2ray.sh"
 wget -O cekvless "https://raw.githubusercontent.com/Gandring15/vps/main/cekvless.sh"
+wget -O cekvless-grpc "https://raw.githubusercontent.com/Gandring15/vps/main/cekvless-grpc.sh"
 wget -O cektrojan "https://raw.githubusercontent.com/Gandring15/vps/main/cektrojan.sh"
 wget -O renewv2ray "https://raw.githubusercontent.com/Gandring15/vps/main/renewv2ray.sh"
 wget -O renewvless "https://raw.githubusercontent.com/Gandring15/vps/main/renewvless.sh"
+wget -O renewvless-grpc "https://raw.githubusercontent.com/Gandring15/vps/main/renewvless-grpc.sh"
 wget -O renewtrojan "https://raw.githubusercontent.com/Gandring15/vps/main/renewtrojan.sh"
 wget -O certv2ray "https://raw.githubusercontent.com/Gandring15/vps/main/certv2ray.sh"
 wget -O addtrgo "https://raw.githubusercontent.com/Gandring15/vps/main/addtrgo.sh"
@@ -548,15 +552,19 @@ chmod +x swapkvm
 chmod +x wg
 chmod +x addv2ray
 chmod +x addvless
+chmod +x addvless-grpc
 chmod +x addtrojan
 chmod +x delv2ray
 chmod +x delvless
+chmod +x delvless-grpc
 chmod +x deltrojan
 chmod +x cekv2ray
 chmod +x cekvless
+chmod +x cekvless-grpc
 chmod +x cektrojan
 chmod +x renewv2ray
 chmod +x renewvless
+chmod +x renewvless-grpc
 chmod +x renewtrojan
 chmod +x certv2ray
 chmod +x addtrgo
