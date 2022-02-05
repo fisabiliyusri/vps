@@ -107,7 +107,7 @@ apt install wget -y && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w n
 
 • Dflate                  : [ON]
 
-• IPtables                : [ON]
+• IPtables                : [OFF]
 
 • Auto-Reboot             : [ON]
 
