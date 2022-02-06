@@ -26,6 +26,7 @@ ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | 
 clear
 systemctl restart ws-tls
 systemctl restart ws-nontls
+systemctl restart ws-open
 systemctl restart ssh-ohp
 systemctl restart dropbear-ohp
 systemctl restart openvpn-ohp
@@ -36,7 +37,7 @@ hariini=`date -d "0 days" +"%Y-%m-%d"`
 expi=`date -d "$masaaktif days" +"%Y-%m-%d"`
 echo -e ""
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
-echo -e "♤  -Informasi SSH & OpenVPN-   ♤"
+echo -e "    -Informasi SSH & OpenVPN-"
 echo -e "♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤♤"
 echo -e "IP/Host       : $IP"
 echo -e "Domain        : ${domain}"
