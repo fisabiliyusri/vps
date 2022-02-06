@@ -13,9 +13,11 @@ apt install wget -y && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w n
 
 • OHP SSH & OHP Dropbear & OHP OpenVPN
 
-• Vmess
+• Vmess Websocket
 
-• Vless
+• Vless Websocket
+
+• Vless gRPC
 
 • Trojan-Gfw
 
@@ -80,6 +82,8 @@ apt install wget -y && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w n
 • Vmess None TLS          : 2095
 
 • Vless TLS               : 443
+
+• Vless gRPC              : 443
 
 • Vless None TLS          : 80
 
