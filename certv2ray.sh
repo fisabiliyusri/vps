@@ -23,6 +23,7 @@ systemctl enable xray@v2ray-nontls
 systemctl enable xray@vless-tls
 systemctl enable xray@vless-nontls
 systemctl enable xray@trojan
+systemctl enable xray@vless-grpc
 /root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256
 ~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key --ecc
 systemctl restart xray@v2ray-tls
@@ -30,6 +31,7 @@ systemctl restart xray@v2ray-nontls
 systemctl restart xray@vless-tls
 systemctl restart xray@vless-nontls
 systemctl restart xray@trojan
+systemctl enable xray@vless-grpc
 echo Done
 sleep 0.5
 clear 
