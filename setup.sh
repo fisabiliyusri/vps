@@ -231,7 +231,7 @@ echo ""  | tee -a log-install.txt
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH                 : 222, 22"    | tee -a log-install.txt
 echo "   - OpenVPN                 : TCP 3268, UDP 3224, SSL 3269"  | tee -a log-install.txt
-echo "   - Stunnel5                : 445, 442"   | tee -a log-install.txt
+echo "   - Stunnel5                : 445, 442, 447, 441"   | tee -a log-install.txt
 echo "   - Dropbear                : 389, 390"   | tee -a log-install.txt
 echo "   - Privoxy                 : 3000'       | tee -a log-install.txt
 echo "   - Squid Proxy             : 3128, 8080" | tee -a log-install.txt
@@ -248,6 +248,7 @@ echo "   - Vmess TLS               : 2096"  | tee -a log-install.txt
 echo "   - Vmess None TLS          : 2095"  | tee -a log-install.txt
 echo "   - Vless TLS               : 443"   | tee -a log-install.txt
 echo "   - Vless None TLS          : 80"    | tee -a log-install.txt
+echo "   - Vless gRPC              : 443"   | tee -a log-install.txt
 echo "   - Trojan-GFW              : 2087"  | tee -a log-install.txt
 echo "   - Websocket TLS           : 2083"  | tee -a log-install.txt
 echo "   - Websocket None TLS      : 8880"  | tee -a log-install.txt
