@@ -699,9 +699,10 @@ systemctl stop xray@v2ray-nontls
 systemctl stop xray@vless-tls
 systemctl stop xray@vless-nontls
 systemctl stop xray@trojan
+systemctl stop xray@vless-grpc
 systemctl start xray@v2ray-tls 
 systemctl start xray@v2ray-nontls 
-systemctl start xray@vless-tls 
+systemctl start xray@vless-tls
 systemctl start xray@vless-nontls 
 systemctl start xray@trojan
 systemctl start xray@vless-grpc 
