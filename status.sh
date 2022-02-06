@@ -34,7 +34,7 @@ wsovpn=$(systemctl status ws-ovpn | grep -i "active (running)")
 v2ray=$(systemctl status xray@v2ray-tls | grep -i "active (running)")
 v2none=$(systemctl status xray@v2ray-nontls | grep -i "active (running)")
 vless=$(systemctl status xray@vless-tls | grep -i "active (running)")
-vless-grpc==$(systemctl status xray@vless-grpc | grep -i "active (running)")
+vless-grpc=$(systemctl status xray@vless-grpc | grep -i "active (running)")
 vnone=$(systemctl status xray@vless-nontls | grep -i "active (running)")
 trojan=$(systemctl status xray@trojan | grep -i "active (running)")
 trojang=$(systemctl status trojan-go | grep -i "active (running)")
@@ -78,7 +78,7 @@ if [[ $wsopen == "" ]]; then
       info+=("WebSocket Openssh")
       keook+=("err2")
 else
-      swsdrop=$AKTIF
+      swsopen=$AKTIF
       gandring+=("enjoooos2")
 fi
 if [[ $wstls == "" ]]; then
