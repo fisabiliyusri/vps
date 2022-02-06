@@ -509,7 +509,6 @@ wget -O host "https://raw.githubusercontent.com/Gandring15/vps/main/host.sh"
 wget -O bw "https://raw.githubusercontent.com/Gandring15/vps/main/bw.sh"
 wget -O update "https://raw.githubusercontent.com/Gandring15/vps/main/update.sh"
 wget -O host "https://raw.githubusercontent.com/Gandring15/vps/main/host.sh"
-wget -O ohpserver "https://raw.githubusercontent.com/Gandring15/vps/main/ohpserver"
 wget -O portsshws https://raw.githubusercontent.com/Gandring15/vps/main/portsshwstls.sh"
 wget -O portsshwsnontls https://raw.githubusercontent.com/Gandring15/vps/main/portsshwsnontls.sh"
 wget -0 wstunnel https://raw.githubusercontent.com/Gandring15/vps/main/wstunnel.sh"
@@ -606,7 +605,6 @@ chmod +x cfh
 chmod +x host
 chmod +x bw
 chmod +x host
-chmod +x ohpserver
 chmod +x portsshwstls
 chmod +x portsshwsnontls
 chmod +x privoxy
