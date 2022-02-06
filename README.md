@@ -11,8 +11,6 @@ apt install wget -y && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w n
 
 • SSH Websocket TLS & No TLS
 
-• OHP SSH & OHP Dropbear & OHP OpenVPN
-
 • Vmess Websocket
 
 • Vless Websocket
